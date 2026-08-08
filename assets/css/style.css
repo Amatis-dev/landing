@@ -1021,10 +1021,12 @@ section {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
+  direction: ltr;
 }
 .marquee-track {
   display: inline-flex;
   align-items: center;
+  direction: ltr;
   animation: marqueeScroll 26s linear infinite;
   will-change: transform;
 }
@@ -1044,6 +1046,7 @@ section {
   color: var(--text);
   opacity: 0.14;
   white-space: nowrap;
+  unicode-bidi: plaintext;
   transition: opacity 0.3s ease;
 }
 .marquee-item .sep {

@@ -1068,6 +1068,10 @@ window.AMATIS_I18N = (function () {
       a.classList.toggle("active", l === locale);
       a.textContent = labels[l];
     });
+
+    if (typeof window.CustomEvent === "function") {
+      document.dispatchEvent(new window.CustomEvent("i18n:applied", { detail: { locale: locale } }));
+    }
   }
 
   function switchTo(locale) {

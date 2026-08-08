@@ -139,7 +139,12 @@
     el.innerHTML = html;
   }
 
-  document.querySelectorAll(".marquee-track").forEach(renderMarquee);
+  function renderMarquees() {
+    document.querySelectorAll(".marquee-track").forEach(renderMarquee);
+  }
+
+  document.addEventListener("i18n:applied", renderMarquees);
+  renderMarquees();
 
   /* ---------------- Reveal on scroll ---------------- */
   var revealEls = document.querySelectorAll(".reveal");
