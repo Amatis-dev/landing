@@ -6,7 +6,7 @@ window.AMATIS_I18N = (function () {
   "use strict";
 
   var locales = ["en", "de", "fa", "ar"];
-  var defaultLocale = "en";
+  var defaultLocale = "fa";
   var langKey = "amatis-lang";
   var rtl = { fa: true, ar: true };
 
