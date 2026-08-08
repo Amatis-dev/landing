@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Amatis · Business Consultancy Agency</title>
-  <meta name="description" content="Amatis is a business consultancy agency helping companies grow with strategy, marketing and technology.">
+    <title>Connect With Us · Amatis</title>
+  <meta name="description" content="Get in touch with Amatis. Book a free consultation.">
   <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -106,185 +106,53 @@
 
   <main>
 
-    <!-- ======================= HERO ======================= -->
-    <section class="hero">
+    <section class="page-hero">
       <div class="hero-grid-pattern"></div>
-      <div class="hero-blob"></div>
       <div class="container-page">
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <span class="hero-eyebrow">
-              <span class="anim-pulse-dot" style="width:9px;height:9px;border-radius:50%;background:currentColor;flex-shrink:0;"></span>
-              <span data-i18n="hero.eyebrow">Business Consultancy · Digital Solutions</span>
-            </span>
-            <h1 class="hero-title">
-              <span data-i18n="hero.titleStart">Your </span><span class="grad" data-i18n="hero.titleGrad">Consultancy</span><span data-i18n="hero.titleEnd"> Partner for Growth.</span>
-            </h1>
-            <div class="hero-stat">
-              <span class="hero-stat-badge" data-i18n="hero.statBadge">10+</span>
-              <span class="hero-stat-text" data-i18n="hero.statText">Years of working experience taking care of your business goals</span>
-            </div>
-            <p class="hero-lead" data-i18n="hero.lead">Amatis helps ambitious businesses grow with strategy, marketing and technology. From the first idea to a launched product, we are your partner at every step.</p>
-            <div class="hero-cta">
-              <a class="btn-primary lg" href="what-we-offer.html" data-i18n="hero.ctaPrimary">Explore Our Services</a>
-              <a class="btn-secondary lg" href="showcase.html" data-i18n="hero.ctaSecondary">View Showcase</a>
-            </div>
-            <div class="hero-chips" data-i18n-list="hero.chips"></div>
-            <p class="hero-note" data-i18n="hero.note">Free consultation for every new project</p>
+        <span class="kicker-pill"><span class="dot"></span><span data-i18n="connect.kicker">connect.kicker</span></span>
+        <h1 data-i18n="connect.title">connect.title</h1>
+        <p data-i18n="connect.subtitle">connect.subtitle</p>
+      </div>
+    </section>
+    <section class="py-section">
+      <div class="container-page">
+        <div class="contact-grid">
+          <div class="contact-cards reveal">
+            <div class="contact-card"><span class="c-icon">📞</span><div><h3 data-i18n="connect.phone">Phone</h3><p data-i18n="connect.phoneValue">+852 2569 7974</p></div></div>
+            <div class="contact-card"><span class="c-icon">✉️</span><div><h3 data-i18n="connect.email">Email</h3><a href="mailto:hello@amatis.com" data-i18n="connect.emailValue">hello@amatis.com</a></div></div>
+            <div class="contact-card"><span class="c-icon">📍</span><div><h3 data-i18n="connect.address">Address</h3><p data-i18n="connect.addressValue">21 King Street, Melbourne, Victoria 1202, Australia</p></div></div>
+            <div class="contact-card"><span class="c-icon">🕒</span><div><h3 data-i18n="connect.hours">Support hours</h3><p data-i18n="connect.hoursValue">Mon – Fri, 9:00 – 18:00</p></div></div>
           </div>
-
-          <div class="hero-visual">
-            <div class="hero-visual-card">
-              <div class="hero-visual-header">
-                <div>
-                  <h4 data-i18n="hero.cardTitle">Amatis</h4>
-                  <p data-i18n="hero.cardSub">Business Consultancy Agency</p>
-                </div>
-                <span class="emoji-badge">📈</span>
-              </div>
-              <div class="hero-img">
-                <img src="assets/images/hero-image.png" alt="Amatis — Business Consultancy" data-i18n-title="hero.imgAlt">
-              </div>
-              <div class="hero-visual-footer">
-                <div class="hero-visual-mini">
-                  <p data-i18n="hero.mini1Label">Clients served</p>
-                  <b data-i18n="hero.mini1Value">350+</b>
-                </div>
-                <div class="hero-visual-mini">
-                  <p data-i18n="hero.mini2Label">Projects delivered</p>
-                  <b data-i18n="hero.mini2Value">870+</b>
-                </div>
-              </div>
+          <form class="form-card reveal" data-form novalidate>
+            <h3 data-i18n="connect.formTitle">Send Us a Message</h3>
+            <div class="form-row">
+              <div class="field"><label for="f-name" data-i18n="connect.formName">Name</label><input id="f-name" name="name" type="text" data-i18n-ph="connect.formName" required></div>
+              <div class="field"><label for="f-email" data-i18n="connect.formEmail">Email</label><input id="f-email" name="email" type="email" data-i18n-ph="connect.formEmail" required></div>
             </div>
-          </div>
+            <div class="field"><label for="f-subject" data-i18n="connect.formSubject">Subject</label><input id="f-subject" name="subject" type="text" data-i18n-ph="connect.formSubject" required></div>
+            <div class="field"><label for="f-message" data-i18n="connect.formMessage">Message</label><textarea id="f-message" name="message" rows="5" data-i18n-ph="connect.formMessage" required></textarea></div>
+            <div class="field"><button class="btn-primary lg" type="submit" data-i18n="connect.formSubmit">Send Message</button></div>
+            <p class="form-message" data-i18n="connect.formSent">Your message has been sent successfully. We will reply soon.</p>
+          </form>
         </div>
       </div>
     </section>
-
-    <!-- ======================= MARQUEE ======================= -->
-    <section class="marquee-section">
-      <div class="marquee marquee-1"><div class="marquee-track" data-marquee="marquee.m1"></div></div>
-      <div class="marquee marquee-2"><div class="marquee-track" data-marquee="marquee.m2"></div></div>
-    </section>
-
-    <!-- ======================= WHAT WE OFFER ======================= -->
-    <section class="offer-section py-section">
-      <div class="container-page">
-        <div class="section-head reveal">
-          <span class="kicker-pill"><span class="dot"></span><span data-i18n="offer.kicker">What We Offer</span></span>
-          <h2 data-i18n="offer.title">Services to Rock Your Business</h2>
-          <p data-i18n="offer.subtitle">A full range of services to take care of your business goals — from strategy to execution.</p>
-        </div>
-        <div class="offer-grid">
-          <article class="offer-card card-hover reveal">
-            <span class="offer-icon" data-i18n="offer.card1.icon">💼</span>
-            <h3 data-i18n="offer.card1.title">Business Consultancy</h3>
-            <p data-i18n="offer.card1.desc">Strategic advice to help you set the right goals and grow with confidence.</p>
-            <a class="offer-link" href="what-we-offer.html">
-              <span data-i18n="offer.link">Learn More</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-            </a>
-          </article>
-          <article class="offer-card card-hover reveal">
-            <span class="offer-icon" data-i18n="offer.card2.icon">📣</span>
-            <h3 data-i18n="offer.card2.title">Digital Marketing</h3>
-            <p data-i18n="offer.card2.desc">Campaigns that build your brand and turn attention into customers.</p>
-            <a class="offer-link" href="what-we-offer.html">
-              <span data-i18n="offer.link">Learn More</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-            </a>
-          </article>
-          <article class="offer-card card-hover reveal">
-            <span class="offer-icon" data-i18n="offer.card3.icon">📊</span>
-            <h3 data-i18n="offer.card3.title">Market Analysis</h3>
-            <p data-i18n="offer.card3.desc">Data-driven insights and clear reporting to understand your market.</p>
-            <a class="offer-link" href="what-we-offer.html">
-              <span data-i18n="offer.link">Learn More</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-            </a>
-          </article>
-          <article class="offer-card card-hover reveal">
-            <span class="offer-icon" data-i18n="offer.card4.icon">🛠️</span>
-            <h3 data-i18n="offer.card4.title">Web Development</h3>
-            <p data-i18n="offer.card4.desc">Fast, secure and beautiful websites that tell your story.</p>
-            <a class="offer-link" href="what-we-offer.html">
-              <span data-i18n="offer.link">Learn More</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-            </a>
-          </article>
-        </div>
-        <div class="offer-cta reveal">
-          <a class="btn-primary lg" href="what-we-offer.html" data-i18n="offer.button">View All Services</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================= BLOG ======================= -->
-    <section class="blog-section py-section">
-      <div class="container-page">
-        <div class="section-head center reveal">
-          <span class="kicker-pill"><span class="dot"></span><span data-i18n="blog.kicker">Insights</span></span>
-          <h2 data-i18n="blog.title">Tech Blog</h2>
-          <p data-i18n="blog.subtitle">News and guides to help your business grow.</p>
-        </div>
-        <div class="blog-grid">
-          <article class="blog-card card-hover reveal">
-            <a class="blog-thumb" href="blogs.html"><img src="assets/images/news-1.jpg" alt=""></a>
-            <div class="blog-body">
-              <span class="blog-date" data-i18n="blog.post1.date">6 December 2025</span>
-              <h3><a href="blogs.html" data-i18n="blog.post1.title">How to choose the right digital partner for your business</a></h3>
-              <p class="blog-meta" data-i18n="blog.post1.author">Isabela Moreira</p>
-            </div>
-          </article>
-          <article class="blog-card card-hover reveal">
-            <a class="blog-thumb" href="blogs.html"><img src="assets/images/news-2.jpg" alt=""></a>
-            <div class="blog-body">
-              <span class="blog-date" data-i18n="blog.post2.date">2 December 2025</span>
-              <h3><a href="blogs.html" data-i18n="blog.post2.title">5 digital marketing trends to watch this year</a></h3>
-              <p class="blog-meta" data-i18n="blog.post2.author">Lucas Silva</p>
-            </div>
-          </article>
-          <article class="blog-card card-hover reveal">
-            <a class="blog-thumb" href="blogs.html"><img src="assets/images/news-3.jpg" alt=""></a>
-            <div class="blog-body">
-              <span class="blog-date" data-i18n="blog.post3.date">29 November 2025</span>
-              <h3><a href="blogs.html" data-i18n="blog.post3.title">Why every business needs a great website</a></h3>
-              <p class="blog-meta" data-i18n="blog.post3.author">Amatis Studio</p>
-            </div>
-          </article>
-        </div>
-        <div class="blog-cta reveal">
-          <a class="btn-secondary lg" href="blogs.html" data-i18n="blog.viewAll">View All Blogs</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================= SCHEDULE ======================= -->
-    <section class="schedule-section py-section" id="schedule">
+    <section class="py-section">
       <div class="container-page">
         <div class="schedule-panel reveal">
           <div>
-            <p class="eyebrow" data-i18n="schedule.eyebrow">Free consultation</p>
-            <h2 data-i18n="schedule.title">Schedule Now to Get Started</h2>
-            <p data-i18n="schedule.subtitle">Book a free consultation with our team and let's talk about your project.</p>
-            <div class="chips">
-              <span class="chip" data-i18n="schedule.chips.0">Free consultation</span>
-              <span class="chip" data-i18n="schedule.chips.1">No commitment</span>
-              <span class="chip" data-i18n="schedule.chips.2">Fast reply</span>
-            </div>
+            <p class="eyebrow" data-i18n="connect.scheduleTitle">Schedule a Free Consultation</p>
+            <h2 data-i18n="connect.scheduleText">Prefer to talk? Book a free consultation and we will call you back.</h2>
           </div>
           <div class="schedule-actions">
-            <a class="btn-white" href="connect-with-us.html">
-              <span data-i18n="schedule.button">Book Now</span>
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
-            </a>
+            <a class="btn-white" href="connect-with-us.html" data-i18n="connect.scheduleButton">Schedule Now</a>
           </div>
         </div>
       </div>
     </section>
 
-  </main>
 
+  </main>
   <!-- ======================= FOOTER ======================= -->
   <footer class="site-footer">
     <div class="container-page">
