@@ -72,9 +72,26 @@
       }
     });
   }
+  /* ---------------- Nav dropdown ---------------- */
+  document.querySelectorAll(".nav-dropdown").forEach(function (dd) {
+    var trigger = dd.querySelector(".nav-pill");
+    if (trigger) {
+      trigger.addEventListener("click", function (e) {
+        e.stopPropagation();
+        dd.classList.toggle("open");
+      });
+    }
+    document.addEventListener("click", function (e) {
+      if (!dd.contains(e.target)) dd.classList.remove("open");
+    });
+  });
+
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") {
       if (langSwitcher) langSwitcher.classList.remove("open");
+      document.querySelectorAll(".nav-dropdown.open").forEach(function (dd) {
+        dd.classList.remove("open");
+      });
       closeMobileMenu();
     }
   });
