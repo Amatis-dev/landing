@@ -997,6 +997,7 @@ section {
   overflow: hidden;
   padding-block: 64px;
   min-height: calc(100vh - 76px);
+  margin-top: 76px;
   display: flex;
   align-items: center;
   scroll-margin-top: 76px;
@@ -1007,7 +1008,7 @@ section {
   background: var(--hero-bg-dark);
 }
 @media (max-width: 640px) {
-  .hero { padding-block: 44px; }
+  .hero { padding-block: 44px; margin-top: 68px; }
 }
 .hero-grid-pattern {
   position: absolute;
