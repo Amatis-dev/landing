@@ -163,6 +163,44 @@
   document.addEventListener("i18n:applied", renderMarquees);
   renderMarquees();
 
+  /* ---------------- Pricing plans ---------------- */
+  function renderPricingGrid(grid) {
+    var cat = grid.getAttribute("data-pricing-grid");
+    var section = i18n.get(i18n.current(), "pricing." + cat);
+    if (!section || !Array.isArray(section.plans)) return;
+    var fromLabel = i18n.get(i18n.current(), "pricing.from") || "from";
+    var unitLabel = i18n.get(i18n.current(), "pricing.unit") || "";
+    var cta = i18n.get(i18n.current(), "pricing.cta") || "";
+    var html = "";
+    section.plans.forEach(function (plan, idx) {
+      var features = (plan.features || [])
+        .map(function (f) {
+          return "<li>" + f + "</li>";
+        })
+        .join("");
+      html +=
+        '<article class="plan-card card-hover reveal is-visible' + (idx === 1 ? " plan-featured" : "") + '">' +
+        (plan.tag ? '<span class="plan-tag">' + plan.tag + "</span>" : "") +
+        '<h3 class="plan-name">' + plan.name + "</h3>" +
+        '<ul class="plan-features">' + features + "</ul>" +
+        '<div class="plan-price">' +
+        '<span class="plan-from">' + fromLabel + "</span>" +
+        '<div class="plan-amount"><span class="plan-value">' + plan.price + "</span><span class=\"plan-unit\">" + unitLabel + "</span></div>" +
+        '<span class="plan-old">' + plan.old + " " + unitLabel + "</span>" +
+        "</div>" +
+        '<a class="btn-primary plan-cta" href="connect-with-us.html">' + cta + "</a>" +
+        "</article>";
+    });
+    grid.innerHTML = html;
+  }
+
+  function renderPricingGrids() {
+    document.querySelectorAll("[data-pricing-grid]").forEach(renderPricingGrid);
+  }
+
+  document.addEventListener("i18n:applied", renderPricingGrids);
+  renderPricingGrids();
+
   /* ---------------- Reveal on scroll ---------------- */
   var revealEls = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window && revealEls.length) {
