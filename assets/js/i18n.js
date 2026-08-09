@@ -35,8 +35,317 @@ window.AMATIS_I18N = (function () {
         blogs: "Blogs",
         whoAreWe: "Who Are We",
         connect: "Connect With Us",
+        pricing: "Plans & Prices",
         chooseLanguage: "Choose language",
         active: "Active",
+      },
+
+      services: {
+        "title": "Our Services",
+        "subtitle": "Every kind of digital product your business needs — built end-to-end.",
+        "viewAll": "View All Services",
+        "apps": {
+          "title": "App Development",
+          "lead": "Native Android & iOS, cross-platform and web apps built with modern stacks.",
+          "android": "Android App",
+          "ios": "iOS App",
+          "pwa": "Web App & PWA",
+          "ecom": "E-commerce App",
+          "classifieds": "Classifieds App",
+          "reader": "Book Reader App",
+          "tourism": "Tourism App",
+          "taxi": "Taxi Booking App",
+          "booking": "Flight & Hotel Booking"
+        },
+        "websites": {
+          "title": "Website Design",
+          "lead": "Custom-coded or WordPress websites for every industry.",
+          "corporate": "Corporate Website",
+          "classifieds": "Classifieds Website",
+          "marketplace": "Marketplace Website",
+          "store": "Online Store",
+          "restaurant": "Restaurant Website",
+          "news": "News Website",
+          "medical": "Medical Website",
+          "tourism": "Tourism Website",
+          "reader": "Book Reader Website",
+          "wordpress": "WordPress Website"
+        },
+        "ecommerce": {
+          "title": "E-commerce",
+          "lead": "Online stores and marketplaces with payments built in.",
+          "store": "Online Store",
+          "marketplace": "Multi-vendor Marketplace",
+          "subscription": "Subscription Store",
+          "shopify": "Shopify Store"
+        },
+        "blockchain": {
+          "title": "Blockchain & Crypto",
+          "lead": "Exchanges, payment gateways and smart contracts on blockchain.",
+          "cex": "Crypto Exchange",
+          "dex": "Decentralized Exchange (DEX)",
+          "p2p": "P2P Exchange",
+          "otc": "OTC Exchange",
+          "gateway": "Crypto Payment Gateway",
+          "contracts": "Smart Contracts & Tokens",
+          "airdrop": "Airdrop Platform",
+          "app": "Exchange App"
+        },
+        "more": {
+          "title": "More Services",
+          "lead": "Design, growth and care that keeps your product ahead.",
+          "uiux": "UI/UX Design",
+          "seo": "SEO & Digital Marketing",
+          "dashboards": "Dashboards & Admin Panels",
+          "support": "Maintenance & Support"
+        }
+      },
+      pricing: {
+        "title": "Plans & Prices",
+        "subtitle": "Transparent, fixed-price plans for every service we build — start to launch.",
+        "cta": "Free Consultation",
+        "from": "from",
+        "unit": "M Toman",
+        "apps": {
+          "title": "App Development",
+          "lead": "Pick the plan that matches your product stage — from MVP to full-scale platform.",
+          "plans": [
+            {
+              "name": "Starter App",
+              "tag": "MVP & single platform",
+              "old": "110",
+              "price": "90",
+              "features": [
+                "Native Android or iOS",
+                "MVP scope & core flows",
+                "Standard UI/UX",
+                "Basic admin panel",
+                "Store submission",
+                "1 month of support"
+              ]
+            },
+            {
+              "name": "Professional App",
+              "tag": "Most popular",
+              "old": "170",
+              "price": "140",
+              "features": [
+                "Android + iOS",
+                "Custom UI/UX design",
+                "Admin panel & dashboard",
+                "Payments & push notifications",
+                "Analytics integration",
+                "3 months of support"
+              ]
+            },
+            {
+              "name": "Enterprise App",
+              "tag": "Full-scale platform",
+              "old": "250",
+              "price": "210",
+              "features": [
+                "Cross-platform or native",
+                "Offline & sync capabilities",
+                "Advanced admin & reports",
+                "Third-party integrations",
+                "Security & performance audit",
+                "12 months of support"
+              ]
+            }
+          ]
+        },
+        "websites": {
+          "title": "Website Design",
+          "lead": "Sites that convert — from landing pages to full editorial platforms.",
+          "plans": [
+            {
+              "name": "Starter Website",
+              "tag": "Up to 8 pages",
+              "old": "50",
+              "price": "40",
+              "features": [
+                "Responsive design",
+                "Up to 8 pages",
+                "Contact form",
+                "Basic SEO setup",
+                "Speed optimization",
+                "1 month of support"
+              ]
+            },
+            {
+              "name": "Business Website",
+              "tag": "CMS & blog",
+              "old": "90",
+              "price": "70",
+              "features": [
+                "Up to 20 pages",
+                "CMS / WordPress",
+                "Blog & news section",
+                "Multi-language",
+                "Analytics & forms",
+                "3 months of support"
+              ]
+            },
+            {
+              "name": "Custom Platform",
+              "tag": "Web app & dashboard",
+              "old": "150",
+              "price": "120",
+              "features": [
+                "Custom web application",
+                "User accounts & roles",
+                "API integrations",
+                "Advanced dashboard",
+                "Custom modules",
+                "6 months of support"
+              ]
+            }
+          ]
+        },
+        "ecommerce": {
+          "title": "E-commerce",
+          "lead": "Stores and marketplaces built to sell — carts, payments and fulfillment included.",
+          "plans": [
+            {
+              "name": "Basic Store",
+              "tag": "Launch your shop",
+              "old": "100",
+              "price": "80",
+              "features": [
+                "Product catalog",
+                "Cart & checkout",
+                "One payment gateway",
+                "Order management",
+                "Customer accounts",
+                "1 month of support"
+              ]
+            },
+            {
+              "name": "Advanced Store",
+              "tag": "Scale & optimize",
+              "old": "160",
+              "price": "130",
+              "features": [
+                "Multiple gateways",
+                "Discount & coupon engine",
+                "Inventory & warehouse",
+                "Shipping & tracking",
+                "Reports & analytics",
+                "3 months of support"
+              ]
+            },
+            {
+              "name": "Marketplace",
+              "tag": "Multi-vendor",
+              "old": "260",
+              "price": "220",
+              "features": [
+                "Multi-vendor selling",
+                "Seller panels & commissions",
+                "Escrow & payouts",
+                "Reviews & ratings",
+                "Returns management",
+                "6 months of support"
+              ]
+            }
+          ]
+        },
+        "blockchain": {
+          "title": "Blockchain & Crypto",
+          "lead": "Secure exchanges, gateways and smart contracts on leading networks.",
+          "plans": [
+            {
+              "name": "Token & Contracts",
+              "tag": "Erc-20 / bep-20",
+              "old": "110",
+              "price": "90",
+              "features": [
+                "Token development",
+                "Smart contracts",
+                "Staking or airdrop",
+                "Wallet integration",
+                "Audit support",
+                "1 month of support"
+              ]
+            },
+            {
+              "name": "Payment Gateway",
+              "tag": "Accept crypto",
+              "old": "190",
+              "price": "160",
+              "features": [
+                "Crypto payment gateway",
+                "Merchant dashboard",
+                "API & plugins",
+                "Automatic settlement",
+                "Multi-currency",
+                "3 months of support"
+              ]
+            },
+            {
+              "name": "Crypto Exchange",
+              "tag": "CEX / OTC / P2P",
+              "old": "320",
+              "price": "280",
+              "features": [
+                "Order book engine",
+                "Wallets & KYC",
+                "P2P / OTC trading",
+                "Admin panel",
+                "Security hardening",
+                "6 months of support"
+              ]
+            }
+          ]
+        },
+        "more": {
+          "title": "More Services",
+          "lead": "Design, growth and care that keeps your product ahead of the competition.",
+          "plans": [
+            {
+              "name": "UI/UX Design",
+              "tag": "Design system",
+              "old": "75",
+              "price": "60",
+              "features": [
+                "UX audit & research",
+                "Wireframes & prototypes",
+                "Design system",
+                "Interactive mockups",
+                "Developer handoff",
+                "Revision rounds"
+              ]
+            },
+            {
+              "name": "SEO & Marketing",
+              "tag": "Growth plan",
+              "old": "65",
+              "price": "50",
+              "features": [
+                "Technical SEO",
+                "Keyword strategy",
+                "Content plan",
+                "Performance tracking",
+                "Monthly reporting",
+                "Ad campaign setup"
+              ]
+            },
+            {
+              "name": "Maintenance & Support",
+              "tag": "Monthly care",
+              "old": "30",
+              "price": "25",
+              "features": [
+                "Monthly updates",
+                "Bug fixing",
+                "Security patches",
+                "Backup management",
+                "Priority support",
+                "Per-month billing"
+              ]
+            }
+          ]
+        }
       },
       svcdesc: {
         apps: {
@@ -324,8 +633,317 @@ window.AMATIS_I18N = (function () {
         blogs: "Blog",
         whoAreWe: "\u00dcber uns",
         connect: "Kontakt",
+        pricing: "Pläne & Preise",
         chooseLanguage: "Sprache w\u00e4hlen",
         active: "Aktiv",
+      },
+
+      services: {
+        "title": "Unsere Dienstleistungen",
+        "subtitle": "Jede Art von digitalem Produkt, das Ihr Unternehmen braucht — von der Idee bis zur fertigen Umsetzung.",
+        "viewAll": "Alle Dienstleistungen ansehen",
+        "apps": {
+          "title": "App-Entwicklung",
+          "lead": "Android-, iOS-, Cross-Platform- und Web-Apps mit modernen Technologien.",
+          "android": "Android-App",
+          "ios": "iOS-App",
+          "pwa": "Web-App & PWA",
+          "ecom": "E-Commerce-App",
+          "classifieds": "Kleinanzeigen-App",
+          "reader": "E-Book-Reader-App",
+          "tourism": "Tourismus-App",
+          "taxi": "Taxi- & Transport-App",
+          "booking": "Flug- & Hotelbuchung"
+        },
+        "websites": {
+          "title": "Website-Design",
+          "lead": "Individuelle oder WordPress-Websites für jede Branche.",
+          "corporate": "Unternehmenswebsite",
+          "classifieds": "Kleinanzeigen-Website",
+          "marketplace": "Marktplatz-Website",
+          "store": "Online-Shop",
+          "restaurant": "Restaurant-Website",
+          "news": "Nachrichten-Website",
+          "medical": "Medizinische Website",
+          "tourism": "Tourismus-Website",
+          "reader": "Buch-Reader-Website",
+          "wordpress": "WordPress-Website"
+        },
+        "ecommerce": {
+          "title": "E-Commerce",
+          "lead": "Online-Shops und Marktplätze mit integrierter Bezahlung.",
+          "store": "Online-Shop",
+          "marketplace": "Multi-Vendor-Marktplatz",
+          "subscription": "Abonnement-Shop",
+          "shopify": "Shopify-Shop"
+        },
+        "blockchain": {
+          "title": "Blockchain & Krypto",
+          "lead": "Börsen, Zahlungs-Gateways und Smart Contracts auf der Blockchain.",
+          "cex": "Krypto-Börse",
+          "dex": "Dezentrale Börse (DEX)",
+          "p2p": "P2P-Börse",
+          "otc": "OTC-Börse",
+          "gateway": "Krypto-Zahlungs-Gateway",
+          "contracts": "Smart Contracts & Token",
+          "airdrop": "Airdrop-Plattform",
+          "app": "Börsen-App"
+        },
+        "more": {
+          "title": "Weitere Dienstleistungen",
+          "lead": "Design, Wachstum und Betreuung, die Ihr Produkt voranbringen.",
+          "uiux": "UI/UX-Design",
+          "seo": "SEO & Digital-Marketing",
+          "dashboards": "Dashboards & Admin-Panels",
+          "support": "Wartung & Support"
+        }
+      },
+      pricing: {
+        "title": "Pläne & Preise",
+        "subtitle": "Transparente Festpreise für jeden unserer Services — vom Start bis zum Launch.",
+        "cta": "Kostenlose Beratung",
+        "from": "ab",
+        "unit": "Mio. Toman",
+        "apps": {
+          "title": "App-Entwicklung",
+          "lead": "Wählen Sie den Plan, der zur Phase Ihres Produkts passt — vom MVP bis zur Plattform.",
+          "plans": [
+            {
+              "name": "Starter-App",
+              "tag": "MVP & eine Plattform",
+              "old": "110",
+              "price": "90",
+              "features": [
+                "Natives Android oder iOS",
+                "MVP-Umfang & Kern-Flows",
+                "Standard-UI/UX",
+                "Basis-Admin-Panel",
+                "Store-Einreichung",
+                "1 Monat Support"
+              ]
+            },
+            {
+              "name": "Professional-App",
+              "tag": "Am beliebtesten",
+              "old": "170",
+              "price": "140",
+              "features": [
+                "Android + iOS",
+                "Individuelles UI/UX",
+                "Admin-Panel & Dashboard",
+                "Zahlungen & Push-Benachrichtigungen",
+                "Analytics-Integration",
+                "3 Monate Support"
+              ]
+            },
+            {
+              "name": "Enterprise-App",
+              "tag": "Vollwertige Plattform",
+              "old": "250",
+              "price": "210",
+              "features": [
+                "Cross-Platform oder nativ",
+                "Offline- & Sync-Fähigkeiten",
+                "Erweitertes Admin & Reports",
+                "Drittanbieter-Integrationen",
+                "Sicherheits- & Performance-Audit",
+                "12 Monate Support"
+              ]
+            }
+          ]
+        },
+        "websites": {
+          "title": "Website-Design",
+          "lead": "Websites, die konvertieren — von Landing-Pages bis zu vollwertigen Redaktions-Plattformen.",
+          "plans": [
+            {
+              "name": "Starter-Website",
+              "tag": "Bis zu 8 Seiten",
+              "old": "50",
+              "price": "40",
+              "features": [
+                "Responsives Design",
+                "Bis zu 8 Seiten",
+                "Kontaktformular",
+                "Basis-SEO",
+                "Geschwindigkeits-Optimierung",
+                "1 Monat Support"
+              ]
+            },
+            {
+              "name": "Business-Website",
+              "tag": "CMS & Blog",
+              "old": "90",
+              "price": "70",
+              "features": [
+                "Bis zu 20 Seiten",
+                "CMS / WordPress",
+                "Blog & News-Bereich",
+                "Mehrsprachig",
+                "Analytics & Formulare",
+                "3 Monate Support"
+              ]
+            },
+            {
+              "name": "Custom-Plattform",
+              "tag": "Web-App & Dashboard",
+              "old": "150",
+              "price": "120",
+              "features": [
+                "Individuelle Web-App",
+                "Benutzerkonten & Rollen",
+                "API-Integrationen",
+                "Erweitertes Dashboard",
+                "Individuelle Module",
+                "6 Monate Support"
+              ]
+            }
+          ]
+        },
+        "ecommerce": {
+          "title": "E-Commerce",
+          "lead": "Shops und Marktplätze, die verkaufen — Warenkorb, Zahlungen und Versand inklusive.",
+          "plans": [
+            {
+              "name": "Basis-Shop",
+              "tag": "Shop starten",
+              "old": "100",
+              "price": "80",
+              "features": [
+                "Produktkatalog",
+                "Warenkorb & Checkout",
+                "Ein Zahlungs-Gateway",
+                "Bestellverwaltung",
+                "Kundenkonten",
+                "1 Monat Support"
+              ]
+            },
+            {
+              "name": "Fortgeschrittener Shop",
+              "tag": "Skalieren",
+              "old": "160",
+              "price": "130",
+              "features": [
+                "Mehrere Gateways",
+                "Rabatt- & Coupon-System",
+                "Lager & Inventar",
+                "Versand & Tracking",
+                "Reports & Analysen",
+                "3 Monate Support"
+              ]
+            },
+            {
+              "name": "Marktplatz",
+              "tag": "Multi-Vendor",
+              "old": "260",
+              "price": "220",
+              "features": [
+                "Multi-Vendor-Verkauf",
+                "Verkäufer-Panels & Provisionen",
+                "Treuhand & Auszahlungen",
+                "Bewertungen",
+                "Retouren-Management",
+                "6 Monate Support"
+              ]
+            }
+          ]
+        },
+        "blockchain": {
+          "title": "Blockchain & Krypto",
+          "lead": "Sichere Börsen, Gateways und Smart Contracts auf führenden Netzwerken.",
+          "plans": [
+            {
+              "name": "Token & Contracts",
+              "tag": "Erc-20 / bep-20",
+              "old": "110",
+              "price": "90",
+              "features": [
+                "Token-Entwicklung",
+                "Smart Contracts",
+                "Staking oder Airdrop",
+                "Wallet-Integration",
+                "Audit-Unterstützung",
+                "1 Monat Support"
+              ]
+            },
+            {
+              "name": "Zahlungs-Gateway",
+              "tag": "Krypto akzeptieren",
+              "old": "190",
+              "price": "160",
+              "features": [
+                "Krypto-Zahlungs-Gateway",
+                "Merchant-Dashboard",
+                "API & Plugins",
+                "Automatische Abrechnung",
+                "Multi-Währung",
+                "3 Monate Support"
+              ]
+            },
+            {
+              "name": "Krypto-Börse",
+              "tag": "CEX / OTC / P2P",
+              "old": "320",
+              "price": "280",
+              "features": [
+                "Order-Book-Engine",
+                "Wallets & KYC",
+                "P2P / OTC-Handel",
+                "Admin-Panel",
+                "Security-Härtung",
+                "6 Monate Support"
+              ]
+            }
+          ]
+        },
+        "more": {
+          "title": "Weitere Services",
+          "lead": "Design, Wachstum und Betreuung, die Ihr Produkt voranbringen.",
+          "plans": [
+            {
+              "name": "UI/UX-Design",
+              "tag": "Design-System",
+              "old": "75",
+              "price": "60",
+              "features": [
+                "UX-Audit & Recherche",
+                "Wireframes & Prototypen",
+                "Design-System",
+                "Interaktive Mockups",
+                "Developer-Handoff",
+                "Revisionsrunden"
+              ]
+            },
+            {
+              "name": "SEO & Marketing",
+              "tag": "Wachstumsplan",
+              "old": "65",
+              "price": "50",
+              "features": [
+                "Technisches SEO",
+                "Keyword-Strategie",
+                "Content-Plan",
+                "Performance-Tracking",
+                "Monatliche Reports",
+                "Ad-Campaign-Setup"
+              ]
+            },
+            {
+              "name": "Wartung & Support",
+              "tag": "Monatliche Betreuung",
+              "old": "30",
+              "price": "25",
+              "features": [
+                "Monatliche Updates",
+                "Fehlerbehebung",
+                "Sicherheits-Patches",
+                "Backup-Management",
+                "Prioritäts-Support",
+                "Monatliche Abrechnung"
+              ]
+            }
+          ]
+        }
       },
       svcdesc: {
         apps: {
@@ -613,8 +1231,317 @@ window.AMATIS_I18N = (function () {
         blogs: "\u0648\u0628\u0644\u0627\u06af",
         whoAreWe: "\u0645\u0627 \u06a9\u06cc\u0633\u062a\u06cc\u0645",
         connect: "\u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0645\u0627",
+        pricing: "تعرفه‌ها و قیمت‌ها",
         chooseLanguage: "\u0627\u0646\u062a\u062e\u0627\u0628 \u0632\u0628\u0627\u0646",
         active: "\u0641\u0639\u0627\u0644",
+      },
+
+      services: {
+        "title": "خدمات ما",
+        "subtitle": "هر نوع محصول دیجیتالی که کسب‌وکار شما به آن نیاز دارد — از ایده تا اجرای کامل.",
+        "viewAll": "مشاهده همه خدمات",
+        "apps": {
+          "title": "توسعه اپلیکیشن",
+          "lead": "اپلیکیشن‌های اندروید، آی‌اواس، کراس‌پلتفرم و وب با استک‌های مدرن.",
+          "android": "اپلیکیشن اندروید",
+          "ios": "اپلیکیشن iOS",
+          "pwa": "وب‌اپ و PWA",
+          "ecom": "اپلیکیشن فروشگاهی",
+          "classifieds": "اپلیکیشن آگهی و ثبت آگهی",
+          "reader": "اپلیکیشن کتاب‌خوان",
+          "tourism": "اپلیکیشن گردشگری",
+          "taxi": "اپلیکیشن تاکسی و حمل‌ونقل",
+          "booking": "رزرو پرواز و هتل"
+        },
+        "websites": {
+          "title": "طراحی وب‌سایت",
+          "lead": "وب‌سایت‌های اختصاصی یا وردپرسی برای هر صنعتی.",
+          "corporate": "وب‌سایت سازمانی",
+          "classifieds": "وب‌سایت آگهی",
+          "marketplace": "وب‌سایت مارکت‌پلیس",
+          "store": "فروشگاه آنلاین",
+          "restaurant": "وب‌سایت رستوران",
+          "news": "وب‌سایت خبری",
+          "medical": "وب‌سایت پزشکی و درمانگاهی",
+          "tourism": "وب‌سایت گردشگری",
+          "reader": "وب‌سایت کتاب‌خوان",
+          "wordpress": "وب‌سایت وردپرسی"
+        },
+        "ecommerce": {
+          "title": "تجارت الکترونیک",
+          "lead": "فروشگاه‌های آنلاین و مارکت‌پلیس با پرداخت یکپارچه.",
+          "store": "فروشگاه آنلاین",
+          "marketplace": "مارکت‌پلیس چندفروشنده",
+          "subscription": "فروشگاه اشتراکی",
+          "shopify": "فروشگاه Shopify"
+        },
+        "blockchain": {
+          "title": "بلاک‌چین و رمزارز",
+          "lead": "صرافی‌ها، درگاه‌های پرداخت و قراردادهای هوشمند روی بلاک‌چین.",
+          "cex": "صرافی ارز دیجیتال",
+          "dex": "صرافی غیرمتمرکز (DEX)",
+          "p2p": "صرافی همتا به همتا",
+          "otc": "صرافی OTC",
+          "gateway": "درگاه پرداخت رمزارزی",
+          "contracts": "قرارداد هوشمند و توکن",
+          "airdrop": "پلتفرم ایردراپ",
+          "app": "اپلیکیشن صرافی"
+        },
+        "more": {
+          "title": "خدمات بیشتر",
+          "lead": "طراحی، رشد و پشتیبانی که محصول شما را جلو نگه می‌دارد.",
+          "uiux": "طراحی UI/UX",
+          "seo": "سئو و دیجیتال مارکتینگ",
+          "dashboards": "داشبورد و پنل مدیریت",
+          "support": "پشتیبانی و نگهداری"
+        }
+      },
+      pricing: {
+        "title": "تعرفه‌ها و قیمت‌ها",
+        "subtitle": "بسته‌های شفاف و با قیمت ثابت برای هر سرویسی که می‌سازیم — از شروع تا انتشار.",
+        "cta": "مشاوره رایگان",
+        "from": "از",
+        "unit": "میلیون تومان",
+        "apps": {
+          "title": "توسعه اپلیکیشن",
+          "lead": "بسته‌ای متناسب با مرحله محصولتان انتخاب کنید — از MVP تا پلتفرم کامل.",
+          "plans": [
+            {
+              "name": "اپلیکیشن استارتر",
+              "tag": "MVP و یک پلتفرم",
+              "old": "۱۱۰",
+              "price": "۹۰",
+              "features": [
+                "اندروید یا iOS",
+                "محدوده MVP و مسیرهای اصلی",
+                "UI/UX استاندارد",
+                "پنل مدیریت ساده",
+                "انتشار در استور",
+                "۱ ماه پشتیبانی"
+              ]
+            },
+            {
+              "name": "اپلیکیشن حرفه‌ای",
+              "tag": "محبوب‌ترین",
+              "old": "۱۷۰",
+              "price": "۱۴۰",
+              "features": [
+                "اندروید + iOS",
+                "طراحی UI/UX اختصاصی",
+                "پنل مدیریت و داشبورد",
+                "پرداخت و اعلان",
+                "اتصال آنالیتیکس",
+                "۳ ماه پشتیبانی"
+              ]
+            },
+            {
+              "name": "اپلیکیشن سازمانی",
+              "tag": "پلتفرم کامل",
+              "old": "۲۵۰",
+              "price": "۲۱۰",
+              "features": [
+                "کراس‌پلتفرم یا نیتیو",
+                "آفلاین و همگام‌سازی",
+                "داشبورد و گزارش پیشرفته",
+                "یکپارچه‌سازی با سرویس‌ها",
+                "بازبینی امنیت و سرعت",
+                "۱۲ ماه پشتیبانی"
+              ]
+            }
+          ]
+        },
+        "websites": {
+          "title": "طراحی وب‌سایت",
+          "lead": "سایت‌هایی که تبدیل می‌کنند — از لندینگ‌پیج تا پلتفرم کامل.",
+          "plans": [
+            {
+              "name": "وب‌سایت استارتر",
+              "tag": "تا ۸ صفحه",
+              "old": "۵۰",
+              "price": "۴۰",
+              "features": [
+                "طراحی واکنش‌گرا",
+                "تا ۸ صفحه",
+                "فرم تماس",
+                "سئو پایه",
+                "بهینه‌سازی سرعت",
+                "۱ ماه پشتیبانی"
+              ]
+            },
+            {
+              "name": "وب‌سایت حرفه‌ای",
+              "tag": "سی‌ام‌اس و وبلاگ",
+              "old": "۹۰",
+              "price": "۷۰",
+              "features": [
+                "تا ۲۰ صفحه",
+                "سی‌ام‌اس / وردپرس",
+                "بخش وبلاگ و اخبار",
+                "چندزبانه",
+                "آنالیتیکس و فرم‌ها",
+                "۳ ماه پشتیبانی"
+              ]
+            },
+            {
+              "name": "پلتفرم اختصاصی",
+              "tag": "وب‌اپ و داشبورد",
+              "old": "۱۵۰",
+              "price": "۱۲۰",
+              "features": [
+                "وب‌اپلیکیشن اختصاصی",
+                "حساب کاربری و نقش‌ها",
+                "اتصال API",
+                "داشبورد پیشرفته",
+                "ماژول‌های اختصاصی",
+                "۶ ماه پشتیبانی"
+              ]
+            }
+          ]
+        },
+        "ecommerce": {
+          "title": "تجارت الکترونیک",
+          "lead": "فروشگاه‌ها و مارکت‌پلیس‌هایی برای فروش — با سبد، پرداخت و ارسال.",
+          "plans": [
+            {
+              "name": "فروشگاه پایه",
+              "tag": "راه‌اندازی فروشگاه",
+              "old": "۱۰۰",
+              "price": "۸۰",
+              "features": [
+                "کاتالوگ محصولات",
+                "سبد خرید و تسویه",
+                "یک درگاه پرداخت",
+                "مدیریت سفارش",
+                "حساب کاربری",
+                "۱ ماه پشتیبانی"
+              ]
+            },
+            {
+              "name": "فروشگاه پیشرفته",
+              "tag": "مقیاس و بهینه‌سازی",
+              "old": "۱۶۰",
+              "price": "۱۳۰",
+              "features": [
+                "چند درگاه پرداخت",
+                "سیستم تخفیف و کوپن",
+                "انبار و موجودی",
+                "ارسال و رهگیری",
+                "گزارش و آنالیتیکس",
+                "۳ ماه پشتیبانی"
+              ]
+            },
+            {
+              "name": "مارکت‌پلیس",
+              "tag": "چندفروشنده",
+              "old": "۲۶۰",
+              "price": "۲۲۰",
+              "features": [
+                "فروش چندفروشنده",
+                "پنل فروشنده و کارمزد",
+                "تسویه حساب امن",
+                "نظر و امتیاز",
+                "مدیریت مرجوعی",
+                "۶ ماه پشتیبانی"
+              ]
+            }
+          ]
+        },
+        "blockchain": {
+          "title": "بلاک‌چین و رمزارز",
+          "lead": "صرافی‌ها، درگاه‌ها و قراردادهای هوشمند امن روی شبکه‌های معتبر.",
+          "plans": [
+            {
+              "name": "توکن و قرارداد",
+              "tag": "ERC-20 / BEP-20",
+              "old": "۱۱۰",
+              "price": "۹۰",
+              "features": [
+                "توسعه توکن",
+                "قرارداد هوشمند",
+                "استیکینگ یا ایردراپ",
+                "اتصال کیف پول",
+                "پشتیبانی ممیزی",
+                "۱ ماه پشتیبانی"
+              ]
+            },
+            {
+              "name": "درگاه پرداخت",
+              "tag": "پذیرش رمزارز",
+              "old": "۱۹۰",
+              "price": "۱۶۰",
+              "features": [
+                "درگاه پرداخت رمزارزی",
+                "داشبورد فروشنده",
+                "API و افزونه",
+                "تسویه خودکار",
+                "چند ارزی",
+                "۳ ماه پشتیبانی"
+              ]
+            },
+            {
+              "name": "صرافی ارز دیجیتال",
+              "tag": "CEX / OTC / P2P",
+              "old": "۳۲۰",
+              "price": "۲۸۰",
+              "features": [
+                "موتور سفارش‌ها",
+                "کیف پول و KYC",
+                "معامله P2P / OTC",
+                "پنل مدیریت",
+                "ارتقای امنیت",
+                "۶ ماه پشتیبانی"
+              ]
+            }
+          ]
+        },
+        "more": {
+          "title": "خدمات بیشتر",
+          "lead": "طراحی، رشد و پشتیبانی که محصول شما را از رقبا جلو نگه می‌دارد.",
+          "plans": [
+            {
+              "name": "طراحی UI/UX",
+              "tag": "سیستم طراحی",
+              "old": "۷۵",
+              "price": "۶۰",
+              "features": [
+                "ممیزی و تحقیق UX",
+                "وایرفریم و پروتوتایپ",
+                "سیستم طراحی",
+                "ماکاپ تعاملی",
+                "تحویل به تیم فنی",
+                "دورهای بازبینی"
+              ]
+            },
+            {
+              "name": "سئو و مارکتینگ",
+              "tag": "پلن رشد",
+              "old": "۶۵",
+              "price": "۵۰",
+              "features": [
+                "سئو تکنیکال",
+                "استراتژی کلمات کلیدی",
+                "پلن محتوا",
+                "پایش عملکرد",
+                "گزارش ماهانه",
+                "راه‌اندازی کمپین"
+              ]
+            },
+            {
+              "name": "پشتیبانی و نگهداری",
+              "tag": "مراقبت ماهانه",
+              "old": "۳۰",
+              "price": "۲۵",
+              "features": [
+                "به‌روزرسانی ماهانه",
+                "رفع باگ",
+                "پچ‌های امنیتی",
+                "مدیریت بکاپ",
+                "پشتیبانی اولویت‌دار",
+                "صورتحساب ماهانه"
+              ]
+            }
+          ]
+        }
       },
       svcdesc: {
         apps: {
@@ -902,8 +1829,317 @@ window.AMATIS_I18N = (function () {
         blogs: "\u0627\u0644\u0645\u062f\u0648\u0646\u0629",
         whoAreWe: "\u0645\u0646 \u0646\u062d\u0646",
         connect: "\u0627\u062a\u0635\u0644 \u0628\u0646\u0627",
+        pricing: "الباقات والأسعار",
         chooseLanguage: "\u0627\u062e\u062a\u0631 \u0627\u0644\u0644\u063a\u0629",
         active: "\u0646\u0634\u0637",
+      },
+
+      services: {
+        "title": "خدماتنا",
+        "subtitle": "كل نوع من المنتجات الرقمية التي يحتاجها عملك — من الفكرة إلى التنفيذ الكامل.",
+        "viewAll": "عرض جميع الخدمات",
+        "apps": {
+          "title": "تطوير التطبيقات",
+          "lead": "تطبيقات أندرويد و iOS وتطبيقات الويب مع أحدث التقنيات.",
+          "android": "تطبيق أندرويد",
+          "ios": "تطبيق iOS",
+          "pwa": "تطبيق ويب و PWA",
+          "ecom": "تطبيق متجر إلكتروني",
+          "classifieds": "تطبيق إعلانات مبوبة",
+          "reader": "تطبيق قراءة الكتب",
+          "tourism": "تطبيق سياحة",
+          "taxi": "تطبيق تاكسي ونقل",
+          "booking": "حجز طيران وفنادق"
+        },
+        "websites": {
+          "title": "تصميم المواقع",
+          "lead": "مواقع مخصصة أو ووردبريس لكل الصناعات.",
+          "corporate": "موقع شركات",
+          "classifieds": "موقع إعلانات مبوبة",
+          "marketplace": "موقع سوق",
+          "store": "متجر إلكتروني",
+          "restaurant": "موقع مطعم",
+          "news": "موقع إخباري",
+          "medical": "موقع طبي وعيادات",
+          "tourism": "موقع سياحي",
+          "reader": "موقع قراءة الكتب",
+          "wordpress": "موقع ووردبريس"
+        },
+        "ecommerce": {
+          "title": "التجارة الإلكترونية",
+          "lead": "متاجر وأسواق إلكترونية مع دفع مدمج.",
+          "store": "متجر إلكتروني",
+          "marketplace": "سوق متعدد البائعين",
+          "subscription": "متجر اشتراكات",
+          "shopify": "متجر Shopify"
+        },
+        "blockchain": {
+          "title": "البلوكتشين والعملات الرقمية",
+          "lead": "بورصات وبوابات دفع وعقود ذكية على البلوكتشين.",
+          "cex": "بورصة عملات رقمية",
+          "dex": "بورصة لا مركزية (DEX)",
+          "p2p": "بورصة P2P",
+          "otc": "بورصة OTC",
+          "gateway": "بوابة دفع رقمية",
+          "contracts": "عقود ذكية ورموز",
+          "airdrop": "منصة إيردروب",
+          "app": "تطبيق بورصة"
+        },
+        "more": {
+          "title": "خدمات إضافية",
+          "lead": "تصميم ونمو ورعاية تحافظ على تقدم منتجك.",
+          "uiux": "تصميم UI/UX",
+          "seo": "تحسين محركات البحث والتسويق الرقمي",
+          "dashboards": "لوحات تحكم وإدارة",
+          "support": "صيانة ودعم"
+        }
+      },
+      pricing: {
+        "title": "الباقات والأسعار",
+        "subtitle": "باقات شفافة بأسعار ثابت لكل خدمة نقدمها — من البداية إلى الإطلاق.",
+        "cta": "استشارة مجانية",
+        "from": "من",
+        "unit": "مليون تومان",
+        "apps": {
+          "title": "تطوير التطبيقات",
+          "lead": "اختر الباقة المناسبة لمرحلة منتجك — من MVP إلى منصة كاملة.",
+          "plans": [
+            {
+              "name": "تطبيق ستارتر",
+              "tag": "MVP ومنصة واحدة",
+              "old": "110",
+              "price": "90",
+              "features": [
+                "أندرويد أو iOS",
+                "نطاق MVP والمسارات الأساسية",
+                "UI/UX قياسي",
+                "لوحة تحكم أساسية",
+                "نشر في المتجر",
+                "شهر واحد من الدعم"
+              ]
+            },
+            {
+              "name": "تطبيق احترافي",
+              "tag": "الأكثر طلباً",
+              "old": "170",
+              "price": "140",
+              "features": [
+                "أندرويد + iOS",
+                "تصميم UI/UX مخصص",
+                "لوحة تحكم ودراسة",
+                "مدفوعات وإشعارات",
+                "تكامل تحليلات",
+                "3 أشهر من الدعم"
+              ]
+            },
+            {
+              "name": "تطبيق مؤسسي",
+              "tag": "منصة كاملة",
+              "old": "250",
+              "price": "210",
+              "features": [
+                "متعدد المنصات أو أصلي",
+                "وضع دون اتصال ومزامنة",
+                "لوحة تحكم وتقارير متقدمة",
+                "تكاملات خارجية",
+                "مراجعة الأمان والأداء",
+                "12 شهراً من الدعم"
+              ]
+            }
+          ]
+        },
+        "websites": {
+          "title": "تصميم المواقع",
+          "lead": "مواقع تحقق التحويل — من صفحات الهبوط إلى منصات المحتوى.",
+          "plans": [
+            {
+              "name": "موقع ستارتر",
+              "tag": "حتى 8 صفحات",
+              "old": "50",
+              "price": "40",
+              "features": [
+                "تصميم متجاوب",
+                "حتى 8 صفحات",
+                "نموذج تواصل",
+                "أساسيات السيو",
+                "تحسين السرعة",
+                "شهر واحد من الدعم"
+              ]
+            },
+            {
+              "name": "موقع أعمال",
+              "tag": "إدارة محتوى ومدونة",
+              "old": "90",
+              "price": "70",
+              "features": [
+                "حتى 20 صفحة",
+                "إدارة محتوى / ووردبريس",
+                "قسم مدونة وأخبار",
+                "متعدد اللغات",
+                "تحليلات ونماذج",
+                "3 أشهر من الدعم"
+              ]
+            },
+            {
+              "name": "منصة مخصصة",
+              "tag": "تطبيق ويب ولوحة",
+              "old": "150",
+              "price": "120",
+              "features": [
+                "تطبيق ويب مخصص",
+                "حسابات مستخدمين وأدوار",
+                "تكاملات API",
+                "لوحة تحكم متقدمة",
+                "وحدات مخصصة",
+                "6 أشهر من الدعم"
+              ]
+            }
+          ]
+        },
+        "ecommerce": {
+          "title": "التجارة الإلكترونية",
+          "lead": "متاجر وأسواق مصممة للبيع — سلة ودفع وشحن متكاملة.",
+          "plans": [
+            {
+              "name": "متجر أساسي",
+              "tag": "أطلق متجرك",
+              "old": "100",
+              "price": "80",
+              "features": [
+                "كتالوج المنتجات",
+                "سلة ودخول للدفع",
+                "بوابة دفع واحدة",
+                "إدارة الطلبات",
+                "حسابات العملاء",
+                "شهر واحد من الدعم"
+              ]
+            },
+            {
+              "name": "متجر متقدم",
+              "tag": "نمو وتحسين",
+              "old": "160",
+              "price": "130",
+              "features": [
+                "بوابات دفع متعددة",
+                "نظام خصومات وكوبونات",
+                "مخزون ومستودعات",
+                "شحن وتتبع",
+                "تقارير وتحليلات",
+                "3 أشهر من الدعم"
+              ]
+            },
+            {
+              "name": "سوق متعدد البائعين",
+              "tag": "متعدد البائعين",
+              "old": "260",
+              "price": "220",
+              "features": [
+                "بيع متعدد البائعين",
+                "لوحات بائعين وعمولات",
+                "ضمان وتسويات",
+                "تقييمات وآراء",
+                "إدارة المرتجعات",
+                "6 أشهر من الدعم"
+              ]
+            }
+          ]
+        },
+        "blockchain": {
+          "title": "البلوكتشين والعملات الرقمية",
+          "lead": "بورصات وبوابات وعقود ذكية آمنة على الشبكات الرائدة.",
+          "plans": [
+            {
+              "name": "توكن وعقود",
+              "tag": "ERC-20 / BEP-20",
+              "old": "110",
+              "price": "90",
+              "features": [
+                "تطوير توكن",
+                "عقود ذكية",
+                "تخزين أو إيردروب",
+                "تكامل محفظة",
+                "دعم التدقيق",
+                "شهر واحد من الدعم"
+              ]
+            },
+            {
+              "name": "بوابة دفع",
+              "tag": "قبول العملات الرقمية",
+              "old": "190",
+              "price": "160",
+              "features": [
+                "بوابة دفع رقمية",
+                "لوحة تحكم تاجر",
+                "API وإضافات",
+                "تسوية تلقائية",
+                "متعدد العملات",
+                "3 أشهر من الدعم"
+              ]
+            },
+            {
+              "name": "بورصة عملات",
+              "tag": "CEX / OTC / P2P",
+              "old": "320",
+              "price": "280",
+              "features": [
+                "محرك أوامر",
+                "محافظ و KYC",
+                "تداول P2P / OTC",
+                "لوحة إدارة",
+                "تعزيز الأمان",
+                "6 أشهر من الدعم"
+              ]
+            }
+          ]
+        },
+        "more": {
+          "title": "خدمات إضافية",
+          "lead": "تصميم ونمو ورعاية تحافظ على تقدم منتجك.",
+          "plans": [
+            {
+              "name": "تصميم UI/UX",
+              "tag": "نظام تصميم",
+              "old": "75",
+              "price": "60",
+              "features": [
+                "تدقيق وبحث UX",
+                "ويرفريم ونماذج أولية",
+                "نظام تصميم",
+                "نماذج تفاعلية",
+                "تسليم للمطورين",
+                "جولات مراجعة"
+              ]
+            },
+            {
+              "name": "سيو وتسويق",
+              "tag": "خطة نمو",
+              "old": "65",
+              "price": "50",
+              "features": [
+                "سيو تقني",
+                "استراتيجية كلمات مفتاحية",
+                "خطة محتوى",
+                "تتبع الأداء",
+                "تقارير شهرية",
+                "إعداد حملات إعلانية"
+              ]
+            },
+            {
+              "name": "صيانة ودعم",
+              "tag": "رعاية شهرية",
+              "old": "30",
+              "price": "25",
+              "features": [
+                "تحديثات شهرية",
+                "إصلاح الأخطاء",
+                "ترقيات أمان",
+                "إدارة النسخ الاحتياطي",
+                "دعم ذو أولوية",
+                "فوترة شهرية"
+              ]
+            }
+          ]
+        }
       },
       svcdesc: {
         apps: {
