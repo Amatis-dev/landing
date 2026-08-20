@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin · Amatis</title>
+  <style>
+    :root {
+      --bg: #0B1120;
+      --bg-2: #0f172a;
+      --surface: #16203a;
+      --surface-2: #1c2945;
+      --line: #27334f;
+      --line-2: #33415f;
+      --text: #e8eef8;
+      --text-2: #b8c4d8;
+      --muted: #7c8aa3;
+      --primary: #14b8a8;
+      --primary-2: #0d9488;
+      --danger: #f06b6b;
+      --success: #34d399;
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg), var(--bg-2));
+      color: var(--text);
+      min-height: 100vh;
+    }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 34px 20px 60px; }
+
+    /* Header */
+    .top {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; flex-wrap: wrap;
+    }
+    .top h1 { font-size: 22px; margin: 0; font-weight: 900; letter-spacing: .2px; }
+    .top .sub { color: var(--muted); font-size: 13px; margin-top: 4px; font-weight: 600; }
+    .accent { color: var(--primary); }
+
+    /* Cards */
+    .card {
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: 18px; padding: 22px; margin-top: 22px;
+    }
+    .card h2 { font-size: 15px; margin: 0 0 4px; font-weight: 900; }
+    .card .sub { color: var(--muted); font-size: 12.5px; font-weight: 600; margin-bottom: 16px; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .row-3 { grid-template-columns: 1fr 1fr 1fr; }
+    .row-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
+    @media (max-width: 700px) { .row, .row-3, .row-4 { grid-template-columns: 1fr; } }
+
+    label.block { display: block; }
+    label.block > span { display: block; font-size: 12px; font-weight: 800; color: var(--text-2); margin-bottom: 6px; }
+    input, textarea, select {
+      width: 100%; background: var(--surface-2); color: var(--text);
+      border: 1px solid var(--line-2); border-radius: 10px;
+      padding: 10px 12px; font-size: 13.5px; font-weight: 600; outline: none;
+      font-family: inherit;
+    }
+    input:focus, textarea:focus, select:focus { border-color: var(--primary); }
+    textarea { resize: vertical; min-height: 90px; }
+    input[type=checkbox] { width: auto; }
+    .check { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: var(--text-2); }
+    .section-label {
+      font-size: 13px; font-weight: 900; color: var(--text); margin: 18px 0 4px;
+    }
+    .hint { font-size: 11.5px; color: var(--muted); font-weight: 600; margin-top: 10px; line-height: 1.6; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+      border: none; border-radius: 11px; padding: 11px 20px;
+      font-size: 13.5px; font-weight: 900; font-family: inherit;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      color: #06302b; transition: opacity .15s, transform .1s;
+    }
+    .btn:hover { filter: brightness(1.06); }
+    .btn:disabled { opacity: .55; cursor: not-allowed; }
+    .btn.ghost { background: var(--surface-2); color: var(--text); border: 1px solid var(--line-2); }
+    .btn.danger { background: linear-gradient(135deg, #ef5350, #c62828); color: #fff; }
+    .btn.sm { padding: 7px 13px; font-size: 12px; border-radius: 9px; }
+
+    /* Nav / auth */
+    .tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 22px; }
+    .tabs button {
+      cursor: pointer; border: 1px solid var(--line-2); background: var(--surface);
+      color: var(--text-2); border-radius: 12px; padding: 10px 16px;
+      font-size: 13px; font-weight: 800; font-family: inherit;
+    }
+    .tabs button.active { background: var(--primary); color: #06302b; border-color: var(--primary); }
+
+    /* Messages */
+    .msg {
+      border: 1px solid var(--line); border-radius: 14px; padding: 16px; margin-top: 12px; background: var(--surface-2);
+    }
+    .msg.unread { border-color: var(--primary); }
+    .msg .topline { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+    .msg .name { font-weight: 900; font-size: 13.5px; }
+    .msg .mail { color: var(--muted); font-size: 12px; font-weight: 700; }
+    .msg .date { color: var(--muted); font-size: 11.5px; font-weight: 700; }
+    .badge {
+      background: var(--primary); color: #06302b; font-size: 10px; font-weight: 900;
+      border-radius: 999px; padding: 2px 8px;
+    }
+    .msg .subject { margin-top: 12px; font-size: 13px; font-weight: 900; color: var(--text); }
+    .msg .body-text {
+      margin-top: 6px; font-size: 13px; line-height: 1.7; color: var(--text-2); white-space: pre-wrap;
+    }
+    .msg .acts { margin-top: 12px; display: flex; gap: 14px; }
+
+    .empty { color: var(--muted); font-size: 13px; font-weight: 600; margin-top: 14px; }
+
+    /* Login */
+    .login-card {
+      max-width: 400px; margin: 9vh auto 0; background: var(--surface);
+      border: 1px solid var(--line); border-radius: 20px; padding: 30px;
+    }
+    .login-card .logo { font-size: 26px; font-weight: 900; text-align: center; color: var(--text); }
+    .login-card .logo .accent { color: var(--primary); }
+    .login-card p.lsub { text-align: center; color: var(--muted); font-size: 12.5px; font-weight: 600; margin: 6px 0 22px; }
+    .login-card .field { margin-bottom: 14px; }
+    .login-card .btn { width: 100%; justify-content: center; }
+
+    .toast {
+      position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+      background: var(--surface-2); border: 1px solid var(--line-2); color: var(--text);
+      padding: 12px 20px; border-radius: 12px; font-size: 13px; font-weight: 800;
+      box-shadow: 0 12px 34px rgba(0,0,0,.4); opacity: 0; pointer-events: none; transition: opacity .2s; z-index: 50;
+    }
+    .toast.show { opacity: 1; }
+    .toast.ok { border-color: var(--success); color: var(--success); }
+    .toast.err { border-color: var(--danger); color: var(--danger); }
+    .hidden { display: none; }
+    .divider { height: 1px; background: var(--line); margin: 18px 0; }
+    .mono { direction: ltr; text-align: left; }
+  </style>
+</head>
+<body>
+  <div class="wrap" id="app"></div>
+  <div class="toast" id="toast"></div>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var app = document.getElementById("app");
+      var toastEl = document.getElementById("toast");
+      var toastTimer = null;
+
+      function toast(text, kind) {
+        toastEl.textContent = text;
+        toastEl.className = "toast show" + (kind === "ok" ? " ok" : kind === "err" ? " err" : "");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () { toastEl.classList.remove("show"); }, 4200);
+      }
+
+      function api(path, opts) {
+        opts = opts || {};
+        var init = {
+          method: opts.method || "GET",
+          credentials: "same-origin",
+          headers: opts.body ? { "Content-Type": "application/json" } : undefined,
+        };
+        if (opts.body) init.body = JSON.stringify(opts.body);
+        return fetch("/api" + path, init).then(function (res) {
+          return res.json().catch(function () { return {}; }).then(function (json) {
+            if (!res.ok || !json.ok) {
+              var err = new Error(json.error || ("HTTP " + res.status));
+              err.status = res.status;
+              err.json = json;
+              throw err;
+            }
+            return json.data;
+          });
+        });
+      }
+
+      /* ---------- Login view ---------- */
+      function renderLogin() {
+        app.innerHTML =
+          '<div class="login-card">' +
+          '<div class="logo">🛡️ Amatis <span class="accent">Admin</span></div>' +
+          '<p class="lsub">Sign in to manage your website</p>' +
+          '<form id="login-form">' +
+          '<div class="field"><label class="block"><span>Email</span>' +
+          '<input class="mono" type="email" id="l-email" autocomplete="username" required></label></div>' +
+          '<div class="field"><label class="block"><span>Password</span>' +
+          '<input class="mono" type="password" id="l-pass" autocomplete="current-password" required></label></div>' +
+          '<button class="btn" type="submit" id="l-btn">Sign in</button>' +
+          '</form></div>';
+        document.getElementById("login-form").addEventListener("submit", function (e) {
+          e.preventDefault();
+          var btn = document.getElementById("l-btn");
+          btn.disabled = true; btn.textContent = "…";
+          api("/auth/login", { method: "POST", body: {
+            email: document.getElementById("l-email").value,
+            password: document.getElementById("l-pass").value,
+          } })
+            .then(function () { boot(); })
+            .catch(function (err) { toast(err.status === 401 ? "Invalid email or password." : "Login failed.", "err"); })
+            .finally(function () { btn.disabled = false; btn.textContent = "Sign in"; });
+        });
+      }
+
+      /* ---------- Dashboard shell ---------- */
+      function renderShell(user) {
+        app.innerHTML =
+          '<div class="top">' +
+          '<div><h1>🛡️ Amatis <span class="accent">Admin</span></h1>' +
+          '<div class="sub">Signed in as ' + esc(user.email) + '</div></div>' +
+          '<div><button class="btn ghost sm" id="logout">Log out</button></div>' +
+          '</div>' +
+          '<div class="tabs">' +
+          '<button data-tab="content" class="active">🖊️ Page content</button>' +
+          '<button data-tab="messages">📥 Messages</button>' +
+          '<button data-tab="email">✉️ Email</button>' +
+          '</div>' +
+          '<div id="tab-content"></div>';
+        document.getElementById("logout").addEventListener("click", function () {
+          api("/auth/logout", { method: "POST" }).finally(function () { renderLogin(); });
+        });
+        document.querySelectorAll("[data-tab]").forEach(function (b) {
+          b.addEventListener("click", function () {
+            document.querySelectorAll("[data-tab]").forEach(function (x) { x.classList.remove("active"); });
+            b.classList.add("active");
+            showTab(b.getAttribute("data-tab"));
+          });
+        });
+        showTab("content");
+      }
+
+      function showTab(name) {
+        var host = document.getElementById("tab-content");
+        if (name === "content") renderContent(host);
+        else if (name === "messages") renderMessages(host);
+        else if (name === "email") renderEmail(host);
+      }
+
+      /* ---------- Page content editor ---------- */
+      var CONTENT_FIELDS = [
+        { key: "contact_phone", label: "Phone", loc: null, ph: "+852 2569 7974" },
+        { key: "contact_email", label: "Email", loc: null, ph: "hello@amatis.com" },
+        { key: "contact_address", label: "Address", loc: ["en", "de", "fa", "ar"] },
+        { key: "contact_hours", label: "Support hours", loc: ["en", "de", "fa", "ar"] },
+        { key: "contact_schedule_title", label: "Schedule panel — title", loc: ["en", "de", "fa", "ar"] },
+        { key: "contact_schedule_text", label: "Schedule panel — text", loc: ["en", "de", "fa", "ar"] },
+        { key: "contact_schedule_button", label: "Schedule panel — button", loc: ["en", "de", "fa", "ar"] },
+      ];
+      var LOCALES = [
+        { code: "en", label: "English" },
+        { code: "de", label: "Deutsch" },
+        { code: "fa", label: "فارسی" },
+        { code: "ar", label: "العربية" },
+      ];
+
+      function renderContent(host) {
+        host.innerHTML =
+          '<div class="card"><h2>Contact &amp; page content</h2>' +
+          '<div class="sub">These values are shown on the "Connect With Us" page. Locale-specific fields update when visitors switch language.</div>' +
+          '<div id="content-fields">Loading…</div>' +
+          '<div class="hint">The form itself (headings, labels, button text) is translated automatically for English, Deutsch, فارسی and العربية.</div>' +
+          '<button class="btn" id="save-content" style="margin-top:18px">Save changes</button></div>';
+
+        api("/admin/settings").then(function (data) {
+          var rows = data.settings || [];
+          var map = {};
+          rows.forEach(function (r) { map[r.key] = r.value; });
+
+          var html = "";
+          CONTENT_FIELDS.forEach(function (f) {
+            html += '<div class="section-label">' + esc(f.label) + "</div>";
+            if (!f.loc) {
+              html += '<div class="row"><label class="block"><span>' + esc(f.label) + "</span><input data-k='" + f.key + "' value='" + escAttr(map[f.key] || "") + "'></label></div>";
+            } else {
+              html += '<div class="row row-4">';
+              LOCALES.forEach(function (lc) {
+                var k = f.key + "_" + lc.code;
+                html += "<label class=\"block\"><span>" + lc.code.toUpperCase() + " · " + esc(lc.label) + "</span>" +
+                  "<input data-k='" + k + "' value='" + escAttr(map[k] || "") + "'" + (lc.code === "fa" || lc.code === "ar" ? " dir='rtl'" : "") + "></label>";
+              });
+              html += "</div>";
+            }
+          });
+          document.getElementById("content-fields").innerHTML = html;
+        }).catch(function (err) {
+          document.getElementById("content-fields").innerHTML =
+            '<p class="empty">Failed to load settings (' + esc(err.message) + ")</p>";
+        });
+
+        document.getElementById("save-content").addEventListener("click", function () {
+          var btn = document.getElementById("save-content");
+          btn.disabled = true; btn.textContent = "Saving…";
+          var inputs = document.querySelectorAll("#content-fields input[data-k]");
+          var calls = [];
+          inputs.forEach(function (inp) {
+            calls.push(api("/admin/settings", { method: "POST", body: {
+              key: inp.getAttribute("data-k"),
+              value: inp.value,
+              group: "contact",
+              isSecret: false,
+            } }));
+          });
+          Promise.all(calls)
+            .then(function () { toast("Saved. The site now shows the new values.", "ok"); })
+            .catch(function (err) { toast("Save failed: " + err.message, "err"); })
+            .finally(function () { btn.disabled = false; btn.textContent = "Save changes"; });
+        });
+      }
+
+      /* ---------- Messages ---------- */
+      function renderMessages(host) {
+        host.innerHTML =
+          '<div class="card"><h2>📥 Contact messages</h2>' +
+          '<div class="sub">Messages sent from the contact form on the website.</div>' +
+          '<div id="msg-list">Loading…</div></div>';
+        loadMessages();
+      }
+
+      function msgRow(m) {
+        return (
+          '<div class="msg' + (m.isRead ? "" : " unread") + '" data-id="' + m.id + '">' +
+          '<div class="topline">' +
+          '<span><span class="name">' + esc(m.name) + "</span>" +
+          ' &nbsp; <a class="mail" href="mailto:' + escAttr(m.email) + '">' + esc(m.email) + "</a>" +
+          (!m.isRead ? ' &nbsp; <span class="badge">UNREAD</span>' : "") + "</span>" +
+          '<span class="date">' + esc(new Date(m.createdAt).toLocaleString()) + "</span>" +
+          "</div>" +
+          (m.subject ? '<div class="subject">' + esc(m.subject) + "</div>" : "") +
+          '<div class="body-text">' + esc(m.message) + "</div>" +
+          '<div class="acts">' +
+          (!m.isRead ? '<button class="btn sm ghost" data-act="read">Mark as read</button>' : "") +
+          '<button class="btn sm danger" data-act="del">Delete</button>' +
+          "</div></div>"
+        );
+      }
+
+      function loadMessages() {
+        var box = document.getElementById("msg-list");
+        api("/admin/contact-messages?take=100").then(function (data) {
+          var msgs = data.messages || [];
+          if (!msgs.length) { box.innerHTML = '<p class="empty">No messages yet.</p>'; return; }
+          box.innerHTML = msgs.map(msgRow).join("");
+          box.querySelectorAll("button[data-act]").forEach(function (btn) {
+            btn.addEventListener("click", function () {
+              var item = btn.closest(".msg");
+              var id = item.getAttribute("data-id");
+              if (btn.getAttribute("data-act") === "del") {
+                if (!confirm("Delete this message?")) return;
+                api("/admin/contact-messages?id=" + encodeURIComponent(id), { method: "DELETE" })
+                  .then(function () { item.remove(); toast("Message deleted.", "ok"); })
+                  .catch(function (e) { toast("Delete failed: " + e.message, "err"); });
+              } else {
+                api("/admin/contact-messages", { method: "PATCH", body: { id: id, isRead: true } })
+                  .then(function () { item.classList.remove("unread"); btn.remove(); })
+                  .catch(function (e) { toast("Update failed: " + e.message, "err"); });
+              }
+            });
+          });
+        }).catch(function (err) {
+          box.innerHTML = '<p class="empty">Failed to load messages (' + esc(err.message) + ")</p>";
+        });
+      }
+
+      /* ---------- Email ---------- */
+      var EMAIL_KEYS = [
+        { key: "resend_api_key", label: "Resend API key", secret: true, ph: "re_... (used first)" },
+        { key: "smtp_host", label: "SMTP host (fallback)", secret: false, ph: "smtp.example.com" },
+        { key: "smtp_port", label: "Port", secret: false, ph: "587" },
+        { key: "smtp_user", label: "Username", secret: false, ph: "admin@example.com" },
+        { key: "smtp_pass", label: "Password", secret: true, ph: "" },
+        { key: "mail_from", label: "From address", secret: false, ph: "onboarding@resend.dev" },
+      ];
+      var MASKED = "••••••••";
+
+      function renderEmail(host) {
+        host.innerHTML =
+          '<div class="card"><h2>✉️ Email settings</h2>' +
+          '<div class="sub">Resend (API key) is used first, SMTP as fallback, for contact-form notifications and emails/replies. The From address must be a verified sender in Resend (onboarding@resend.dev works only for the account-owner email).</div>' +
+          '<div class="row row-3" id="email-fields">Loading…</div>' +
+          '<button class="btn" id="save-email" style="margin-top:16px">Save email settings</button>' +
+          '<button class="btn ghost" id="btn-test" style="margin-top:16px">Send test email</button>' +
+          '<div class="divider"></div>' +
+          '<h2>✉️ Send an email / reply to a user</h2>' +
+          '<div class="sub">Compose and send to any address (e.g. replying to a contact message).</div>' +
+          '<div class="row"><label class="block"><span>To</span><input class="mono" id="s-to" placeholder="user@example.com"></label>' +
+          '<label class="block"><span>Subject</span><input id="s-subject" placeholder="Hello"></label></div>' +
+          '<label class="block" style="margin-top:14px"><span>Message</span><textarea id="s-body" rows="6"></textarea></label>' +
+          '<button class="btn" id="btn-send" style="margin-top:16px">Send email</button></div>';
+
+        api("/admin/settings").then(function (data) {
+          var map = {};
+          (data.settings || []).forEach(function (r) { map[r.key] = r.value; });
+          var html = "";
+          EMAIL_KEYS.forEach(function (f) {
+            var val = f.secret ? "" : (map[f.key] || "");
+            html += "<label class=\"block\"><span>" + f.label + "</span>" +
+              (f.secret ? "" : "") +
+              "<input class=\"mono\" data-k='" + f.key + "' type='" + (f.secret ? "password" : "text") + "'" +
+              (f.secret ? " placeholder='" + MASKED + "'" : " value='" + escAttr(val) + "' placeholder='" + escAttr(f.ph) + "'") +
+              "></label>";
+          });
+          html += "<label class=\"block check\" style=\"grid-column:1/-1;margin-top:12px\"><input id=\"s-secure\" type=\"checkbox\"" +
+            (map.smtp_secure === "true" ? " checked" : "") + "> SSL/TLS connection (usually port 465)</label>";
+          document.getElementById("email-fields").innerHTML = html;
+        }).catch(function (err) {
+          document.getElementById("email-fields").innerHTML =
+            '<p class="empty">Failed to load settings (' + esc(err.message) + ")</p>";
+        });
+
+        document.getElementById("save-email").addEventListener("click", function () {
+          var btn = this; btn.disabled = true; btn.textContent = "Saving…";
+          var calls = [];
+          EMAIL_KEYS.forEach(function (f) {
+            var inp = document.querySelector("input[data-k='" + f.key + "']");
+            if (!inp) return;
+            var value = inp.value;
+            if (f.secret && (!value || value === MASKED)) return; // keep existing secret
+            calls.push(api("/admin/settings", { method: "POST", body: {
+              key: f.key, value: value, group: "email", isSecret: !!f.secret,
+            } }));
+          });
+          var secure = document.getElementById("s-secure").checked ? "true" : "false";
+          calls.push(api("/admin/settings", { method: "POST", body: {
+            key: "smtp_secure", value: secure, group: "email", isSecret: false,
+          } }));
+          Promise.all(calls)
+            .then(function () { toast("Email settings saved.", "ok"); })
+            .catch(function (err) { toast("Save failed: " + err.message, "err"); })
+            .finally(function () { btn.disabled = false; btn.textContent = "Save email settings"; });
+        });
+
+        document.getElementById("btn-test").addEventListener("click", function () {
+          var btn = this; btn.disabled = true; btn.textContent = "Sending…";
+          api("/admin/test-email", { method: "POST", body: {} })
+            .then(function (d) { toast("Sent to " + d.to, "ok"); })
+            .catch(function (err) { toast("Send failed: " + (err.json && err.json.detail || err.message), "err"); })
+            .finally(function () { btn.disabled = false; btn.textContent = "Send test email"; });
+        });
+
+        document.getElementById("btn-send").addEventListener("click", function () {
+          var btn = this; btn.disabled = true; btn.textContent = "Sending…";
+          api("/admin/send-message", { method: "POST", body: {
+            to: document.getElementById("s-to").value,
+            subject: document.getElementById("s-subject").value,
+            body: document.getElementById("s-body").value,
+          } })
+            .then(function (d) { toast("Sent to " + d.to, "ok"); })
+            .catch(function (err) { toast("Send failed: " + (err.json && err.json.detail || err.message), "err"); })
+            .finally(function () { btn.disabled = false; btn.textContent = "Send email"; });
+        });
+      }
+
+      /* ---------- utils ---------- */
+      function esc(s) {
+        return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+        });
+      }
+      function escAttr(s) { return esc(s).replace(/`/g, "&#96;"); }
+
+      function boot() {
+        api("/auth/me").then(function (data) {
+          renderShell(data.user);
+        }).catch(function () {
+          renderLogin();
+        });
+      }
+
+      boot();
+    })();
+  </script>
+</body>
+</html>

@@ -282,10 +282,56 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var msg = form.querySelector(".form-message");
-      if (msg) msg.classList.add("show");
-      form.reset();
+      if (msg) msg.classList.remove("show");
+      var errEl = form.querySelector(".form-error");
+      if (errEl) errEl.remove();
+
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn) btn.disabled = true;
+
+      var payload = {};
+      form.querySelectorAll("input, textarea").forEach(function (el) {
+        if (el.name) payload[el.name] = el.value;
+      });
+
+      fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      })
+        .then(function (res) {
+          return res.json().catch(function () {
+            return {};
+          });
+        })
+        .then(function (json) {
+          if (json && json.ok) {
+            form.reset();
+            if (msg) msg.classList.add("show");
+          } else {
+            showFormError(form);
+          }
+        })
+        .catch(function () {
+          showFormError(form);
+        })
+        .finally(function () {
+          if (btn) btn.disabled = false;
+        });
     });
   });
+
+  function showFormError(form) {
+    var existing = form.querySelector(".form-error");
+    if (!existing) {
+      existing = document.createElement("p");
+      existing.className = "form-error";
+      form.insertBefore(existing, form.querySelector(".form-message"));
+    }
+    var text = null;
+    if (i18n && i18n.get) text = i18n.get(i18n.current(), "connect.errorGeneric");
+    existing.textContent = text || "Something went wrong. Please try again later.";
+  }
 
   /* ---------------- Back to top ---------------- */
   var btt = document.querySelector(".back-to-top");

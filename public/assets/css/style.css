@@ -2066,6 +2066,15 @@ section {
 .form-message.show {
   display: block;
 }
+.form-error {
+  margin-top: 14px;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--danger);
+  background: rgba(224, 79, 79, 0.12);
+}
 
 /* ---------- Footer (dark slate, vandar-style) ---------- */
 .site-footer {
