@@ -7,7 +7,7 @@ const prisma = new PrismaClient();
 
 const DEFAULT_SETTINGS = [
   { key: "contact_phone", value: "+852 2569 7974", secret: false, group: "contact" },
-  { key: "contact_email", value: "hello@amatis.com", secret: false, group: "contact" },
+  { key: "contact_email", value: "hello@amatisberry.ir", secret: false, group: "contact" },
   { key: "contact_address_en", value: "21 King Street, Melbourne, Victoria 1202, Australia", secret: false, group: "contact" },
   { key: "contact_address_de", value: "21 King Street, Melbourne, Victoria 1202, Australien", secret: false, group: "contact" },
   { key: "contact_address_fa", value: "خیابان کینگ ۲۱، ملبورن، ویکتوریا ۱۲۰۲، استرالیا", secret: false, group: "contact" },

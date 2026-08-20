@@ -21,7 +21,7 @@ async function loadSmtpConfig(): Promise<SmtpConfig | null> {
     (await getSetting("mail_from")) ||
     process.env.MAIL_FROM ||
     user ||
-    "hello@amatis.com";
+    "hello@amatisberry.ir";
   const portNum = Number(port);
   return {
     host,
