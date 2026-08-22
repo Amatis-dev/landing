@@ -81,8 +81,15 @@ const FOOTER = `
     </div>
   </footer>`;
 
+const CHROME: Record<string, { home: string; blogs: string; minRead: string; ctaTitle: string; ctaText: string; ctaButton: string }> = {
+  en: { home: "Home", blogs: "Blogs", minRead: "min read", ctaTitle: "Ready to grow your business?", ctaText: "Talk to the Amatis team about your project — free consultation.", ctaButton: "Connect With Us" },
+  fa: { home: "خانه", blogs: "وبلاگ", minRead: "دقیقه مطالعه", ctaTitle: "آمادهٔ رشد کسب‌وکارتان هستید؟", ctaText: "درمورد پروژه‌تان با تیم اماتیس صحبت کنید — مشاوره اولیه رایگان است.", ctaButton: "ارتباط با ما" },
+  ar: { home: "الرئيسية", blogs: "المدونة", minRead: "دقائق القراءة", ctaTitle: "جاهز لتنمية عملك؟", ctaText: "تحدث مع فريق أماتيس عن مشروعك — استشارة مجانية.", ctaButton: "تواصل معنا" },
+};
+
 export function renderPostPage(post: PublicPost): string {
   const dir = post.lang === "fa" || post.lang === "ar" ? "rtl" : "ltr";
+  const L = CHROME[post.lang] || CHROME.en;
   const date = formatPostDate(new Date(post.publishedAt), post.lang);
   const minutes = new Intl.NumberFormat(
     post.lang === "fa" ? "fa-IR" : post.lang === "ar" ? "ar" : "en",
@@ -127,19 +134,18 @@ export function renderPostPage(post: PublicPost): string {
     <section class="py-section">
       <div class="container-page post-wrap">
         <nav class="post-crumb" aria-label="Breadcrumb">
-          <a href="/">Home</a> <span>/</span> <a href="/blogs.html">Blogs</a> <span>/</span> <span>${escapeHtml(post.title)}</span>
-        </nav>
+          <a href="/">${L.home}</a> <span>/</span> <a href="/blogs.html">${L.blogs}</a> <span>/</span> <span>${escapeHtml(post.title)}</span>        </nav>
         <span class="post-tag-pill">${escapeHtml(post.tag || "Blog")}</span>
         <h1 class="post-title">${escapeHtml(post.title)}</h1>
         <div class="post-meta">
-          <span><strong>Amatis</strong></span><span>•</span><span>${date}</span><span>•</span><span>${minutes} min read</span>
+          <span><strong>Amatis</strong></span><span>•</span><span>${date}</span><span>•</span><span>${minutes} ${L.minRead}</span>
         </div>
         ${cover}
         <div class="post-body">${post.content}</div>
         <div class="post-cta">
-          <h3>Ready to grow your business?</h3>
-          <p>Talk to the Amatis team about your project — free consultation.</p>
-          <a class="btn-pill" href="/connect-with-us.html">Connect With Us</a>
+          <h3>${L.ctaTitle}</h3>
+          <p>${L.ctaText}</p>
+          <a class="btn-pill" href="/connect-with-us.html">${L.ctaButton}</a>
         </div>
       </div>
     </section>

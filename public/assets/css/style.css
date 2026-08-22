@@ -1934,6 +1934,10 @@ section {
 }
 
 /* ---------- Blog list page ---------- */
+.blog-list {
+  display: grid;
+  gap: 28px;
+}
 .blog-list .blog-card {
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr);
@@ -1949,6 +1953,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
 }
 
 /* ---------- Contact ---------- */

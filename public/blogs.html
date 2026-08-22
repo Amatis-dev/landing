@@ -281,38 +281,58 @@
       }
 
       var list = document.getElementById("blogList");
-      var status = document.getElementById("blogStatus");
 
-      fetch("/api/blog", { cache: "no-store" })
-        .then(function (r) { return r.json(); })
-        .then(function (json) {
-          status.remove();
-          var posts = (json && json.ok && json.data.posts) || [];
-          if (!posts.length) {
-            list.innerHTML = "<p style='opacity:.7'>" + t("blogList.empty", "No articles yet.") + "</p>";
-            return;
-          }
-          posts.forEach(function (p, idx) {
-            var art = document.createElement("article");
-            art.className = "blog-card card-hover reveal is-visible";
-            var meta = [p.tag, fmtNum(p.readMinutes, p.lang) + " " + t("blogList.minRead", "min read")]
-              .filter(Boolean).join(" · ");
-            art.innerHTML =
-              '<a class="blog-thumb" href="/blog/' + encodeURIComponent(p.slug) + '">' +
-              '<img src="' + (p.coverImage || "/assets/images/news-1.jpg") + '" alt="" loading="lazy"></a>' +
-              '<div class="blog-body">' +
-              '<span class="blog-date">' + fmtDate(p.publishedAt, p.lang) + "</span>" +
-              '<h3><a href="/blog/' + encodeURIComponent(p.slug) + '"></a></h3>' +
-              '<p class="blog-meta"></p>';
-            art.querySelector("h3 a").textContent = p.title;
-            art.querySelector(".blog-meta").textContent = meta;
-            list.appendChild(art);
+      function uiPostLang() {
+        var cur = "en";
+        try { cur = window.AMATIS_I18N.current(); } catch (e) {}
+        return cur === "fa" ? "fa" : "en";
+      }
+
+      function loadPosts() {
+        var status = document.getElementById("blogStatus");
+        if (!status) {
+          status = document.createElement("p");
+          status.id = "blogStatus";
+          status.style.opacity = ".7";
+          list.innerHTML = "";
+          list.appendChild(status);
+        }
+        status.textContent = t("blogList.loading", "Loading…");
+        fetch("/api/blog?lang=" + uiPostLang(), { cache: "no-store" })
+          .then(function (r) { return r.json(); })
+          .then(function (json) {
+            list.innerHTML = "";
+            var posts = (json && json.ok && json.data.posts) || [];
+            if (!posts.length) {
+              list.innerHTML = "<p style='opacity:.7'>" + t("blogList.empty", "No articles yet.") + "</p>";
+              return;
+            }
+            posts.forEach(function (p, idx) {
+              var art = document.createElement("article");
+              art.className = "blog-card card-hover reveal is-visible";
+              var meta = [p.tag, fmtNum(p.readMinutes, p.lang) + " " + t("blogList.minRead", "min read")]
+                .filter(Boolean).join(" · ");
+              art.innerHTML =
+                '<a class="blog-thumb" href="/blog/' + encodeURIComponent(p.slug) + '">' +
+                '<img src="' + (p.coverImage || "/assets/images/news-1.jpg") + '" alt="" loading="lazy"></a>' +
+                '<div class="blog-body">' +
+                '<span class="blog-date"></span>' +
+                '<h3><a href="/blog/' + encodeURIComponent(p.slug) + '"></a></h3>' +
+                '<p class="blog-meta"></p>';
+              art.querySelector(".blog-date").textContent = fmtDate(p.publishedAt, p.lang);
+              art.querySelector("h3 a").textContent = p.title;
+              art.querySelector(".blog-meta").textContent = meta;
+              list.appendChild(art);
+            });
+          })
+          .catch(function () {
+            var st = document.getElementById("blogStatus");
+            if (st) st.textContent = t("blogList.error", "Couldn't load articles.");
           });
-          document.dispatchEvent(new CustomEvent("blogs:rendered"));
-        })
-        .catch(function () {
-          status.textContent = t("blogList.error", "Couldn't load articles.");
-        });
+      }
+
+      loadPosts();
+      document.addEventListener("i18n:applied", loadPosts);
     })();
   </script>
   <style>
