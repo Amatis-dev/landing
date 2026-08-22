@@ -285,7 +285,7 @@
       function uiPostLang() {
         var cur = "en";
         try { cur = window.AMATIS_I18N.current(); } catch (e) {}
-        return cur === "fa" ? "fa" : "en";
+        return cur;
       }
 
       function loadPosts() {
@@ -298,7 +298,7 @@
           list.appendChild(status);
         }
         status.textContent = t("blogList.loading", "Loading…");
-        fetch("/api/blog?lang=" + uiPostLang(), { cache: "no-store" })
+        fetch("/api/blog?lang=" + encodeURIComponent(uiPostLang()), { cache: "no-store" })
           .then(function (r) { return r.json(); })
           .then(function (json) {
             list.innerHTML = "";

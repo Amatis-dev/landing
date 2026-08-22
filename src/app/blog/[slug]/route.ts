@@ -13,7 +13,12 @@ export async function GET(
   if (!post) {
     return new Response("Not found", { status: 404 });
   }
-  return new Response(renderPostPage(post), {
+  const siblings = await prisma.blogPost.findMany({
+    where: { groupId: post.groupId, published: true },
+    select: { slug: true, lang: true },
+    orderBy: { lang: "asc" },
+  });
+  return new Response(renderPostPage(post, siblings), {
     status: 200,
     headers: { "content-type": "text/html; charset=utf-8" },
   });

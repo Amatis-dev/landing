@@ -43,6 +43,10 @@ const POST_STYLES = `
     .post-cta h3{font-size:1.3rem;font-weight:900;margin-bottom:.6rem;}
     .post-cta p{opacity:.8;margin-bottom:1.2rem;}
     .btn-pill{display:inline-block;padding:.85rem 1.9rem;border-radius:999px;font-weight:800;color:#fff!important;background:var(--accent,#6c5ce7);text-decoration:none;}
+    .lang-pills{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.2rem;}
+    .lang-pill{display:inline-flex;padding:.35rem .95rem;border-radius:999px;font-size:.8rem;font-weight:800;text-decoration:none;border:1px solid var(--line-2,rgba(255,255,255,.15));color:inherit;opacity:.8;}
+    .lang-pill:hover{opacity:1;border-color:var(--primary,#6c5ce7);}
+    .lang-pill.active{background:var(--accent,#6c5ce7);border-color:var(--accent,#6c5ce7);color:#fff;opacity:1;}
   </style>`;
 
 const NAV = `
@@ -87,13 +91,35 @@ const CHROME: Record<string, { home: string; blogs: string; minRead: string; cta
   ar: { home: "الرئيسية", blogs: "المدونة", minRead: "دقائق القراءة", ctaTitle: "جاهز لتنمية عملك؟", ctaText: "تحدث مع فريق أماتيس عن مشروعك — استشارة مجانية.", ctaButton: "تواصل معنا" },
 };
 
-export function renderPostPage(post: PublicPost): string {
+const LANG_LABELS: Record<string, string> = {
+  fa: "فارسی",
+  en: "English",
+  de: "Deutsch",
+  ar: "العربية",
+};
+
+export function renderPostPage(
+  post: PublicPost,
+  siblings?: { slug: string; lang: string }[],
+): string {
   const dir = post.lang === "fa" || post.lang === "ar" ? "rtl" : "ltr";
   const L = CHROME[post.lang] || CHROME.en;
   const date = formatPostDate(new Date(post.publishedAt), post.lang);
   const minutes = new Intl.NumberFormat(
     post.lang === "fa" ? "fa-IR" : post.lang === "ar" ? "ar" : "en",
   ).format(post.readMinutes);
+  const switcher =
+    siblings && siblings.length > 1
+      ? `<div class="lang-pills">` +
+        siblings
+          .map((s) =>
+            s.lang === post.lang
+              ? `<span class="lang-pill active">${LANG_LABELS[s.lang] || s.lang}</span>`
+              : `<a class="lang-pill" href="/blog/${encodeURIComponent(s.slug)}">${LANG_LABELS[s.lang] || s.lang}</a>`,
+          )
+          .join("") +
+        `</div>`
+      : "";
   const cover = post.coverImage
     ? `<img class="post-cover" src="${escapeHtml(post.coverImage)}" alt="">`
     : "";
@@ -135,6 +161,7 @@ export function renderPostPage(post: PublicPost): string {
       <div class="container-page post-wrap">
         <nav class="post-crumb" aria-label="Breadcrumb">
           <a href="/">${L.home}</a> <span>/</span> <a href="/blogs.html">${L.blogs}</a> <span>/</span> <span>${escapeHtml(post.title)}</span>        </nav>
+        ${switcher}
         <span class="post-tag-pill">${escapeHtml(post.tag || "Blog")}</span>
         <h1 class="post-title">${escapeHtml(post.title)}</h1>
         <div class="post-meta">

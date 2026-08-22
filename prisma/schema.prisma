@@ -51,8 +51,10 @@ model BlogPost {
   publishedAt DateTime @default(now())
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+  groupId     String   @default("")
 
   @@index([published, publishedAt])
+  @@index([groupId])
 }
 
 // ---------- Newsletter subscribers ----------
