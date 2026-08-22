@@ -215,7 +215,6 @@ export function renderPostPage(
 
   ${FOOTER}
   <script src="/assets/js/i18n.js"></script>
-  <script src="/assets/js/main.js"></script>
   <script>
     (function () {
       var siblings = ${renderSiblingsData(siblings)};
@@ -243,6 +242,9 @@ export function renderPostPage(
           if (!langSwitcher.contains(e.target)) {
             langSwitcher.classList.remove("open");
           }
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") langSwitcher.classList.remove("open");
         });
       }
     })();
