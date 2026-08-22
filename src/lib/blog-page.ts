@@ -98,6 +98,31 @@ const LANG_LABELS: Record<string, string> = {
   ar: "العربية",
 };
 
+const LANGS = ["en", "de", "fa", "ar"] as const;
+
+function renderHeaderLangSwitcher(currentLang: string): string {
+  const currentLabel = LANG_LABELS[currentLang] || currentLang;
+  const currentCode = currentLang.toUpperCase();
+  const options = LANGS.map(l => `
+    <button class="lang-option" type="button" data-lang-option="${l}">
+      <span class="lang-meta"><span class="lang-code">${l.toUpperCase()}</span><span>${LANG_LABELS[l] || l}</span></span>
+      <span class="lang-active-pill">${l === currentLang ? "Active" : ""}</span>
+    </button>
+  `).join("");
+  return `
+    <div class="lang-switcher">
+      <button class="lang-trigger" type="button" aria-haspopup="true" aria-label="Choose language">
+        <span class="lang-globe">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </span>
+        <span class="lang-label">${currentLabel}</span>
+        <span class="lang-caret"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+      </button>
+      <div class="lang-panel">${options}</div>
+    </div>
+  `;
+}
+
 export function renderPostPage(
   post: PublicPost,
   siblings?: { slug: string; lang: string }[],
@@ -149,6 +174,7 @@ export function renderPostPage(
       </a>
       <nav class="site-nav" aria-label="Main">${NAV}</nav>
       <div class="header-actions">
+        ${renderHeaderLangSwitcher(post.lang)}
         <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
         </button>
