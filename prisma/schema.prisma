@@ -55,6 +55,14 @@ model BlogPost {
   @@index([published, publishedAt])
 }
 
+// ---------- Newsletter subscribers ----------
+
+model NewsletterSubscriber {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+}
+
 // ---------- Site settings / editable content ----------
 // Key-value store for editable page content (contact info, schedule panel)
 // and credentials (SMTP, ...). Non-secret keys are exposed via /api/public/site-info.

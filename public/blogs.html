@@ -181,6 +181,20 @@
       </div>
     </section>
 
+    <section class="py-section">
+      <div class="container-page">
+        <form id="subscribeForm" class="subscribe-box reveal is-visible" novalidate>
+          <h3 data-i18n="news.title">Subscribe to our newsletter</h3>
+          <p data-i18n="news.subtitle">Get new articles and insights in your inbox. No spam.</p>
+          <div class="field subscribe-field">
+            <input id="sub-email" name="email" type="email" data-i18n-ph="news.placeholder" required>
+            <button class="btn-primary lg" type="submit" data-i18n="news.button">Subscribe</button>
+          </div>
+          <p class="form-message" id="subMessage"></p>
+        </form>
+      </div>
+    </section>
+
 
   </main>
   <!-- ======================= FOOTER ======================= -->
@@ -280,7 +294,7 @@
           }
           posts.forEach(function (p, idx) {
             var art = document.createElement("article");
-            art.className = "blog-card card-hover reveal" + (idx === 0 ? "" : "");
+            art.className = "blog-card card-hover reveal is-visible";
             var meta = [p.tag, fmtNum(p.readMinutes, p.lang) + " " + t("blogList.minRead", "min read")]
               .filter(Boolean).join(" · ");
             art.innerHTML =
@@ -299,6 +313,59 @@
         .catch(function () {
           status.textContent = t("blogList.error", "Couldn't load articles.");
         });
+    })();
+  </script>
+  <style>
+    .subscribe-box{max-width:480px;margin:0 auto;text-align:center;}
+    .subscribe-box h3{font-size:1.35rem;font-weight:900;margin-bottom:.4rem;}
+    .subscribe-box p{opacity:.75;font-size:.95rem;}
+    .subscribe-field{display:flex;gap:10px;align-items:stretch;}
+    .subscribe-field input{flex:1;min-width:0;width:auto;}
+    .subscribe-field .btn-primary{white-space:nowrap;padding-inline:1.4rem;}
+    @media (max-width:560px){.subscribe-field{flex-direction:column;}.subscribe-field input,.subscribe-field .btn-primary{width:100%;}}
+    .form-message.error{background:rgba(239,68,68,.12);color:#f87171;}
+    .form-message.ok{background:rgba(34,197,94,.12);color:#4ade80;}
+  </style>
+  <script>
+    (function () {
+      function t(key, fallback) {
+        try { var v = window.AMATIS_I18N.get(key); return v && v !== key ? v : fallback; } catch (e) { return fallback; }
+      }
+      var form = document.getElementById("subscribeForm");
+      var msg = document.getElementById("subMessage");
+      if (!form) return;
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var email = (document.getElementById("sub-email").value || "").trim();
+        msg.classList.remove("show", "ok", "error");
+        fetch("/api/subscribe", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: email }),
+        })
+          .then(function (r) { return r.json().catch(function () { return {}; }); })
+          .then(function (json) {
+            var code = json && json.ok ? "ok" : json && json.error;
+            if (code === "ok") {
+              msg.textContent = t("news.success", "You're subscribed! Welcome aboard.");
+              msg.classList.add("show", "ok");
+              form.reset();
+            } else if (code === "already_subscribed") {
+              msg.textContent = t("news.already", "This email is already subscribed.");
+              msg.classList.add("show", "error");
+            } else if (code === "invalid_email") {
+              msg.textContent = t("news.invalid", "Please enter a valid email address.");
+              msg.classList.add("show", "error");
+            } else {
+              msg.textContent = t("news.errGeneric", "Something went wrong. Please try again later.");
+              msg.classList.add("show", "error");
+            }
+          })
+          .catch(function () {
+            msg.textContent = t("news.errGeneric", "Something went wrong. Please try again later.");
+            msg.classList.add("show", "error");
+          });
+      });
     })();
   </script>
   <!-- ======================= GOATCOUNTER ANALYTICS ======================= -->
