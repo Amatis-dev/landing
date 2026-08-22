@@ -35,6 +35,26 @@ model ContactMessage {
   @@index([email])
 }
 
+// ---------- Blog posts ----------
+
+model BlogPost {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  excerpt     String
+  content     String
+  coverImage  String?
+  tag         String?
+  lang        String   @default("en")
+  readMinutes Int      @default(5)
+  published   Boolean  @default(true)
+  publishedAt DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([published, publishedAt])
+}
+
 // ---------- Site settings / editable content ----------
 // Key-value store for editable page content (contact info, schedule panel)
 // and credentials (SMTP, ...). Non-secret keys are exposed via /api/public/site-info.

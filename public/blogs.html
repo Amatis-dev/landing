@@ -175,55 +175,8 @@
     </section>
     <section class="py-section">
       <div class="container-page">
-        <div class="blog-list">
-          <article class="blog-card card-hover reveal">
-            <a class="blog-thumb" href="blogs.html"><img src="assets/images/news-1.jpg" alt=""></a>
-            <div class="blog-body">
-              <span class="blog-date" data-i18n="blogList.post1.date"></span>
-              <h3><a href="blogs.html" data-i18n="blogList.post1.title"></a></h3>
-              <p class="blog-meta" data-i18n="blogList.post1.author"></p>
-            </div>
-          </article>
-          <article class="blog-card card-hover reveal">
-            <a class="blog-thumb" href="blogs.html"><img src="assets/images/news-2.jpg" alt=""></a>
-            <div class="blog-body">
-              <span class="blog-date" data-i18n="blogList.post2.date"></span>
-              <h3><a href="blogs.html" data-i18n="blogList.post2.title"></a></h3>
-              <p class="blog-meta" data-i18n="blogList.post2.author"></p>
-            </div>
-          </article>
-          <article class="blog-card card-hover reveal">
-            <a class="blog-thumb" href="blogs.html"><img src="assets/images/news-3.jpg" alt=""></a>
-            <div class="blog-body">
-              <span class="blog-date" data-i18n="blogList.post3.date"></span>
-              <h3><a href="blogs.html" data-i18n="blogList.post3.title"></a></h3>
-              <p class="blog-meta" data-i18n="blogList.post3.author"></p>
-            </div>
-          </article>
-          <article class="blog-card card-hover reveal">
-            <a class="blog-thumb" href="blogs.html"><img src="assets/images/news-details.jpg" alt=""></a>
-            <div class="blog-body">
-              <span class="blog-date" data-i18n="blogList.post4.date"></span>
-              <h3><a href="blogs.html" data-i18n="blogList.post4.title"></a></h3>
-              <p class="blog-meta" data-i18n="blogList.post4.author"></p>
-            </div>
-          </article>
-          <article class="blog-card card-hover reveal">
-            <a class="blog-thumb" href="blogs.html"><img src="assets/images/news-1.jpg" alt=""></a>
-            <div class="blog-body">
-              <span class="blog-date" data-i18n="blogList.post5.date"></span>
-              <h3><a href="blogs.html" data-i18n="blogList.post5.title"></a></h3>
-              <p class="blog-meta" data-i18n="blogList.post5.author"></p>
-            </div>
-          </article>
-          <article class="blog-card card-hover reveal">
-            <a class="blog-thumb" href="blogs.html"><img src="assets/images/news-2.jpg" alt=""></a>
-            <div class="blog-body">
-              <span class="blog-date" data-i18n="blogList.post6.date"></span>
-              <h3><a href="blogs.html" data-i18n="blogList.post6.title"></a></h3>
-              <p class="blog-meta" data-i18n="blogList.post6.author"></p>
-            </div>
-          </article>
+        <div class="blog-list" id="blogList">
+          <p id="blogStatus" style="opacity:.7"></p>
         </div>
       </div>
     </section>
@@ -290,6 +243,64 @@
 
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      function t(key, fallback) {
+        try { var v = window.AMATIS_I18N.get(key); return v && v !== key ? v : fallback; } catch (e) { return fallback; }
+      }
+      function localeFor(lang) {
+        var cur = "en";
+        try { cur = window.AMATIS_I18N.current(); } catch (e) {}
+        if (lang === "fa" || lang === "ar") return lang === "fa" ? "fa-IR-u-ca-persian" : "ar";
+        if (cur === "de") return "de-DE";
+        if (cur === "fa") return "fa-IR-u-ca-persian";
+        if (cur === "ar") return "ar";
+        return "en-GB";
+      }
+      function fmtDate(iso, lang) {
+        try {
+          return new Intl.DateTimeFormat(localeFor(lang), { year: "numeric", month: "long", day: "numeric" }).format(new Date(iso));
+        } catch (e) { return iso.slice(0, 10); }
+      }
+      function fmtNum(n, lang) {
+        try { return new Intl.NumberFormat(localeFor(lang)).format(n); } catch (e) { return String(n); }
+      }
+
+      var list = document.getElementById("blogList");
+      var status = document.getElementById("blogStatus");
+
+      fetch("/api/blog", { cache: "no-store" })
+        .then(function (r) { return r.json(); })
+        .then(function (json) {
+          status.remove();
+          var posts = (json && json.ok && json.data.posts) || [];
+          if (!posts.length) {
+            list.innerHTML = "<p style='opacity:.7'>" + t("blogList.empty", "No articles yet.") + "</p>";
+            return;
+          }
+          posts.forEach(function (p, idx) {
+            var art = document.createElement("article");
+            art.className = "blog-card card-hover reveal" + (idx === 0 ? "" : "");
+            var meta = [p.tag, fmtNum(p.readMinutes, p.lang) + " " + t("blogList.minRead", "min read")]
+              .filter(Boolean).join(" · ");
+            art.innerHTML =
+              '<a class="blog-thumb" href="/blog/' + encodeURIComponent(p.slug) + '">' +
+              '<img src="' + (p.coverImage || "/assets/images/news-1.jpg") + '" alt="" loading="lazy"></a>' +
+              '<div class="blog-body">' +
+              '<span class="blog-date">' + fmtDate(p.publishedAt, p.lang) + "</span>" +
+              '<h3><a href="/blog/' + encodeURIComponent(p.slug) + '"></a></h3>' +
+              '<p class="blog-meta"></p>';
+            art.querySelector("h3 a").textContent = p.title;
+            art.querySelector(".blog-meta").textContent = meta;
+            list.appendChild(art);
+          });
+          document.dispatchEvent(new CustomEvent("blogs:rendered"));
+        })
+        .catch(function () {
+          status.textContent = t("blogList.error", "Couldn't load articles.");
+        });
+    })();
+  </script>
   <!-- ======================= GOATCOUNTER ANALYTICS ======================= -->
   <script data-goatcounter="https://amatis.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>

@@ -41,6 +41,9 @@ async function main() {
   }
   console.log(`seed: ensured ${DEFAULT_SETTINGS.length} default settings.`);
 
+  const { seedPosts } = require("./blog-seed.cjs");
+  await seedPosts();
+
   const email = (process.env.ADMIN_EMAIL || "").trim().toLowerCase();
   const password = process.env.ADMIN_PASSWORD || "";
   if (email && password.length >= 8) {

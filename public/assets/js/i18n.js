@@ -545,36 +545,10 @@ window.AMATIS_I18N = (function () {
         kicker: "Blogs",
         title: "Latest News & Insights",
         subtitle: "Guides, news and ideas to help your business grow.",
-        post1: {
-          title: "How to choose the right digital partner for your business",
-          date: "6 December 2025",
-          author: "Isabela Moreira",
-        },
-        post2: {
-          title: "5 digital marketing trends to watch this year",
-          date: "2 December 2025",
-          author: "Lucas Silva",
-        },
-        post3: {
-          title: "Why every business needs a great website",
-          date: "29 November 2025",
-          author: "Amatis Studio",
-        },
-        post4: {
-          title: "The basics of market analysis for small businesses",
-          date: "22 November 2025",
-          author: "Amatis Studio",
-        },
-        post5: {
-          title: "Branding 101: building a brand people remember",
-          date: "15 November 2025",
-          author: "Isabela Moreira",
-        },
-        post6: {
-          title: "AI tools every agency should be using",
-          date: "8 November 2025",
-          author: "Lucas Silva",
-        },
+        loading: "Loading articles…",
+        error: "Couldn't load articles. Please try again.",
+        empty: "No articles yet — check back soon!",
+        minRead: "min read",
         readMore: "Read More",
       },
       waw: {
@@ -1144,36 +1118,10 @@ window.AMATIS_I18N = (function () {
         kicker: "Blog",
         title: "Aktuelle News & Einblicke",
         subtitle: "Ratgeber, News und Ideen f\u00fcr das Wachstum Ihres Unternehmens.",
-        post1: {
-          title: "So w\u00e4hlen Sie den richtigen digitalen Partner f\u00fcr Ihr Unternehmen",
-          date: "6. Dezember 2025",
-          author: "Isabela Moreira",
-        },
-        post2: {
-          title: "5 Digital-Marketing-Trends, die Sie dieses Jahr beachten sollten",
-          date: "2. Dezember 2025",
-          author: "Lucas Silva",
-        },
-        post3: {
-          title: "Warum jedes Unternehmen eine gro\u00dfartige Website braucht",
-          date: "29. November 2025",
-          author: "Amatis Studio",
-        },
-        post4: {
-          title: "Grundlagen der Marktanalyse f\u00fcr kleine Unternehmen",
-          date: "22. November 2025",
-          author: "Amatis Studio",
-        },
-        post5: {
-          title: "Branding 101: eine Marke, die man sich merkt",
-          date: "15. November 2025",
-          author: "Isabela Moreira",
-        },
-        post6: {
-          title: "KI-Tools, die jede Agentur nutzen sollte",
-          date: "8. November 2025",
-          author: "Lucas Silva",
-        },
+        loading: "Artikel werden geladen …",
+        error: "Artikel konnten nicht geladen werden.",
+        empty: "Noch keine Artikel – schau bald wieder vorbei!",
+        minRead: "Min. Lesezeit",
         readMore: "Weiterlesen",
       },
       waw: {
@@ -1743,36 +1691,10 @@ window.AMATIS_I18N = (function () {
         kicker: "\u0648\u0628\u0644\u0627\u06af",
         title: "\u0622\u062e\u0631\u06cc\u0646 \u0627\u062e\u0628\u0627\u0631 \u0648 \u0628\u06cc\u0646\u0634\u200c\u0647\u0627",
         subtitle: "\u0631\u0627\u0647\u0646\u0645\u0627\u06cc\u06cc\u200c\u0647\u0627\u060c \u0627\u062e\u0628\u0627\u0631 \u0648 \u0627\u06cc\u062f\u0647\u200c\u0647\u0627\u06cc\u06cc \u0628\u0631\u0627\u06cc \u0631\u0634\u062f \u06a9\u0633\u0628 \u0648 \u06a9\u0627\u0631.",
-        post1: {
-          title: "\u0686\u06af\u0648\u0646\u0647 \u0634\u0631\u06cc\u06a9 \u062f\u06cc\u062c\u06cc\u062a\u0627\u0644 \u0645\u0646\u0627\u0633\u0628 \u06a9\u0633\u0628 \u0648 \u06a9\u0627\u0631 \u062e\u0648\u062f \u0631\u0627 \u0627\u0646\u062a\u062e\u0627\u0628 \u06a9\u0646\u06cc\u0645",
-          date: "6 \u062f\u0633\u0627\u0645\u0628\u0631 2025",
-          author: "\u0627\u06cc\u0632\u0627\u0628\u0644\u0627 \u0645\u0648\u0631\u06cc\u0631\u0627",
-        },
-        post2: {
-          title: "5 \u062a\u0631\u0646\u062f \u0628\u0627\u0632\u0627\u0631\u06cc\u0627\u0628\u06cc \u062f\u06cc\u062c\u06cc\u062a\u0627\u0644 \u062f\u0631 \u0627\u06cc\u0646 \u0633\u0627\u0644",
-          date: "2 \u062f\u0633\u0627\u0645\u0628\u0631 2025",
-          author: "\u0644\u0648\u06a9\u0627\u0633 \u0633\u06cc\u0644\u0648\u0627",
-        },
-        post3: {
-          title: "\u0686\u0631\u0627 \u0647\u0631 \u06a9\u0633\u0628 \u0648 \u06a9\u0627\u0631\u06cc \u0628\u0647 \u06cc\u06a9 \u0648\u0628\u200c\u0633\u0627\u06cc\u062a \u0639\u0627\u0644\u06cc \u0646\u06cc\u0627\u0632 \u062f\u0627\u0631\u062f",
-          date: "29 \u0646\u0648\u0627\u0645\u0628\u0631 2025",
-          author: "\u0627\u0633\u062a\u0648\u062f\u06cc\u0648 \u0622\u0645\u0627\u062a\u06cc\u0633",
-        },
-        post4: {
-          title: "\u0645\u0628\u0627\u0646\u06cc \u062a\u062d\u0644\u06cc\u0644 \u0628\u0627\u0632\u0627\u0631 \u0628\u0631\u0627\u06cc \u06a9\u0633\u0628\u200c\u0648\u06a9\u0627\u0631\u0647\u0627\u06cc \u06a9\u0648\u0686\u06a9",
-          date: "22 \u0646\u0648\u0627\u0645\u0628\u0631 2025",
-          author: "\u0627\u0633\u062a\u0648\u062f\u06cc\u0648 \u0622\u0645\u0627\u062a\u06cc\u0633",
-        },
-        post5: {
-          title: "\u0628\u0631\u0646\u062f\u06cc\u0646\u06af 101: \u0633\u0627\u062e\u062a \u0628\u0631\u0646\u062f\u06cc \u06a9\u0647 \u0645\u06cc\u0645\u0627\u0646\u062f",
-          date: "15 \u0646\u0648\u0627\u0645\u0628\u0631 2025",
-          author: "\u0627\u06cc\u0632\u0627\u0628\u0644\u0627 \u0645\u0648\u0631\u06cc\u0631\u0627",
-        },
-        post6: {
-          title: "\u0627\u0628\u0632\u0627\u0631\u0647\u0627\u06cc \u0647\u0648\u0634 \u0645\u0635\u0646\u0648\u0639\u06cc \u06a9\u0647 \u0647\u0631 \u0622\u0698\u0627\u0646\u0633\u06cc \u0628\u0627\u06cc\u062f \u0627\u0633\u062a\u0641\u0627\u062f\u0647 \u06a9\u0646\u062f",
-          date: "8 \u0646\u0648\u0627\u0645\u0628\u0631 2025",
-          author: "\u0644\u0648\u06a9\u0627\u0633 \u0633\u06cc\u0644\u0648\u0627",
-        },
+        loading: "در حال بارگذاری مقاله‌ها…",
+        error: "خطا در بارگذاری مقاله‌ها.",
+        empty: "هنوز مقاله‌ای منتشر نشده است؛ به‌زودی برگردید!",
+        minRead: "دقیقه مطالعه",
         readMore: "\u0627\u062f\u0627\u0645\u0647 \u0645\u0637\u0644\u0628",
       },
       waw: {
@@ -2342,36 +2264,10 @@ window.AMATIS_I18N = (function () {
         kicker: "\u0627\u0644\u0645\u062f\u0648\u0646\u0629",
         title: "\u0623\u062d\u062f\u062b \u0627\u0644\u0623\u062e\u0628\u0627\u0631 \u0648\u0627\u0644\u0631\u0624\u0649",
         subtitle: "\u0623\u062f\u0644\u0629 \u0648\u0623\u062e\u0628\u0627\u0631 \u0648\u0623\u0641\u0643\u0627\u0631 \u0644\u0645\u0633\u0627\u0639\u062f\u0629 \u0639\u0645\u0644\u0643 \u0639\u0644\u0649 \u0627\u0644\u0646\u0645\u0648.",
-        post1: {
-          title: "\u0643\u064a\u0641 \u062a\u062e\u062a\u0627\u0631 \u0627\u0644\u0634\u0631\u064a\u0643 \u0627\u0644\u0631\u0642\u0645\u064a \u0627\u0644\u0645\u0646\u0627\u0633\u0628 \u0644\u0639\u0645\u0644\u0643",
-          date: "6 \u062f\u064a\u0633\u0645\u0628\u0631 2025",
-          author: "\u0625\u064a\u0632\u0627\u0628\u064a\u0644\u0627 \u0645\u0648\u0631\u064a\u0631\u0627",
-        },
-        post2: {
-          title: "5 \u0627\u062a\u062c\u0627\u0647\u0627\u062a \u0644\u0644\u062a\u0633\u0648\u064a\u0642 \u0627\u0644\u0631\u0642\u0645\u064a \u064a\u062c\u0628 \u0645\u062a\u0627\u0628\u0639\u062a\u0647\u0627 \u0647\u0630\u0627 \u0627\u0644\u0639\u0627\u0645",
-          date: "2 \u062f\u064a\u0633\u0645\u0628\u0631 2025",
-          author: "\u0644\u0648\u0643\u0627\u0633 \u0633\u064a\u0644\u0641\u0627",
-        },
-        post3: {
-          title: "\u0644\u0645\u0627\u0630\u0627 \u064a\u062d\u062a\u0627\u062c \u0643\u0644 \u0639\u0645\u0644 \u0625\u0644\u0649 \u0645\u0648\u0642\u0639 \u0639\u0627\u0644\u0645\u064a \u0627\u0644\u0645\u0633\u062a\u0648\u0649",
-          date: "29 \u0646\u0648\u0641\u0645\u0628\u0631 2025",
-          author: "\u0627\u0633\u062a\u0648\u062f\u064a\u0648 \u0623\u0645\u0627\u062a\u064a\u0633",
-        },
-        post4: {
-          title: "\u0623\u0633\u0627\u0633\u064a\u0627\u062a \u062a\u062d\u0644\u064a\u0644 \u0627\u0644\u0633\u0648\u0642 \u0644\u0644\u0634\u0631\u0643\u0627\u062a \u0627\u0644\u0635\u063a\u064a\u0631\u0629",
-          date: "22 \u0646\u0648\u0641\u0645\u0628\u0631 2025",
-          author: "\u0627\u0633\u062a\u0648\u062f\u064a\u0648 \u0623\u0645\u0627\u062a\u064a\u0633",
-        },
-        post5: {
-          title: "\u0627\u0644\u0639\u0644\u0627\u0645\u0629 \u0627\u0644\u062a\u062c\u0627\u0631\u064a\u0629 101: \u0628\u0646\u0627\u0621 \u0639\u0644\u0627\u0645\u0629 \u064a\u062a\u0630\u0643\u0631\u0647\u0627 \u0627\u0644\u0646\u0627\u0633",
-          date: "15 \u0646\u0648\u0641\u0645\u0628\u0631 2025",
-          author: "\u0625\u064a\u0632\u0627\u0628\u064a\u0644\u0627 \u0645\u0648\u0631\u064a\u0631\u0627",
-        },
-        post6: {
-          title: "\u0623\u062f\u0648\u0627\u062a \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a \u0627\u0644\u062a\u064a \u064a\u062c\u0628 \u0623\u0646 \u062a\u0633\u062a\u062e\u062f\u0645\u0647\u0627 \u0643\u0644 \u0648\u0643\u0627\u0644\u0629",
-          date: "8 \u0646\u0648\u0641\u0645\u0628\u0631 2025",
-          author: "\u0644\u0648\u0643\u0627\u0633 \u0633\u064a\u0644\u0641\u0627",
-        },
+        loading: "جارٍ تحميل المقالات…",
+        error: "تعذّر تحميل المقالات.",
+        empty: "لا توجد مقالات بعد — عُد قريباً!",
+        minRead: "دقائق القراءة",
         readMore: "\u0627\u0642\u0631\u0623 \u0627\u0644\u0645\u0632\u064a\u062f",
       },
       waw: {
