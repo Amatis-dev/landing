@@ -253,7 +253,7 @@ export function renderPostPage(
       document.querySelectorAll(".lang-pill[href]").forEach(function (a) {
         a.addEventListener("click", function () {
           var href = this.getAttribute("href");
-          var langMatch = href.match(/blog\/([^\/]+)-([a-z]{2})$/);
+          var langMatch = href.match(/blog\\/([^\\/]+)-([a-z]{2})$/);
           if (langMatch && langMatch[2] && i18n && i18n.switchTo) {
             i18n.switchTo(langMatch[2]);
           }
