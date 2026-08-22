@@ -123,6 +123,15 @@ function renderHeaderLangSwitcher(currentLang: string): string {
   `;
 }
 
+function renderSiblingsData(siblings?: { slug: string; lang: string }[]): string {
+  if (!siblings || siblings.length === 0) return "{}";
+  const obj: Record<string, string> = {};
+  for (const s of siblings) {
+    obj[s.lang] = s.slug;
+  }
+  return JSON.stringify(obj);
+}
+
 export function renderPostPage(
   post: PublicPost,
   siblings?: { slug: string; lang: string }[],
@@ -205,7 +214,39 @@ export function renderPostPage(
   </main>
 
   ${FOOTER}
+  <script src="/assets/js/i18n.js"></script>
   <script src="/assets/js/main.js"></script>
+  <script>
+    (function () {
+      var siblings = ${renderSiblingsData(siblings)};
+      var currentLang = "${post.lang}";
+      var langSwitcher = document.querySelector(".lang-switcher");
+      if (langSwitcher) {
+        var trigger = langSwitcher.querySelector(".lang-trigger");
+        if (trigger) {
+          trigger.addEventListener("click", function (e) {
+            e.stopPropagation();
+            langSwitcher.classList.toggle("open");
+          });
+        }
+        langSwitcher.querySelectorAll("[data-lang-option]").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var targetLang = btn.getAttribute("data-lang-option");
+            var slug = siblings[targetLang];
+            if (slug) {
+              window.location.href = "/blog/" + encodeURIComponent(slug);
+            }
+            langSwitcher.classList.remove("open");
+          });
+        });
+        document.addEventListener("click", function (e) {
+          if (!langSwitcher.contains(e.target)) {
+            langSwitcher.classList.remove("open");
+          }
+        });
+      }
+    })();
+  </script>
 </body>
 </html>`;
 }
