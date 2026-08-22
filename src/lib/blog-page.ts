@@ -220,6 +220,7 @@ export function renderPostPage(
       var siblings = ${renderSiblingsData(siblings)};
       var currentLang = "${post.lang}";
       var langSwitcher = document.querySelector(".lang-switcher");
+      var i18n = window.AMATIS_I18N;
       if (langSwitcher) {
         var trigger = langSwitcher.querySelector(".lang-trigger");
         if (trigger) {
@@ -233,6 +234,7 @@ export function renderPostPage(
             var targetLang = btn.getAttribute("data-lang-option");
             var slug = siblings[targetLang];
             if (slug) {
+              if (i18n && i18n.switchTo) i18n.switchTo(targetLang);
               window.location.href = "/blog/" + encodeURIComponent(slug);
             }
             langSwitcher.classList.remove("open");
@@ -247,6 +249,15 @@ export function renderPostPage(
           if (e.key === "Escape") langSwitcher.classList.remove("open");
         });
       }
+      // Also persist language when clicking inline language pills
+      document.querySelectorAll(".lang-pill[href]").forEach(function (a) {
+        a.addEventListener("click", function () {
+          var lang = this.getAttribute("href").match(/blog\/([^\/]+)-([a-z]{2})$/);
+          if (lang && lang[2] && i18n && i18n.switchTo) {
+            i18n.switchTo(lang[2]);
+          }
+        });
+      });
     })();
   </script>
 </body>
