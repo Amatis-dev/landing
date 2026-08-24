@@ -85,10 +85,10 @@ function getSmtpTransporter(cfg: SmtpConfig) {
   });
 }
 
-export async function sendEmail(to: string, subject: string, text: string, html: string): Promise<void> {
+export async function sendEmail(to: string, subject: string, text: string, html: string, fromOverride?: string): Promise<void> {
   const resendCfg = await loadResendConfig();
   if (resendCfg) {
-    await sendViaResend(resendCfg.apiKey, resendCfg.from, to, subject, text, html);
+    await sendViaResend(resendCfg.apiKey, fromOverride || resendCfg.from, to, subject, text, html);
     return;
   }
 
@@ -96,7 +96,7 @@ export async function sendEmail(to: string, subject: string, text: string, html:
   if (smtpCfg) {
     const transporter = getSmtpTransporter(smtpCfg);
     await transporter.sendMail({
-      from: smtpCfg.from,
+      from: fromOverride || smtpCfg.from,
       to,
       subject,
       text,
@@ -166,10 +166,10 @@ export async function sendContactNotification(msg: {
 /**
  * Sends a plain administrative / reply email (used by the admin panel).
  */
-export async function sendAdminEmail(to: string, subject: string, body: string): Promise<void> {
+export async function sendAdminEmail(to: string, subject: string, body: string, fromOverride?: string): Promise<void> {
   const html = body
     .split(/\n{2,}/)
     .map((p) => `<p style="margin:0 0 12px;white-space:pre-wrap">${escapeHtml(p)}</p>`)
     .join("");
-  await sendEmail(to, subject, body, wrapHtml(html));
+  await sendEmail(to, subject, body, wrapHtml(html), fromOverride);
 }

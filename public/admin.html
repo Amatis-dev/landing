@@ -390,6 +390,15 @@
           '<div class="sub">Compose and send to any address (e.g. replying to a contact message).</div>' +
           '<div class="row"><label class="block"><span>To</span><input class="mono" id="s-to" placeholder="user@example.com"></label>' +
           '<label class="block"><span>Subject</span><input id="s-subject" placeholder="Hello"></label></div>' +
+          '<div class="row" style="margin-top:14px"><label class="block"><span>From</span>' +
+          '<select id="s-from-select">' +
+          '<option value="info@amatisberry.ir">info@amatisberry.ir</option>' +
+          '<option value="admin@amatisberry.ir">admin@amatisberry.ir</option>' +
+          '<option value="noreply@amatisberry.ir">noreply@amatisberry.ir</option>' +
+          '<option value="custom">Custom…</option>' +
+          '</select></label>' +
+          '<label class="block" id="s-from-custom-wrap" style="display:none"><span>Custom from address</span>' +
+          '<input class="mono" id="s-from-custom" placeholder="sender@amatisberry.ir"></label></div>' +
           '<label class="block" style="margin-top:14px"><span>Message</span><textarea id="s-body" rows="6"></textarea></label>' +
           '<button class="btn" id="btn-send" style="margin-top:16px">Send email</button></div>';
 
@@ -445,14 +454,24 @@
 
         document.getElementById("btn-send").addEventListener("click", function () {
           var btn = this; btn.disabled = true; btn.textContent = "Sending…";
+          var fromSelect = document.getElementById("s-from-select");
+          var fromVal = fromSelect.value === "custom"
+            ? document.getElementById("s-from-custom").value.trim()
+            : fromSelect.value;
           api("/admin/send-message", { method: "POST", body: {
             to: document.getElementById("s-to").value,
             subject: document.getElementById("s-subject").value,
             body: document.getElementById("s-body").value,
+            from: fromVal || undefined,
           } })
             .then(function (d) { toast("Sent to " + d.to, "ok"); })
             .catch(function (err) { toast("Send failed: " + (err.json && err.json.detail || err.message), "err"); })
             .finally(function () { btn.disabled = false; btn.textContent = "Send email"; });
+        });
+
+        document.getElementById("s-from-select").addEventListener("change", function () {
+          var wrap = document.getElementById("s-from-custom-wrap");
+          wrap.style.display = this.value === "custom" ? "" : "none";
         });
       }
 
