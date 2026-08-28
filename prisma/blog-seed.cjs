@@ -377,7 +377,7 @@ const ARTICLES = [
   },
   {
     group: "seo-checklist-2026",
-    cover: "/assets/images/our-service-1.jpg",
+    cover: "/assets/images/seo-checklist.jpg",
     tr: {
       fa: { slug: "seo-checklist-2026-fa", title: "چک‌لیست سئو ۲۰۲۶؛ چه چیزی واقعاً رتبه می‌آورد؟", excerpt: "مبانی تکنیکال، عمق محتوا و ساخت موجودیت؛ پلی‌بوک به‌روزشده برای رتبه گرفتن در امسال.", content: P5fa, tag: "سئو و مارکتینگ" },
       en: { slug: "seo-checklist-2026-en", title: "SEO Checklist for 2026: What Actually Moves the Needle", excerpt: "Technical foundations, content depth and entity building — the updated playbook for ranking higher this year.", content: P5, tag: "SEO & Marketing" },
