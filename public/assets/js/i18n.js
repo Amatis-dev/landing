@@ -44,6 +44,8 @@ window.AMATIS_I18N = (function () {
         "title": "Our Services",
         "subtitle": "Every kind of digital product your business needs — built end-to-end.",
         "viewAll": "View All Services",
+        "ctaTitle": "Ready to start your project?",
+        "ctaButton": "Book a Free Consultation",
         "apps": {
           "title": "App Development",
           "lead": "Native Android & iOS, cross-platform and web apps built with modern stacks.",
@@ -103,6 +105,8 @@ window.AMATIS_I18N = (function () {
       pricing: {
         "title": "Plans & Prices",
         "subtitle": "Transparent, fixed-price plans for every service we build — start to launch.",
+        "ctaTitle": "Not sure which plan fits your project?",
+        "ctaButton": "Book a Free Consultation",
         "cta": "Free Consultation",
         "from": "from",
         "unit": "M Toman",
@@ -503,6 +507,8 @@ window.AMATIS_I18N = (function () {
         filters: ["All", "Websites"],
         item1: { title: "HeartLung", cat: "Websites" },
         item2: { title: "FigureForge", cat: "Websites" },
+        ctaTitle: "Want results like these?",
+        ctaButton: "Book a Free Consultation",
       },
       wwo: {
         kicker: "What We Offer",
@@ -546,6 +552,8 @@ window.AMATIS_I18N = (function () {
         already: "This email is already subscribed.",
         invalid: "Please enter a valid email address.",
         errGeneric: "Something went wrong. Please try again later.",
+        ctaTitle: "Have a project in mind?",
+        ctaButton: "Book a Free Consultation",
       },
       blogList: {
         kicker: "Blogs",
@@ -647,6 +655,8 @@ window.AMATIS_I18N = (function () {
         "title": "Unsere Dienstleistungen",
         "subtitle": "Jede Art von digitalem Produkt, das Ihr Unternehmen braucht — von der Idee bis zur fertigen Umsetzung.",
         "viewAll": "Alle Dienstleistungen ansehen",
+        "ctaTitle": "Bereit, Ihr Projekt zu starten?",
+        "ctaButton": "Kostenlose Beratung buchen",
         "apps": {
           "title": "App-Entwicklung",
           "lead": "Android-, iOS-, Cross-Platform- und Web-Apps mit modernen Technologien.",
@@ -706,6 +716,8 @@ window.AMATIS_I18N = (function () {
       pricing: {
         "title": "Pläne & Preise",
         "subtitle": "Transparente Festpreise für jeden unserer Services — vom Start bis zum Launch.",
+        "ctaTitle": "Nicht sicher, welcher Plan passt?",
+        "ctaButton": "Kostenlose Beratung buchen",
         "cta": "Kostenlose Beratung",
         "from": "ab",
         "unit": "Mio. Toman",
@@ -1106,6 +1118,8 @@ window.AMATIS_I18N = (function () {
         filters: ["Alle", "Websites"],
         item1: { title: "HeartLung", cat: "Websites" },
         item2: { title: "FigureForge", cat: "Websites" },
+        ctaTitle: "M\u00f6chten Sie \u00e4hnliche Ergebnisse?",
+        ctaButton: "Kostenlose Beratung buchen",
       },
       wwo: {
         kicker: "Unsere Leistungen",
@@ -1149,6 +1163,8 @@ window.AMATIS_I18N = (function () {
         already: "Diese E-Mail ist bereits abonniert.",
         invalid: "Bitte gib eine gültige E-Mail-Adresse ein.",
         errGeneric: "Etwas ist schiefgelaufen. Bitte versuche es später erneut.",
+        ctaTitle: "Haben Sie ein Projekt im Sinn?",
+        ctaButton: "Kostenlose Beratung buchen",
       },
       blogList: {
         kicker: "Blog",
@@ -1250,6 +1266,8 @@ window.AMATIS_I18N = (function () {
         "title": "خدمات ما",
         "subtitle": "هر نوع محصول دیجیتالی که کسب‌وکار شما به آن نیاز دارد — از ایده تا اجرای کامل.",
         "viewAll": "مشاهده همه خدمات",
+        "ctaTitle": "آماده شروع پروژه خود هستید؟",
+        "ctaButton": "رزرو مشاوره رایگان",
         "apps": {
           "title": "توسعه اپلیکیشن",
           "lead": "اپلیکیشن‌های اندروید، آی‌اواس، کراس‌پلتفرم و وب با استک‌های مدرن.",
@@ -1309,6 +1327,8 @@ window.AMATIS_I18N = (function () {
       pricing: {
         "title": "تعرفه‌ها و قیمت‌ها",
         "subtitle": "بسته‌های شفاف و با قیمت ثابت برای هر سرویسی که می‌سازیم — از شروع تا انتشار.",
+        "ctaTitle": "مطمئن نیستید کدام طرح برای پروژه شما مناسب است؟",
+        "ctaButton": "رزرو مشاوره رایگان",
         "cta": "مشاوره رایگان",
         "from": "از",
         "unit": "میلیون تومان",
@@ -1709,6 +1729,8 @@ window.AMATIS_I18N = (function () {
         filters: ["\u0647\u0645\u0647", "\u0648\u0628\u200c\u0633\u0627\u06cc\u062a"],
         item1: { title: "HeartLung", cat: "Websites" },
         item2: { title: "\u0641\u06cc\u06af\u0631\u0641\u0648\u0631\u062c", cat: "Websites" },
+        ctaTitle: "\u0627\u06cc\u0646 \u0646\u062a\u0627\u06cc\u062c \u0631\u0627 \u0645\u06cc\u200c\u062e\u0648\u0627\u0647\u06cc\u062f\u061f",
+        ctaButton: "\u0631\u0632\u0631\u0648 \u0645\u0634\u0627\u0648\u0631\u0647 \u0631\u0627\u06cc\u06af\u0627\u0646",
       },
       wwo: {
         kicker: "\u062e\u062f\u0645\u0627\u062a \u0645\u0627",
@@ -1752,6 +1774,8 @@ window.AMATIS_I18N = (function () {
         already: "این ایمیل قبلاً عضو خبرنامه شده است.",
         invalid: "لطفاً یک ایمیل معتبر وارد کنید.",
         errGeneric: "خطایی رخ داد. لطفاً بعداً دوباره تلاش کنید.",
+        ctaTitle: "پروژه‌ای در ذهن دارید؟",
+        ctaButton: "رزرو مشاوره رایگان",
       },
       blogList: {
         kicker: "\u0648\u0628\u0644\u0627\u06af",
@@ -1853,6 +1877,8 @@ window.AMATIS_I18N = (function () {
         "title": "خدماتنا",
         "subtitle": "كل نوع من المنتجات الرقمية التي يحتاجها عملك — من الفكرة إلى التنفيذ الكامل.",
         "viewAll": "عرض جميع الخدمات",
+        "ctaTitle": "مستعد لبدء مشروعك؟",
+        "ctaButton": "احجز استشارة",
         "apps": {
           "title": "تطوير التطبيقات",
           "lead": "تطبيقات أندرويد و iOS وتطبيقات الويب مع أحدث التقنيات.",
@@ -1912,6 +1938,8 @@ window.AMATIS_I18N = (function () {
       pricing: {
         "title": "الباقات والأسعار",
         "subtitle": "باقات شفافة بأسعار ثابت لكل خدمة نقدمها — من البداية إلى الإطلاق.",
+        "ctaTitle": "لست متأكداً أي باقة تناسبك؟",
+        "ctaButton": "احجز استشارة",
         "cta": "استشارة مجانية",
         "from": "من",
         "unit": "مليون تومان",
@@ -2312,6 +2340,8 @@ window.AMATIS_I18N = (function () {
         filters: ["\u0627\u0644\u0643\u0644", "\u0645\u0648\u0627\u0642\u0639"],
         item1: { title: "HeartLung", cat: "Websites" },
         item2: { title: "FigureForge", cat: "Websites" },
+        ctaTitle: "\u0647\u0644 \u062a\u0631\u064a\u062f \u0646\u062a\u0627\u0626\u062c \u0645\u0645\u0627\u062b\u0644\u0629\u061f",
+        ctaButton: "\u0627\u062d\u062c\u0632 \u0627\u0633\u062a\u0634\u0627\u0631\u0629",
       },
       wwo: {
         kicker: "\u0645\u0627 \u0646\u0642\u062f\u0645\u0647",
@@ -2355,6 +2385,8 @@ window.AMATIS_I18N = (function () {
         already: "هذا البريد مشترك بالفعل في النشرة.",
         invalid: "يرجى إدخال بريد إلكتروني صحيح.",
         errGeneric: "حدث خطأ. يرجى المحاولة لاتقاً.",
+        ctaTitle: "لديك مشروع في ذهنك؟",
+        ctaButton: "احجز استشارة",
       },
       blogList: {
         kicker: "\u0627\u0644\u0645\u062f\u0648\u0646\u0629",
