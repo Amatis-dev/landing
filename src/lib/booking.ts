@@ -15,8 +15,8 @@ export const BOOKING_DEFAULT_TZ = "Asia/Tehran";
 export const BOOKING_DEFAULT_DURATION = 60;
 export const BOOKING_DEFAULT_WEEKDAYS = [1, 2, 3, 4, 5]; // Mon..Fri
 export const BOOKING_DEFAULT_RANGES: SlotRanges = [
-  { startHour: 9, endHour: 12 },
-  { startHour: 13, endHour: 17 },
+  { startHour: 9, endHour: 13 },
+  { startHour: 14, endHour: 18 },
 ];
 export const BOOKING_DEFAULT_MAX_DAYS_AHEAD = 60;
 

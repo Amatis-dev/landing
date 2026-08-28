@@ -2293,6 +2293,11 @@ section {
 .bk-time:hover { border-color: var(--primary); }
 .bk-time.active { background: var(--primary); border-color: var(--primary); color: #fff; }
 .bk-time:disabled { opacity: .4; cursor: not-allowed; }
+.bk-time.booked { border-style: dashed; position: relative; }
+.bk-time.booked .bk-booked-tag {
+  display: block; margin-top: 2px; font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .02em; color: var(--text-4);
+}
 
 .bk-continue { margin-top: 18px; width: 100%; }
 .bk-continue:disabled { opacity: .4; cursor: not-allowed; }

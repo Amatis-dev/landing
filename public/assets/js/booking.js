@@ -88,7 +88,7 @@
         state.durationMin = json.data.durationMin;
         state.days = (json.data.days || []).filter(function (d) {
           return d.slots.some(function (s) {
-            return s.status === "available";
+            return s.status === "available" || s.status === "booked";
           });
         });
         state.selectedIndex = 0;
@@ -127,15 +127,29 @@
       })
       .join("");
 
-    var avail = (day.slots || []).filter(function (s) {
+    var daySlots = (day.slots || []).filter(function (s) {
+      return s.status === "available" || s.status === "booked";
+    });
+    var hasAvail = daySlots.some(function (s) {
       return s.status === "available";
     });
     var timesHtml;
-    if (!avail.length) {
+    if (!daySlots.length) {
       timesHtml = '<p class="booking-none">' + esc(t("noTimes")) + "</p>";
     } else {
-      timesHtml = avail
+      timesHtml = daySlots
         .map(function (s) {
+          if (s.status === "booked" || s.booked) {
+            return (
+              '<button type="button" class="bk-time booked" disabled title="' +
+              esc(t("booked")) +
+              '">' +
+              esc(s.time) +
+              '<span class="bk-booked-tag">' +
+              esc(t("booked")) +
+              "</span></button>"
+            );
+          }
           return (
             '<button type="button" class="bk-time' + (state.selectedSlot && state.selectedSlot.id === s.id ? " active" : "") + '" data-id="' + esc(s.id) + '">' +
             esc(s.time) +
