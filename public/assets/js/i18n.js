@@ -491,7 +491,7 @@ window.AMATIS_I18N = (function () {
         links: {
           services: ["What We Offer", "Web Design", "WordPress Website", "Blogs"],
           company: ["Home", "Showcase", "Who Are We", "Connect With Us"],
-          contact: ["Contact Us", "Schedule a Call", "About Us", "Blog"],
+          contact: ["Schedule a Call"],
         },
         rights: "\u00a9 {year} Amatis. All rights reserved.",
       },
@@ -1070,7 +1070,7 @@ window.AMATIS_I18N = (function () {
         links: {
           services: ["Unsere Leistungen", "Webdesign", "WordPress-Website", "Blog"],
           company: ["Startseite", "Referenzen", "\u00dcber uns", "Kontakt"],
-          contact: ["Kontakt", "Beratung buchen", "\u00dcber uns", "Blog"],
+          contact: ["Beratung buchen"],
         },
         rights: "\u00a9 {year} Amatis. Alle Rechte vorbehalten.",
       },
@@ -1649,7 +1649,7 @@ window.AMATIS_I18N = (function () {
         links: {
           services: ["\u062e\u062f\u0645\u0627\u062a \u0645\u0627", "\u0637\u0631\u0627\u062d\u06cc \u0648\u0628", "\u0648\u0628\u200c\u0633\u0627\u06cc\u062a \u0648\u0631\u062f\u067e\u0631\u0633", "\u0648\u0628\u0644\u0627\u06af"],
           company: ["\u062e\u0627\u0646\u0647", "\u0646\u0645\u0648\u0646\u0647 \u06a9\u0627\u0631\u0647\u0627", "\u0645\u0627 \u06a9\u06cc\u0633\u062a\u06cc\u0645", "\u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0645\u0627"],
-          contact: ["\u062a\u0645\u0627\u0633 \u0628\u0627 \u0645\u0627", "\u0631\u0632\u0631\u0648 \u0645\u0634\u0627\u0648\u0631\u0647", "\u0645\u0627 \u06a9\u06cc\u0633\u062a\u06cc\u0645", "\u0648\u0628\u0644\u0627\u06af"],
+          contact: ["\u0631\u0632\u0631\u0648 \u0645\u0634\u0627\u0648\u0631\u0647"],
         },
         rights: "\u00a9 {year} \u0622\u0645\u0627\u062a\u06cc\u0633. \u06a9\u0644\u06cc\u0647 \u062d\u0642\u0648\u0642 \u0645\u062d\u0641\u0648\u0638 \u0627\u0633\u062a.",
       },
@@ -2228,7 +2228,7 @@ window.AMATIS_I18N = (function () {
         links: {
           services: ["\u0645\u0627 \u0646\u0642\u062f\u0645\u0647", "\u062a\u0635\u0645\u064a\u0645 \u0627\u0644\u0648\u064a\u0628", "\u0645\u0648\u0642\u0639 \u0648\u0648\u0631\u062f\u0628\u0631\u0633", "\u0627\u0644\u0645\u062f\u0648\u0646\u0629"],
           company: ["\u0627\u0644\u0631\u0626\u064a\u0633\u064a\u0629", "\u0623\u0639\u0645\u0627\u0644\u0646\u0627", "\u0645\u0646 \u0646\u062d\u0646", "\u0627\u062a\u0635\u0644 \u0628\u0646\u0627"],
-          contact: ["\u0627\u062a\u0635\u0644 \u0628\u0646\u0627", "\u0627\u062d\u062c\u0632 \u0627\u0633\u062a\u0634\u0627\u0631\u0629", "\u0645\u0646 \u0646\u062d\u0646", "\u0627\u0644\u0645\u062f\u0648\u0646\u0629"],
+          contact: ["\u0627\u062d\u062c\u0632 \u0627\u0633\u062a\u0634\u0627\u0631\u0629"],
         },
         rights: "\u00a9 {year} \u0623\u0645\u0627\u062a\u064a\u0633. \u062c\u0645\u064a\u0639 \u0627\u0644\u062d\u0642\u0648\u0642 \u0645\u062d\u0641\u0648\u0638\u0629.",
       },
