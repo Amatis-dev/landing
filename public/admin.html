@@ -219,6 +219,7 @@
           '<div class="tabs">' +
           '<button data-tab="content" class="active">🖊️ Page content</button>' +
           '<button data-tab="messages">📥 Messages</button>' +
+          '<button data-tab="bookings">📅 Bookings</button>' +
           '<button data-tab="email">✉️ Email</button>' +
           '</div>' +
           '<div id="tab-content"></div>';
@@ -239,6 +240,7 @@
         var host = document.getElementById("tab-content");
         if (name === "content") renderContent(host);
         else if (name === "messages") renderMessages(host);
+        else if (name === "bookings") renderBookings(host);
         else if (name === "email") renderEmail(host);
       }
 
@@ -365,6 +367,132 @@
         }).catch(function (err) {
           box.innerHTML = '<p class="empty">Failed to load messages (' + esc(err.message) + ")</p>";
         });
+      }
+
+      /* ---------- Bookings ---------- */
+      function renderBookings(host) {
+        host.innerHTML =
+          '<div class="card"><h2>📅 Meeting bookings</h2>' +
+          '<div class="sub">Manage booking hours, time slots and confirmed meetings. New available slots are generated automatically from the working-hours config below.</div>' +
+          '<div id="bk-load">Loading…</div></div>';
+        api("/admin/bookings").then(function (data) {
+          var html =
+            '<h3 class="section-label">Working hours config</h3>' +
+            '<div class="row row-3" id="bk-config">' +
+            '<label class="block"><span>Timezone</span><input class="mono" data-k="booking_tz" value="' + escAttr(data.configKeys.find(function(k){return k.key==="booking_tz";}).value) + '" placeholder="Asia/Tehran"></label>' +
+            '<label class="block"><span>Duration (minutes)</span><input data-k="booking_duration_min" type="number" min="15" step="15" value="' + escAttr(data.configKeys.find(function(k){return k.key==="booking_duration_min";}).value) + '"></label>' +
+            '<label class="block"><span>Max days ahead</span><input data-k="booking_max_days_ahead" type="number" min="1" max="365" value="' + escAttr(data.configKeys.find(function(k){return k.key==="booking_max_days_ahead";}).value) + '"></label>' +
+            '<label class="block"><span>Working days (0=Sun..6=Sat, comma)</span><input class="mono" data-k="booking_weekdays" value="' + escAttr(data.configKeys.find(function(k){return k.key==="booking_weekdays";}).value) + '" placeholder="1,2,3,4,5"></label>' +
+            '<label class="block"><span>Ranges "HH-HH;HH-HH"</span><input class="mono" data-k="booking_ranges" value="' + escAttr(data.configKeys.find(function(k){return k.key==="booking_ranges";}).value) + '" placeholder="9-12;13-17"></label>' +
+            '<label class="block"><span>Owner email (calendar invite)</span><input class="mono" data-k="booking_owner_email" value="' + escAttr(data.configKeys.find(function(k){return k.key==="booking_owner_email";}).value) + '" placeholder="hello@amatisberry.ir"></label>' +
+            "</div>" +
+            '<button class="btn" id="bk-save-config" style="margin-top:16px">Save &amp; generate slots</button>' +
+            '<div class="divider"></div>' +
+            '<h3 class="section-label">Time slots</h3>' +
+            '<div class="sub">Block/unblock or delete individual slots. Booked slots cannot be deleted.</div>' +
+            '<div id="bk-slots"></div>' +
+            '<div class="divider"></div>' +
+            '<h3 class="section-label">Confirmed bookings</h3>' +
+            '<div id="bk-list"></div>';
+          document.getElementById("bk-load").innerHTML = html;
+          renderSlotsTable(data.slots || []);
+          renderBookingsList(data.bookings || []);
+
+          document.getElementById("bk-save-config").addEventListener("click", function () {
+            var btn = this; btn.disabled = true; btn.textContent = "Saving…";
+            var body = {};
+            document.querySelectorAll("#bk-config input[data-k]").forEach(function (inp) {
+              body[inp.getAttribute("data-k")] = inp.value;
+            });
+            api("/admin/bookings", { method: "POST", body: body })
+              .then(function () { toast("Config saved. Slots regenerated.", "ok"); renderBookings(host); })
+              .catch(function (err) { toast("Save failed: " + err.message, "err"); })
+              .finally(function () { btn.disabled = false; btn.textContent = "Save &amp; generate slots"; });
+          });
+        }).catch(function (err) {
+          document.getElementById("bk-load").innerHTML =
+            '<p class="empty">Failed to load bookings (' + esc(err.message) + ")</p>";
+        });
+      }
+
+      function renderSlotsTable(slots) {
+        var box = document.getElementById("bk-slots");
+        if (!slots.length) { box.innerHTML = '<p class="empty">No slots generated yet — save the config to create them.</p>'; return; }
+        box.innerHTML =
+          '<table style="width:100%;border-collapse:collapse;font-size:12.5px">' +
+          "<thead><tr>" +
+          "<th style='text-align:left;padding:8px;color:var(--muted)'>Date</th>" +
+          "<th style='text-align:left;padding:8px;color:var(--muted)'>Time</th>" +
+          "<th style='text-align:left;padding:8px;color:var(--muted)'>Status</th>" +
+          "<th style='text-align:left;padding:8px;color:var(--muted)'>Booked by</th>" +
+          "<th style='text-align:right;padding:8px;color:var(--muted)'>Actions</th>" +
+          "</tr></thead><tbody>" +
+          slots.map(function (s) {
+            return "<tr style='border-top:1px solid var(--line)'>" +
+              "<td style='padding:8px'>" + esc(s.date) + "</td>" +
+              "<td style='padding:8px;font-weight:800'>" + esc(s.time) + "</td>" +
+              "<td style='padding:8px'>" + statusBadge(s) + "</td>" +
+              "<td style='padding:8px;color:var(--text-2)'>" + (s.bookedName ? esc(s.bookedName) + " · " + esc(s.bookedEmail) : "—") + "</td>" +
+              "<td style='padding:8px;text-align:right;white-space:nowrap'>" +
+              slotActions(s) +
+              "</td></tr>";
+          }).join("") +
+          "</tbody></table>";
+
+        box.querySelectorAll("[data-slotact]").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var id = btn.getAttribute("data-id");
+            var act = btn.getAttribute("data-slotact");
+            if (act === "block") {
+              api("/admin/bookings", { method: "PATCH", body: { id: id, status: "blocked" } })
+                .then(function () { toast("Slot blocked.", "ok"); refreshBookings(); })
+                .catch(function (e) { toast("Failed: " + e.message, "err"); });
+            } else if (act === "unblock") {
+              api("/admin/bookings", { method: "PATCH", body: { id: id, status: "available" } })
+                .then(function () { toast("Slot unblocked.", "ok"); refreshBookings(); })
+                .catch(function (e) { toast("Failed: " + e.message, "err"); });
+            } else if (act === "del") {
+              if (!confirm("Delete this slot?")) return;
+              api("/admin/bookings?id=" + encodeURIComponent(id), { method: "DELETE" })
+                .then(function () { toast("Slot deleted.", "ok"); refreshBookings(); })
+                .catch(function (e) { toast("Failed: " + e.message, "err"); });
+            }
+          });
+        });
+      }
+
+      function statusBadge(s) {
+        if (s.status === "booked") return '<span class="badge">BOOKED</span>';
+        if (s.status === "blocked") return '<span style="background:#64748b;color:#fff;font-size:10px;font-weight:900;border-radius:999px;padding:2px 8px">BLOCKED</span>';
+        return '<span style="background:#34d399;color:#064e3b;font-size:10px;font-weight:900;border-radius:999px;padding:2px 8px">FREE</span>';
+      }
+
+      function slotActions(s) {
+        if (s.status === "booked") return '<span style="color:var(--muted);font-size:11.5px">—</span>';
+        var html = "";
+        if (s.status === "available") html += '<button class="btn sm ghost" data-slotact="block" data-id="' + s.id + '">Block</button> ';
+        if (s.status === "blocked") html += '<button class="btn sm ghost" data-slotact="unblock" data-id="' + s.id + '">Unblock</button> ';
+        html += '<button class="btn sm danger" data-slotact="del" data-id="' + s.id + '">Delete</button>';
+        return html;
+      }
+
+      function renderBookingsList(list) {
+        var box = document.getElementById("bk-list");
+        if (!list.length) { box.innerHTML = '<p class="empty">No bookings yet.</p>'; return; }
+        box.innerHTML = list.map(function (b) {
+          return '<div class="msg">' +
+            '<div class="topline"><span><span class="name">' + esc(b.name) + "</span>" +
+            ' &nbsp; <a class="mail" href="mailto:' + escAttr(b.email) + '">' + esc(b.email) + "</a>" +
+            "</span><span class=\"date\">" + esc(new Date(b.createdAt).toLocaleString()) + "</span></div>" +
+            '<div class="subject">' + esc(b.meetLink) + "</div>" +
+            (b.notes ? '<div class="body-text">' + esc(b.notes) + "</div>" : "") +
+            "</div>";
+        }).join("");
+      }
+
+      function refreshBookings() {
+        var host = document.getElementById("tab-content");
+        renderBookings(host);
       }
 
       /* ---------- Email ---------- */

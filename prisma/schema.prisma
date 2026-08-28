@@ -79,3 +79,38 @@ model Setting {
 
   @@index([group])
 }
+
+// ---------- Meeting booking: concrete generated time slots ----------
+
+model TimeSlot {
+  id        String   @id @default(cuid())
+  date      DateTime
+  start     DateTime
+  end       DateTime
+  status    String   @default("available") // available | booked | blocked
+  label     String?
+  createdAt DateTime @default(now())
+
+  booking   Booking?
+
+  @@index([date])
+  @@index([start, status])
+}
+
+// ---------- Meeting booking: confirmed bookings ----------
+
+model Booking {
+  id        String   @id @default(cuid())
+  slotId    String   @unique
+  name      String
+  email     String
+  notes     String?
+  meetLink  String
+  status    String   @default("confirmed") // confirmed | cancelled
+  createdAt DateTime @default(now())
+
+  slot      TimeSlot @relation(fields: [slotId], references: [id])
+
+  @@index([createdAt])
+  @@index([email])
+}

@@ -173,3 +173,81 @@ export async function sendAdminEmail(to: string, subject: string, body: string, 
     .join("");
   await sendEmail(to, subject, body, wrapHtml(html), fromOverride);
 }
+
+/**
+ * Sends a meeting-booking confirmation to the customer with an .ics invite
+ * attachment, plus a notification to the owner inbox.
+ */
+export async function sendBookingInvite(opts: {
+  to: string;
+  owner: string;
+  subject: string;
+  summary: string;
+  description: string;
+  location: string;
+  start: Date;
+  end: Date;
+  ics: string;
+  meetLink: string;
+}): Promise<void> {
+  const text =
+    `${opts.summary}\n\n` +
+    `When: ${opts.start.toLocaleString()}\n` +
+    `Where: ${opts.location}\n\n` +
+    `Join the meeting: ${opts.meetLink}\n\n` +
+    `${opts.description}\n\n` +
+    `This calendar invite (.ics) has been attached — open it to add the meeting to your calendar.`;
+
+  const html =
+    `<div style="font-size:18px;font-weight:900;color:#12223D">${escapeHtml(opts.summary)}</div>` +
+    `<p style="margin:12px 0;color:#334155;line-height:1.8">${escapeHtml(opts.description)}</p>` +
+    `<table style="font-size:13.5px;color:#334155;line-height:1.9">` +
+    `<tr><td style="font-weight:900;color:#12223D;padding-right:12px">When</td><td>${escapeHtml(opts.start.toLocaleString())}</td></tr>` +
+    `<tr><td style="font-weight:900;color:#12223D;padding-right:12px">Where</td><td>${escapeHtml(opts.location)}</td></tr>` +
+    `</table>` +
+    `<p style="margin:14px 0"><a href="${escapeHtml(opts.meetLink)}" style="display:inline-block;background:#14b8a8;color:#06302b;text-decoration:none;padding:10px 18px;border-radius:10px;font-weight:900">Join Google Meet</a></p>` +
+    `<p style="margin:8px 0 0;font-size:12px;color:#64748b">Open the attached .ics file to add this meeting to your calendar.</p>`;
+
+  const attendee = opts.to;
+  const resendCfg = await loadResendConfig();
+  if (resendCfg) {
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${resendCfg.apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: resendCfg.from,
+        to: [attendee],
+        subject: opts.subject,
+        text,
+        html: wrapHtml(html),
+        attachments: [
+          {
+            filename: "invite.ics",
+            content: Buffer.from(opts.ics, "utf8").toString("base64"),
+          },
+        ],
+      }),
+    });
+    if (!res.ok) {
+      const detail = await res.text();
+      throw new Error(`Resend API error ${res.status}: ${detail}`);
+    }
+  } else {
+    const smtpCfg = await loadSmtpConfig();
+    if (!smtpCfg) throw new Error("Email transport is not configured");
+    const transporter = getSmtpTransporter(smtpCfg);
+    await transporter.sendMail({
+      from: smtpCfg.from,
+      to: attendee,
+      cc: opts.owner,
+      subject: opts.subject,
+      text,
+      html: wrapHtml(html),
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      icalEvent: { method: "request", content: opts.ics, filename: "invite.ics" as any } as any,
+    });
+  }
+}

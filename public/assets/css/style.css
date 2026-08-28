@@ -2251,3 +2251,91 @@ section {
     transition: none !important;
   }
 }
+
+/* ---------- Meeting booking calendar ---------- */
+#booking { max-width: 860px; margin: 0 auto; }
+.booking-head { margin-bottom: 22px; }
+.booking-head h3 { font-size: 26px; font-weight: 900; color: var(--text); }
+.booking-head p { margin-top: 6px; color: var(--text-2); font-weight: 600; line-height: 1.7; }
+
+.booking-panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: 0 16px 46px rgba(30, 31, 40, 0.08);
+}
+.bk-row { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 26px; }
+@media (max-width: 720px) { .bk-row { grid-template-columns: 1fr; } }
+.bk-col { min-width: 0; }
+.bk-label { display: block; font-size: 12px; font-weight: 800; color: var(--text-4); margin-bottom: 10px; text-transform: uppercase; letter-spacing: .03em; }
+
+.bk-dates-list {
+  max-height: 320px; overflow-y: auto;
+  display: grid; grid-template-columns: 1fr; gap: 6px;
+}
+.bk-date {
+  border: 1px solid var(--line-2); background: var(--surface-2);
+  color: var(--text); border-radius: 10px; padding: 10px 14px;
+  font-size: 13.5px; font-weight: 700; cursor: pointer; text-align: left;
+  font-family: inherit; transition: border-color .15s, background .15s;
+}
+.bk-date:hover { border-color: var(--primary); }
+.bk-date.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+
+.bk-times-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(86px, 1fr)); gap: 8px; }
+.bk-time {
+  border: 1px solid var(--line-2); background: var(--surface-2);
+  color: var(--text); border-radius: 10px; padding: 9px 6px;
+  font-size: 13.5px; font-weight: 800; cursor: pointer; font-family: inherit;
+  text-align: center; transition: border-color .15s, background .15s, color .15s;
+}
+.bk-time:hover { border-color: var(--primary); }
+.bk-time.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+.bk-time:disabled { opacity: .4; cursor: not-allowed; }
+
+.bk-continue { margin-top: 18px; width: 100%; }
+.bk-continue:disabled { opacity: .4; cursor: not-allowed; }
+
+.booking-none { color: var(--text-3); font-size: 13.5px; font-weight: 600; padding: 10px 0; }
+
+.booking-loading, .booking-error {
+  text-align: center; color: var(--text-2); padding: 40px 20px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 20px;
+  font-weight: 600; line-height: 1.8;
+}
+.spinner {
+  width: 26px; height: 26px; margin: 0 auto 14px; border-radius: 50%;
+  border: 3px solid var(--line); border-top-color: var(--primary);
+  animation: bk-spin .8s linear infinite;
+}
+@keyframes bk-spin { to { transform: rotate(360deg); } }
+
+.bk-form { margin-top: 18px; }
+.bk-form .field { margin-top: 14px; }
+.bk-slot-summary {
+  background: var(--surface-2); border: 1px solid var(--line-2);
+  border-radius: 14px; padding: 16px 18px;
+}
+.bk-slot-summary .bk-kicker { display: block; font-size: 11.5px; font-weight: 800; color: var(--text-4); text-transform: uppercase; letter-spacing: .03em; margin-bottom: 4px; }
+.bk-slot-summary strong { font-size: 17px; font-weight: 900; color: var(--text); }
+.bk-error { margin-top: 12px; color: var(--danger); font-size: 13px; font-weight: 700; min-height: 1px; }
+
+.booked-succ .bk-check {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; border-radius: 50%; background: var(--primary);
+  color: #fff; font-weight: 900; margin-bottom: 10px;
+}
+.booked-succ p { color: var(--text-2); }
+.booked-succ p strong { color: var(--primary); }
+
+.bk-meet { margin-top: 16px; }
+.bk-meet-link {
+  display: inline-block; word-break: break-all;
+  background: var(--surface-2); border: 1px solid var(--line-2);
+  border-radius: 10px; padding: 10px 14px; color: var(--primary);
+  font-weight: 800; font-size: 14px; margin-top: 6px;
+}
+.bk-hint { margin-top: 14px; color: var(--text-3); font-size: 12.5px; font-weight: 600; line-height: 1.7; }
+.booking-panel.success .bk-slot-summary { margin-top: 14px; }
+.booking-panel.success #bk-another { margin-top: 18px; }
