@@ -15,8 +15,10 @@
     tz: "Asia/Tehran",
     durationMin: 60,
     days: [],
-    selectedIndex: 0,
+    selectedIndex: -1,
     selectedSlot: null,
+    view: { y: 1970, m: 1 },
+    viewAnchor: Date.now(),
   };
 
   var BOOKINGS_LIMIT = 2;
@@ -73,6 +75,171 @@
     }
   }
 
+  // ---- Calendar: locale/calendar aware month view ----
+  var CAL_CODE = { en: "gregory", de: "gregory", fa: "persian", ar: "islamic-civil" };
+  var CAL_LOCALE = { en: "en", de: "de-DE", fa: "fa-IR", ar: "ar-SA" };
+  var WEEK_START = { en: 0, de: 1, fa: 6, ar: 6 }; // 0=Sun .. 6=Sat
+
+  function calCode() {
+    return CAL_CODE[i18n.current()] || "gregory";
+  }
+  function calLocale() {
+    return CAL_LOCALE[i18n.current()] || "en";
+  }
+  function weekStart() {
+    var v = WEEK_START[i18n.current()];
+    return typeof v === "number" ? v : 0;
+  }
+  function calParts(date) {
+    var fmt = new Intl.DateTimeFormat(calLocale(), {
+      calendar: calCode(),
+      numberingSystem: "latn",
+      timeZone: "UTC",
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+      weekday: "short",
+    });
+    var p = {};
+    fmt.formatToParts(date).forEach(function (x) {
+      p[x.type] = x.value;
+    });
+    return { y: Number(p.year), m: Number(p.month), d: Number(p.day), w: p.weekday };
+  }
+  function localizedDay(date) {
+    return new Intl.DateTimeFormat(calLocale(), {
+      calendar: calCode(),
+      timeZone: "UTC",
+      day: "numeric",
+    }).format(date);
+  }
+  function calMonthKey(date) {
+    var p = calParts(date);
+    return p.y * 100 + p.m;
+  }
+  function shiftMonth(y, m, delta) {
+    var t = y * 12 + (m - 1) + delta;
+    return { y: Math.floor(t / 12), m: (t % 12) + 1 };
+  }
+  // Return gregorian timestamp (ms) of the first instant of calendar month (y,m).
+  function monthStartGregorian(y, m, anchorMs) {
+    var DAY = 86400000;
+    var key = y * 100 + m;
+    function k(ts) {
+      return calMonthKey(new Date(ts));
+    }
+    var lo = anchorMs - 500 * DAY;
+    var hi = anchorMs + 500 * DAY;
+    while (k(lo) >= key) {
+      hi = lo;
+      lo -= 1000 * DAY;
+    }
+    while (k(hi) <= key) {
+      hi += 1000 * DAY;
+    }
+    var a = lo,
+      b = hi;
+    while (a < b) {
+      var mid = Math.floor((a + b) / 2);
+      if (k(mid) >= key) b = mid;
+      else a = mid + 1;
+    }
+    return a;
+  }
+  function weekdayNames(ws) {
+    var base = Date.UTC(2026, 0, 4); // a Sunday
+    var names = new Array(7);
+    for (var i = 0; i < 7; i++) {
+      var ts = new Date(base + i * 86400000);
+      names[ts.getUTCDay()] = calParts(ts).w;
+    }
+    var ordered = [];
+    for (var i = 0; i < 7; i++) ordered.push(names[(ws + i) % 7] || "");
+    return ordered;
+  }
+  function monthYearTitle(date) {
+    return new Intl.DateTimeFormat(calLocale(), {
+      calendar: calCode(),
+      timeZone: "UTC",
+      year: "numeric",
+      month: "long",
+    }).format(date);
+  }
+  function gregKey(date) {
+    return date.toISOString().slice(0, 10);
+  }
+  function renderCalendar() {
+    var ws = weekStart();
+    var key = state.view.y * 100 + state.view.m;
+    var start = new Date(monthStartGregorian(state.view.y, state.view.m, state.viewAnchor));
+    state.viewAnchor = start.getTime();
+    var lead = (start.getUTCDay() - ws + 7) % 7;
+    var count = 0;
+    var cur = new Date(start.getTime());
+    while (calMonthKey(cur) === key) {
+      count++;
+      cur = new Date(cur.getTime() + 86400000);
+    }
+    var dayIndex = {};
+    for (var i = 0; i < state.days.length; i++) dayIndex[state.days[i].date] = i;
+
+    var html =
+      '<div class="bk-cal-head">' +
+      '<button type="button" class="bk-cal-nav" data-nav="-1" aria-label="prev">\u2039</button>' +
+      '<span class="bk-cal-title">' + esc(monthYearTitle(start)) + "</span>" +
+      '<button type="button" class="bk-cal-nav" data-nav="1" aria-label="next">\u203a</button>' +
+      "</div>";
+    html +=
+      '<div class="bk-cal-wdays">' +
+      weekdayNames(ws)
+        .map(function (n) {
+          return "<span>" + esc(n) + "</span>";
+        })
+        .join("") +
+      "</div>";
+    html += '<div class="bk-cal-grid">';
+    for (var k = 0; k < lead; k++) html += '<span class="bk-cal-blank"></span>';
+    cur = new Date(start.getTime());
+    for (var day = 0; day < count; day++) {
+      var gk = gregKey(cur);
+      if (Object.prototype.hasOwnProperty.call(dayIndex, gk)) {
+        var idx = dayIndex[gk];
+        var sel = idx === state.selectedIndex;
+        html +=
+          '<button type="button" class="bk-cal-day has-slot' + (sel ? " active" : "") + '" data-idx="' + idx + '">' +
+          esc(localizedDay(cur)) +
+          "</button>";
+      } else {
+        html +=
+          '<span class="bk-cal-day muted"' + (cur.getTime() < Date.now() ? " data-past=\"1\"" : "") + ">" +
+          esc(localizedDay(cur)) +
+          "</span>";
+      }
+      cur = new Date(cur.getTime() + 86400000);
+    }
+    html += "</div>";
+    return html;
+  }
+
+  // When navigating months, keep the selected day inside the visible month when possible.
+  function keepSelectionInView() {
+    var selDay = state.selectedIndex >= 0 ? state.days[state.selectedIndex] : null;
+    if (selDay) {
+      var sp = calParts(new Date(selDay.date + "T00:00:00Z"));
+      if (sp.y === state.view.y && sp.m === state.view.m) return;
+    }
+    for (var i = 0; i < state.days.length; i++) {
+      var dp = calParts(new Date(state.days[i].date + "T00:00:00Z"));
+      if (dp.y === state.view.y && dp.m === state.view.m) {
+        state.selectedIndex = i;
+        state.selectedSlot = null;
+        return;
+      }
+    }
+    state.selectedIndex = -1;
+    state.selectedSlot = null;
+  }
+
   function loadSlots() {
     root.innerHTML =
       '<div class="booking-loading">' +
@@ -91,8 +258,20 @@
             return s.status === "available" || s.status === "booked";
           });
         });
-        state.selectedIndex = 0;
         state.selectedSlot = null;
+        if (state.days.length) {
+          var first = new Date(state.days[0].date + "T00:00:00Z");
+          var fp = calParts(first);
+          state.view = { y: fp.y, m: fp.m };
+          state.viewAnchor = first.getTime();
+          state.selectedIndex = 0;
+        } else {
+          var now = new Date();
+          var np = calParts(now);
+          state.view = { y: np.y, m: np.m };
+          state.viewAnchor = now.getTime();
+          state.selectedIndex = -1;
+        }
         renderStep("pick");
       })
       .catch(function () {
@@ -116,18 +295,10 @@
       return;
     }
 
-    var day = state.days[state.selectedIndex];
-    var datesHtml = state.days
-      .map(function (d, i) {
-        return (
-          '<button type="button" class="bk-date' + (i === state.selectedIndex ? " active" : "") + '" data-idx="' + i + '">' +
-          esc(fmtDate(d.date)) +
-          "</button>"
-        );
-      })
-      .join("");
+    var day = state.selectedIndex >= 0 ? state.days[state.selectedIndex] : null;
+    var datesHtml = renderCalendar();
 
-    var daySlots = (day.slots || []).filter(function (s) {
+    var daySlots = (day ? day.slots : []).filter(function (s) {
       return s.status === "available" || s.status === "booked";
     });
     var hasAvail = daySlots.some(function (s) {
@@ -136,6 +307,18 @@
     var timesHtml;
     if (!daySlots.length) {
       timesHtml = '<p class="booking-none">' + esc(t("noTimes")) + "</p>";
+    } else if (!hasAvail) {
+      timesHtml = daySlots
+        .map(function (s) {
+          return (
+            '<button type="button" class="bk-time booked" disabled>' +
+            esc(s.time) +
+            '<span class="bk-booked-tag">' +
+            esc(t("booked")) +
+            "</span></button>"
+          );
+        })
+        .join("");
     } else {
       timesHtml = daySlots
         .map(function (s) {
@@ -172,13 +355,22 @@
       '<div class="bk-row">' +
       '<div class="bk-col bk-dates">' +
       '<span class="bk-label">' + esc(t("pickDate")) + "</span>" +
-      '<div class="bk-dates-list">' + datesHtml + "</div>" +
+      '<div class="bk-cal">' + datesHtml + "</div>" +
       "</div>" +
       timePanel +
       "</div>";
     root.appendChild(wrapper);
 
-    root.querySelectorAll(".bk-date").forEach(function (b) {
+    root.querySelectorAll(".bk-cal-nav").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var delta = Number(b.getAttribute("data-nav"));
+        state.view = shiftMonth(state.view.y, state.view.m, delta);
+        state.viewAnchor = state.viewAnchor;
+        keepSelectionInView();
+        renderPicker();
+      });
+    });
+    root.querySelectorAll(".bk-cal-day.has-slot").forEach(function (b) {
       b.addEventListener("click", function () {
         state.selectedIndex = Number(b.getAttribute("data-idx"));
         state.selectedSlot = null;
