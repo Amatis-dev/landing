@@ -19,6 +19,34 @@
     selectedSlot: null,
   };
 
+  var BOOKINGS_LIMIT = 2;
+  var BOOKINGS_KEY_MAP = "amatis_booked_map";
+
+  function getBookingsMap() {
+    try {
+      return JSON.parse(window.localStorage.getItem(BOOKINGS_KEY_MAP) || "{}");
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function localBookCount(email) {
+    var key = String(email || "").trim().toLowerCase();
+    if (!key) return 0;
+    var m = getBookingsMap();
+    return m[key] ? m[key] : 0;
+  }
+
+  function recordLocalBooking(email) {
+    var key = String(email || "").trim().toLowerCase();
+    if (!key) return;
+    var m = getBookingsMap();
+    m[key] = (m[key] || 0) + 1;
+    try {
+      window.localStorage.setItem(BOOKINGS_KEY_MAP, JSON.stringify(m));
+    } catch (e) {}
+  }
+
   function t(path) {
     var v = i18n && i18n.get ? i18n.get(i18n.current(), "connect.booking." + path) : null;
     return v != null ? v : path;
@@ -190,6 +218,7 @@
       '<input id="bk-name" type="text" required maxlength="200"></div>' +
       '<div class="field"><label for="bk-email">' + esc(t("formEmail")) + "</label>" +
       '<input id="bk-email" type="email" required maxlength="200"></div>' +
+      '<p class="bk-limit" id="bk-limit"></p>' +
       '<div class="field"><label for="bk-notes">' + esc(t("formNotes")) + "</label>" +
       '<textarea id="bk-notes" rows="3" maxlength="2000"></textarea></div>' +
       '<p class="bk-error" id="bk-error"></p>' +
@@ -197,16 +226,50 @@
       "</form>" +
       "</div>";
 
+    var emailInput = document.getElementById("bk-email");
+    emailInput.addEventListener("input", function () {
+      checkLocalLimit();
+    });
+
     document.getElementById("bk-form").addEventListener("submit", function (e) {
       e.preventDefault();
       submitBooking();
     });
   }
 
+  function checkLocalLimit() {
+    var limit = document.getElementById("bk-limit");
+    var submit = document.getElementById("bk-submit");
+    var email = document.getElementById("bk-email");
+    if (!limit || !email) return;
+    var count = localBookCount(email.value);
+    var remaining = BOOKINGS_LIMIT - count;
+    if (count >= BOOKINGS_LIMIT) {
+      limit.textContent = t("limitReached");
+      limit.classList.add("show");
+      if (submit) submit.disabled = true;
+    } else {
+      limit.textContent = "";
+      limit.classList.remove("show");
+      if (submit) submit.disabled = false;
+    }
+    return count;
+  }
+
   function submitBooking() {
     var errEl = document.getElementById("bk-error");
     var btn = document.getElementById("bk-submit");
+    var name = document.getElementById("bk-name").value;
+    var email = document.getElementById("bk-email").value;
+    var notes = document.getElementById("bk-notes").value;
     errEl.textContent = "";
+
+    var localCount = localBookCount(email);
+    if (localCount >= BOOKINGS_LIMIT) {
+      errEl.textContent = t("limitReached");
+      return;
+    }
+
     btn.disabled = true;
     btn.textContent = t("submitting");
 
@@ -215,9 +278,9 @@
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         slotId: state.selectedSlot.id,
-        name: document.getElementById("bk-name").value,
-        email: document.getElementById("bk-email").value,
-        notes: document.getElementById("bk-notes").value,
+        name: name,
+        email: email,
+        notes: notes,
       }),
     })
       .then(function (r) {
@@ -227,8 +290,11 @@
       })
       .then(function (json) {
         if (json && json.ok) {
+          recordLocalBooking(email);
           state.last = json.data;
           renderSuccess();
+        } else if (json && json.error === "booking_limit") {
+          errEl.textContent = t("limitReached");
         } else {
           errEl.textContent = t(json && json.error === "slot_unavailable" ? "error" : "error");
         }
@@ -244,7 +310,6 @@
 
   function renderSuccess() {
     var d = state.last;
-    var link = d.meetLink;
     root.innerHTML =
       '<div class="booking-head booked-succ"><span class="bk-check">✓</span>' +
       "<h3>" + esc(t("successTitle")) + "</h3>" +
@@ -253,16 +318,8 @@
       '<div class="bk-slot-summary">' +
       (d.localTime && d.localDate ? "<strong>" + esc(fmtDate(d.localDate) + " — " + d.localTime) + "</strong>" : "") +
       "</div>" +
-      '<div class="bk-meet"><span class="bk-label">' + esc(t("meetLink")) + "</span>" +
-      '<a class="bk-meet-link" href="' + esc(link) + '" target="_blank" rel="noopener">' + esc(link) + "</a></div>" +
       '<p class="bk-hint">' + esc(t("addToCalendar")) + "</p>" +
-      '<button type="button" class="btn-primary lg" id="bk-another">' + esc(t("bookBtn")) + "</button>" +
       "</div>";
-
-    document.getElementById("bk-another").addEventListener("click", function () {
-      state.selectedSlot = null;
-      loadSlots();
-    });
   }
 
   document.addEventListener("i18n:applied", function () {

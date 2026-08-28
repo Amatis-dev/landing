@@ -209,27 +209,31 @@ export async function sendBookingInvite(opts: {
     `<p style="margin:8px 0 0;font-size:12px;color:#64748b">Open the attached .ics file to add this meeting to your calendar.</p>`;
 
   const attendee = opts.to;
+  const owner = opts.owner;
+  const ccList = attendee.toLowerCase() === owner.toLowerCase() ? [] : [owner];
   const resendCfg = await loadResendConfig();
   if (resendCfg) {
+    const payload: Record<string, unknown> = {
+      from: resendCfg.from,
+      to: [attendee],
+      subject: opts.subject,
+      text,
+      html: wrapHtml(html),
+      attachments: [
+        {
+          filename: "invite.ics",
+          content: Buffer.from(opts.ics, "utf8").toString("base64"),
+        },
+      ],
+    };
+    if (ccList.length) payload.cc = ccList;
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${resendCfg.apiKey}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        from: resendCfg.from,
-        to: [attendee],
-        subject: opts.subject,
-        text,
-        html: wrapHtml(html),
-        attachments: [
-          {
-            filename: "invite.ics",
-            content: Buffer.from(opts.ics, "utf8").toString("base64"),
-          },
-        ],
-      }),
+      body: JSON.stringify(payload),
     });
     if (!res.ok) {
       const detail = await res.text();
@@ -242,7 +246,7 @@ export async function sendBookingInvite(opts: {
     await transporter.sendMail({
       from: smtpCfg.from,
       to: attendee,
-      cc: opts.owner,
+      cc: ccList.length ? ccList : undefined,
       subject: opts.subject,
       text,
       html: wrapHtml(html),

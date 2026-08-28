@@ -10,6 +10,7 @@ import {
 import { sendBookingInvite } from "@/lib/email";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const BOOKINGS_LIMIT = 2;
 
 /**
  * POST /api/booking
@@ -38,6 +39,12 @@ export async function POST(req: NextRequest) {
   if (!slot) return fail("slot_not_found", 404);
   if (slot.status !== "available") return fail("slot_unavailable", 409);
   if (slot.start.getTime() <= Date.now() + 2 * 60 * 60 * 1000) return fail("slot_past", 409);
+
+  // Limit: a user may have at most BOOKINGS_LIMIT active bookings.
+  const activeCount = await prisma.booking.count({
+    where: { email, status: "confirmed" },
+  });
+  if (activeCount >= BOOKINGS_LIMIT) return fail("booking_limit", 403);
 
   const config = await loadBookingConfig();
   const meetLink = generateMeetLink();
