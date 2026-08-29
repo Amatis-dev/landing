@@ -535,7 +535,7 @@ def patch_offer_cards(content):
 
     def repl(m):
         inner = m.group(1)
-        km = re.search(r'data-i18n="(services\.[a-z]+\.[a-z]+)"', inner)
+        km = re.search(r'data-i18n="(services\.[a-z0-9]+\.[a-z0-9]+)"', inner)
         if km and km.group(1) in LINK_MAP:
             page = LINK_MAP[km.group(1)]
             return '<a class="offer-card card-hover reveal" href="%s">%s</a>' % (page, inner)
