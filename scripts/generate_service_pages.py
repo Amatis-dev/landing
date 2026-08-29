@@ -164,7 +164,7 @@ HEADER_TOP = """  <!-- ======================= HEADER ======================= --
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html" data-nav-key="home">
-        <span class="brand-mark">A</span>
+        <span class="brand-mark">AB</span>
         <span class="brand-word" data-i18n="brand">AmatisBerry</span>
       </a>
 
@@ -254,7 +254,7 @@ FOOTER = """  <!-- ======================= FOOTER ======================= -->
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="brand" href="index.html">
-            <span class="brand-mark">A</span>
+            <span class="brand-mark">AB</span>
             <span class="brand-word" data-i18n="brand">AmatisBerry</span>
           </a>
           <p data-i18n="footer.tagline">AmatisBerry is a business consultancy agency helping companies grow with strategy, marketing and technology.</p>

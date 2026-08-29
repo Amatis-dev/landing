@@ -353,7 +353,7 @@ window.AMATIS_I18N = (function () {
         f5: "SLA-backed support & reporting"
       },
     },
-    /*__SVC_END__*/        svc: {
+    /*__SVC_END__*/            svc: {
       androidApp: {
         subtitle: "Native Android applications built with Kotlin, from MVP to mature product.",
         p1: "Our Android team ships high-performance apps using Kotlin and modern architecture patterns such as MVVM and clean architecture. We cover the full lifecycle — discovery, UI/UX, development, Play Store publishing and post-launch iteration.",
@@ -2290,7 +2290,7 @@ window.AMATIS_I18N = (function () {
         f5: "Support mit SLA & Reporting"
       },
     },
-    /*__SVC_END__*/        svc: {
+    /*__SVC_END__*/            svc: {
       androidApp: {
         subtitle: "Native-Android-Apps mit Kotlin – vom MVP bis zum ausgereiften Produkt.",
         p1: "Unser Android-Team entwickelt leistungsfähige Apps mit Kotlin und modernen Architekturmustern wie MVVM und Clean Architecture. Wir begleiten den gesamten Lebenszyklus – von der Konzeption über UI/UX und Entwicklung bis zur Veröffentlichung im Play Store sowie zur Weiterentwicklung nach dem Launch.",
@@ -4227,7 +4227,7 @@ window.AMATIS_I18N = (function () {
         f5: "پشتیبانی با SLA و گزارش‌دهی"
       },
     },
-    /*__SVC_END__*/        svc: {
+    /*__SVC_END__*/            svc: {
       androidApp: {
         subtitle: "اپلیکیشن‌های اندروید نیتیو با کاتلین، از MVP تا محصول کامل.",
         p1: "تیم اندروید ما با کاتلین و معماری‌های مدرن مانند MVVM و Clean Architecture اپلیکیشن‌هایی پرسرعت و باکیفیت می‌سازد. کل چرخه را پوشش می‌دهیم — از ایده و UI/UX و توسعه تا انتشار در گوگل‌پلی و بهبود مداوم پس از عرضه.",
@@ -6164,7 +6164,7 @@ window.AMATIS_I18N = (function () {
         f5: "دعم باتفاقيات مستوى خدمة وتقارير"
       },
     },
-    /*__SVC_END__*/        svc: {
+    /*__SVC_END__*/            svc: {
       androidApp: {
         subtitle: "تطبيقات أندرويد أصلية مبنية بلغة Kotlin، من فكرة MVP إلى منتج متكامل.",
         p1: "يبني فريقنا تطبيقات أندرويد عالية الأداء باستخدام Kotlin وأنماط معمارية حديثة مثل MVVM وClean Architecture. نغطي دورة الحياة كاملة — من الفكرة وتصميم الواجهة والتطوير وحتى النشر في متجر Play والتطوير المستمر.",

@@ -61,7 +61,7 @@ const FOOTER = `
     <div class="container-page">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a class="brand" href="/"><span class="brand-mark">A</span><span class="brand-word">AmatisBerry</span></a>
+          <a class="brand" href="/"><span class="brand-mark">AB</span><span class="brand-word">AmatisBerry</span></a>
           <p>AmatisBerry is a business consultancy agency helping companies grow with strategy, marketing and technology.</p>
         </div>
         <div class="footer-col">
@@ -179,7 +179,7 @@ export function renderPostPage(
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/">
-        <span class="brand-mark">A</span><span class="brand-word">AmatisBerry</span>
+        <span class="brand-mark">AB</span><span class="brand-word">AmatisBerry</span>
       </a>
       <nav class="site-nav" aria-label="Main">${NAV}</nav>
       <div class="header-actions">
