@@ -7,11 +7,13 @@ const prisma = new PrismaClient();
 
 const DEFAULT_SETTINGS = [
   { key: "contact_phone", value: "+852 2569 7974", secret: false, group: "contact" },
+  { key: "contact_phone_fa", value: "+۸۵۲ ۲۵۶۹ ۷۹۷۴", secret: false, group: "contact" },
+  { key: "contact_phone_ar", value: "+٨٥٢ ٢٥٦٩ ٧٩٧٤", secret: false, group: "contact" },
   { key: "contact_email", value: "hello@amatisberry.ir", secret: false, group: "contact" },
   { key: "contact_address_en", value: "44/1, Amethyst Tower, Training Park, Mashhad, Iran", secret: false, group: "contact" },
   { key: "contact_address_de", value: "44/1, Amethyst Tower, Training Park, Mashhad, Iran", secret: false, group: "contact" },
-  { key: "contact_address_fa", value: "44/1, Amethyst Tower, Training Park, Mashhad, Iran", secret: false, group: "contact" },
-  { key: "contact_address_ar", value: "44/1, Amethyst Tower, Training Park, Mashhad, Iran", secret: false, group: "contact" },
+  { key: "contact_address_fa", value: "۴۴/۱، برج آمتیست، پارک ترینینگ، مشهد، ایران", secret: false, group: "contact" },
+  { key: "contact_address_ar", value: "٤٤/١، برج أميتيست، منتزه التدريب، مشهد، إيران", secret: false, group: "contact" },
   { key: "contact_hours_en", value: "Mon – Fri, 9:00 – 18:00", secret: false, group: "contact" },
   { key: "contact_hours_de", value: "Mo – Fr, 9:00 – 18:00", secret: false, group: "contact" },
   { key: "contact_hours_fa", value: "شنبه تا پنجشنبه، 9:00 – 18:00", secret: false, group: "contact" },
