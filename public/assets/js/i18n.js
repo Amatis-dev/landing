@@ -1435,7 +1435,7 @@ window.AMATIS_I18N = (function () {
         "ctaButton": "Book a Free Consultation",
         "cta": "Free Consultation",
         "from": "from",
-        "unit": "M Toman",
+        "unit": "USD",
         "apps": {
           "title": "App Development",
           "lead": "Pick the plan that matches your product stage — from MVP to full-scale platform.",
@@ -1443,8 +1443,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Starter App",
               "tag": "MVP & single platform",
-              "old": "110",
-              "price": "90",
+              "old": "610",
+              "price": "500",
               "features": [
                 "Native Android or iOS",
                 "MVP scope & core flows",
@@ -1457,8 +1457,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Professional App",
               "tag": "Most popular",
-              "old": "170",
-              "price": "140",
+              "old": "940",
+              "price": "780",
               "features": [
                 "Android + iOS",
                 "Custom UI/UX design",
@@ -1471,8 +1471,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Enterprise App",
               "tag": "Full-scale platform",
-              "old": "250",
-              "price": "210",
+              "old": "1390",
+              "price": "1170",
               "features": [
                 "Cross-platform or native",
                 "Offline & sync capabilities",
@@ -1491,8 +1491,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Starter Website",
               "tag": "Up to 8 pages",
-              "old": "50",
-              "price": "40",
+              "old": "280",
+              "price": "220",
               "features": [
                 "Responsive design",
                 "Up to 8 pages",
@@ -1505,8 +1505,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Business Website",
               "tag": "CMS & blog",
-              "old": "90",
-              "price": "70",
+              "old": "500",
+              "price": "390",
               "features": [
                 "Up to 20 pages",
                 "CMS / WordPress",
@@ -1519,8 +1519,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Custom Platform",
               "tag": "Web app & dashboard",
-              "old": "150",
-              "price": "120",
+              "old": "830",
+              "price": "670",
               "features": [
                 "Custom web application",
                 "User accounts & roles",
@@ -1539,8 +1539,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Basic Store",
               "tag": "Launch your shop",
-              "old": "100",
-              "price": "80",
+              "old": "560",
+              "price": "440",
               "features": [
                 "Product catalog",
                 "Cart & checkout",
@@ -1553,8 +1553,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Advanced Store",
               "tag": "Scale & optimize",
-              "old": "160",
-              "price": "130",
+              "old": "890",
+              "price": "720",
               "features": [
                 "Multiple gateways",
                 "Discount & coupon engine",
@@ -1567,8 +1567,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Marketplace",
               "tag": "Multi-vendor",
-              "old": "260",
-              "price": "220",
+              "old": "1440",
+              "price": "1220",
               "features": [
                 "Multi-vendor selling",
                 "Seller panels & commissions",
@@ -1587,8 +1587,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Token & Contracts",
               "tag": "Erc-20 / bep-20",
-              "old": "110",
-              "price": "90",
+              "old": "610",
+              "price": "500",
               "features": [
                 "Token development",
                 "Smart contracts",
@@ -1601,8 +1601,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Payment Gateway",
               "tag": "Accept crypto",
-              "old": "190",
-              "price": "160",
+              "old": "1060",
+              "price": "890",
               "features": [
                 "Crypto payment gateway",
                 "Merchant dashboard",
@@ -1615,8 +1615,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Crypto Exchange",
               "tag": "CEX / OTC / P2P",
-              "old": "320",
-              "price": "280",
+              "old": "1780",
+              "price": "1560",
               "features": [
                 "Order book engine",
                 "Wallets & KYC",
@@ -1635,8 +1635,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "UI/UX Design",
               "tag": "Design system",
-              "old": "75",
-              "price": "60",
+              "old": "420",
+              "price": "330",
               "features": [
                 "UX audit & research",
                 "Wireframes & prototypes",
@@ -1649,8 +1649,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "SEO & Marketing",
               "tag": "Growth plan",
-              "old": "65",
-              "price": "50",
+              "old": "360",
+              "price": "280",
               "features": [
                 "Technical SEO",
                 "Keyword strategy",
@@ -1663,8 +1663,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Maintenance & Support",
               "tag": "Monthly care",
-              "old": "30",
-              "price": "25",
+              "old": "170",
+              "price": "140",
               "features": [
                 "Monthly updates",
                 "Bug fixing",
@@ -3372,7 +3372,7 @@ window.AMATIS_I18N = (function () {
         "ctaButton": "Kostenlose Beratung buchen",
         "cta": "Kostenlose Beratung",
         "from": "ab",
-        "unit": "Mio. Toman",
+        "unit": "USD",
         "apps": {
           "title": "App-Entwicklung",
           "lead": "Wählen Sie den Plan, der zur Phase Ihres Produkts passt — vom MVP bis zur Plattform.",
@@ -3380,8 +3380,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Starter-App",
               "tag": "MVP & eine Plattform",
-              "old": "110",
-              "price": "90",
+              "old": "610",
+              "price": "500",
               "features": [
                 "Natives Android oder iOS",
                 "MVP-Umfang & Kern-Flows",
@@ -3394,8 +3394,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Professional-App",
               "tag": "Am beliebtesten",
-              "old": "170",
-              "price": "140",
+              "old": "940",
+              "price": "780",
               "features": [
                 "Android + iOS",
                 "Individuelles UI/UX",
@@ -3408,8 +3408,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Enterprise-App",
               "tag": "Vollwertige Plattform",
-              "old": "250",
-              "price": "210",
+              "old": "1390",
+              "price": "1170",
               "features": [
                 "Cross-Platform oder nativ",
                 "Offline- & Sync-Fähigkeiten",
@@ -3428,8 +3428,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Starter-Website",
               "tag": "Bis zu 8 Seiten",
-              "old": "50",
-              "price": "40",
+              "old": "280",
+              "price": "220",
               "features": [
                 "Responsives Design",
                 "Bis zu 8 Seiten",
@@ -3442,8 +3442,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Business-Website",
               "tag": "CMS & Blog",
-              "old": "90",
-              "price": "70",
+              "old": "500",
+              "price": "390",
               "features": [
                 "Bis zu 20 Seiten",
                 "CMS / WordPress",
@@ -3456,8 +3456,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Custom-Plattform",
               "tag": "Web-App & Dashboard",
-              "old": "150",
-              "price": "120",
+              "old": "830",
+              "price": "670",
               "features": [
                 "Individuelle Web-App",
                 "Benutzerkonten & Rollen",
@@ -3476,8 +3476,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Basis-Shop",
               "tag": "Shop starten",
-              "old": "100",
-              "price": "80",
+              "old": "560",
+              "price": "440",
               "features": [
                 "Produktkatalog",
                 "Warenkorb & Checkout",
@@ -3490,8 +3490,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Fortgeschrittener Shop",
               "tag": "Skalieren",
-              "old": "160",
-              "price": "130",
+              "old": "890",
+              "price": "720",
               "features": [
                 "Mehrere Gateways",
                 "Rabatt- & Coupon-System",
@@ -3504,8 +3504,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Marktplatz",
               "tag": "Multi-Vendor",
-              "old": "260",
-              "price": "220",
+              "old": "1440",
+              "price": "1220",
               "features": [
                 "Multi-Vendor-Verkauf",
                 "Verkäufer-Panels & Provisionen",
@@ -3524,8 +3524,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Token & Contracts",
               "tag": "Erc-20 / bep-20",
-              "old": "110",
-              "price": "90",
+              "old": "610",
+              "price": "500",
               "features": [
                 "Token-Entwicklung",
                 "Smart Contracts",
@@ -3538,8 +3538,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Zahlungs-Gateway",
               "tag": "Krypto akzeptieren",
-              "old": "190",
-              "price": "160",
+              "old": "1060",
+              "price": "890",
               "features": [
                 "Krypto-Zahlungs-Gateway",
                 "Merchant-Dashboard",
@@ -3552,8 +3552,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Krypto-Börse",
               "tag": "CEX / OTC / P2P",
-              "old": "320",
-              "price": "280",
+              "old": "1780",
+              "price": "1560",
               "features": [
                 "Order-Book-Engine",
                 "Wallets & KYC",
@@ -3572,8 +3572,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "UI/UX-Design",
               "tag": "Design-System",
-              "old": "75",
-              "price": "60",
+              "old": "420",
+              "price": "330",
               "features": [
                 "UX-Audit & Recherche",
                 "Wireframes & Prototypen",
@@ -3586,8 +3586,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "SEO & Marketing",
               "tag": "Wachstumsplan",
-              "old": "65",
-              "price": "50",
+              "old": "360",
+              "price": "280",
               "features": [
                 "Technisches SEO",
                 "Keyword-Strategie",
@@ -3600,8 +3600,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "Wartung & Support",
               "tag": "Monatliche Betreuung",
-              "old": "30",
-              "price": "25",
+              "old": "170",
+              "price": "140",
               "features": [
                 "Monatliche Updates",
                 "Fehlerbehebung",
@@ -7246,7 +7246,7 @@ window.AMATIS_I18N = (function () {
         "ctaButton": "احجز استشارة",
         "cta": "استشارة مجانية",
         "from": "من",
-        "unit": "مليون تومان",
+        "unit": "USD",
         "apps": {
           "title": "تطوير التطبيقات",
           "lead": "اختر الباقة المناسبة لمرحلة منتجك — من MVP إلى منصة كاملة.",
@@ -7254,8 +7254,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "تطبيق ستارتر",
               "tag": "MVP ومنصة واحدة",
-              "old": "110",
-              "price": "90",
+              "old": "610",
+              "price": "500",
               "features": [
                 "أندرويد أو iOS",
                 "نطاق MVP والمسارات الأساسية",
@@ -7268,8 +7268,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "تطبيق احترافي",
               "tag": "الأكثر طلباً",
-              "old": "170",
-              "price": "140",
+              "old": "940",
+              "price": "780",
               "features": [
                 "أندرويد + iOS",
                 "تصميم UI/UX مخصص",
@@ -7282,8 +7282,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "تطبيق مؤسسي",
               "tag": "منصة كاملة",
-              "old": "250",
-              "price": "210",
+              "old": "1390",
+              "price": "1170",
               "features": [
                 "متعدد المنصات أو أصلي",
                 "وضع دون اتصال ومزامنة",
@@ -7302,8 +7302,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "موقع ستارتر",
               "tag": "حتى 8 صفحات",
-              "old": "50",
-              "price": "40",
+              "old": "280",
+              "price": "220",
               "features": [
                 "تصميم متجاوب",
                 "حتى 8 صفحات",
@@ -7316,8 +7316,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "موقع أعمال",
               "tag": "إدارة محتوى ومدونة",
-              "old": "90",
-              "price": "70",
+              "old": "500",
+              "price": "390",
               "features": [
                 "حتى 20 صفحة",
                 "إدارة محتوى / ووردبريس",
@@ -7330,8 +7330,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "منصة مخصصة",
               "tag": "تطبيق ويب ولوحة",
-              "old": "150",
-              "price": "120",
+              "old": "830",
+              "price": "670",
               "features": [
                 "تطبيق ويب مخصص",
                 "حسابات مستخدمين وأدوار",
@@ -7350,8 +7350,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "متجر أساسي",
               "tag": "أطلق متجرك",
-              "old": "100",
-              "price": "80",
+              "old": "560",
+              "price": "440",
               "features": [
                 "كتالوج المنتجات",
                 "سلة ودخول للدفع",
@@ -7364,8 +7364,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "متجر متقدم",
               "tag": "نمو وتحسين",
-              "old": "160",
-              "price": "130",
+              "old": "890",
+              "price": "720",
               "features": [
                 "بوابات دفع متعددة",
                 "نظام خصومات وكوبونات",
@@ -7378,8 +7378,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "سوق متعدد البائعين",
               "tag": "متعدد البائعين",
-              "old": "260",
-              "price": "220",
+              "old": "1440",
+              "price": "1220",
               "features": [
                 "بيع متعدد البائعين",
                 "لوحات بائعين وعمولات",
@@ -7398,8 +7398,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "توكن وعقود",
               "tag": "ERC-20 / BEP-20",
-              "old": "110",
-              "price": "90",
+              "old": "610",
+              "price": "500",
               "features": [
                 "تطوير توكن",
                 "عقود ذكية",
@@ -7412,8 +7412,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "بوابة دفع",
               "tag": "قبول العملات الرقمية",
-              "old": "190",
-              "price": "160",
+              "old": "1060",
+              "price": "890",
               "features": [
                 "بوابة دفع رقمية",
                 "لوحة تحكم تاجر",
@@ -7426,8 +7426,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "بورصة عملات",
               "tag": "CEX / OTC / P2P",
-              "old": "320",
-              "price": "280",
+              "old": "1780",
+              "price": "1560",
               "features": [
                 "محرك أوامر",
                 "محافظ و KYC",
@@ -7446,8 +7446,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "تصميم UI/UX",
               "tag": "نظام تصميم",
-              "old": "75",
-              "price": "60",
+              "old": "420",
+              "price": "330",
               "features": [
                 "تدقيق وبحث UX",
                 "ويرفريم ونماذج أولية",
@@ -7460,8 +7460,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "سيو وتسويق",
               "tag": "خطة نمو",
-              "old": "65",
-              "price": "50",
+              "old": "360",
+              "price": "280",
               "features": [
                 "سيو تقني",
                 "استراتيجية كلمات مفتاحية",
@@ -7474,8 +7474,8 @@ window.AMATIS_I18N = (function () {
             {
               "name": "صيانة ودعم",
               "tag": "رعاية شهرية",
-              "old": "30",
-              "price": "25",
+              "old": "170",
+              "price": "140",
               "features": [
                 "تحديثات شهرية",
                 "إصلاح الأخطاء",
