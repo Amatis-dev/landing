@@ -432,7 +432,7 @@
               "<td style='padding:8px'>" + esc(s.date) + "</td>" +
               "<td style='padding:8px;font-weight:800'>" + esc(s.time) + "</td>" +
               "<td style='padding:8px'>" + statusBadge(s) + "</td>" +
-              "<td style='padding:8px;color:var(--text-2)'>" + (s.bookedName ? esc(s.bookedName) + " · " + esc(s.bookedEmail) : "—") + "</td>" +
+               "<td style='padding:8px;color:var(--text-2)'>" + (s.bookedName ? esc(s.bookedName) + " · " + esc(s.bookedEmail) : (s.status === "booked" ? "<span style='color:var(--muted)'>none (unlinked)</span>" : "—")) + "</td>" +
               "<td style='padding:8px;text-align:right;white-space:nowrap'>" +
               slotActions(s) +
               "</td></tr>";
@@ -468,7 +468,11 @@
       }
 
       function slotActions(s) {
-        if (s.status === "booked") return '<span style="color:var(--muted);font-size:11.5px">—</span>';
+        if (s.status === "booked") {
+          var orphan = !s.bookedName && !s.bookedEmail;
+          if (orphan) return '<button class="btn sm ghost" data-slotact="unblock" data-id="' + s.id + '">Unblock</button>';
+          return '<span style="color:var(--muted);font-size:11.5px">—</span>';
+        }
         var html = "";
         if (s.status === "available") html += '<button class="btn sm ghost" data-slotact="block" data-id="' + s.id + '">Block</button> ';
         if (s.status === "blocked") html += '<button class="btn sm ghost" data-slotact="unblock" data-id="' + s.id + '">Unblock</button> ';

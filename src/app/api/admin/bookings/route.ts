@@ -128,6 +128,10 @@ export async function PATCH(req: NextRequest) {
     if (status === "booked" && slot.status !== "booked") {
       return fail("cannot_force_book", 400);
     }
+    // Releasing a booked slot (faked/unlinked or real): drop any linked Booking row.
+    if ((status === "available" || status === "blocked") && slot.status === "booked") {
+      await prisma.booking.deleteMany({ where: { slotId: id } });
+    }
     await prisma.timeSlot.update({
       where: { id },
       data: { status: status === "booked" ? "booked" : status, label: slot.label },
