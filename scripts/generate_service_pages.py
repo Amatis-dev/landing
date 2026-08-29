@@ -354,14 +354,15 @@ def download_image(slug, keyword):
 # ---------------------------------------------------------------------------
 def build_page(svc, img):
     slug = svc["file"][:-5]  # strip .html
+    js_slug = slug_to_js(slug)  # camelCase key used in i18n.js (svc.*)
     en = svc["c"]["en"]
     title = esc(svc["title_en"])
     head_meta = """    <title>%s · Amatis</title>
-  <meta name="description" content="%s">""" % (esc(svc["title_en"]), esc(svc["desc"]))
+   <meta name="description" content="%s">""" % (esc(svc["title_en"]), esc(svc["desc"]))
 
     features = "\n".join(
         '              <li><span class="tick">%s</span><span data-i18n="svc.%s.f%d">%s</span></li>'
-        % (TICK_SVG, slug, i, esc(en["f%d" % i])) for i in range(1, 6)
+        % (TICK_SVG, js_slug, i, esc(en["f%d" % i])) for i in range(1, 6)
     )
 
     body = """    <section class="page-hero">
@@ -407,7 +408,7 @@ def build_page(svc, img):
         "cat_title": CAT_TITLE_KEY[svc["cat"]],
         "title_key": svc["title_key"],
         "title": title,
-        "slug": slug,
+        "slug": js_slug,
         "subtitle": esc(en["subtitle"]),
         "p1": esc(en["p1"]),
         "p2": esc(en["p2"]),
@@ -493,15 +494,9 @@ def build_svc_block(locale):
 
 
 def inject_svc(i18n_content):
-    """Remove any previous svc block and re-insert right after each locale open."""
-    for loc in LOCALES:
-        i18n_content = re.sub(
-            r'^    %s: \{\n    svc: \{.*?\n    \},\n      meta: \{' % re.escape(loc),
-            '    %s: {\n      meta: {' % loc,
-            i18n_content,
-            count=1,
-            flags=re.MULTILINE | re.DOTALL,
-        )
+    """Remove any previous svc blocks and re-insert right after each locale open."""
+    # Drop every existing svc block (they accumulate on re-runs / last-wins).
+    i18n_content = re.sub(r'    svc: \{.*?\n    \},\n', '', i18n_content, flags=re.DOTALL)
     out = []
     for loc in LOCALES:
         marker = "    %s: {\n" % loc
