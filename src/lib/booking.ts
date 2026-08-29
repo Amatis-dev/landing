@@ -247,7 +247,7 @@ export function buildIcs(opts: {
   return [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//Amatis//Booking//EN",
+    "PRODID:-//AmatisBerry//Booking//EN",
     "CALSCALE:GREGORIAN",
     "METHOD:REQUEST",
     "BEGIN:VEVENT",
@@ -260,7 +260,7 @@ export function buildIcs(opts: {
     `SUMMARY:${icsEscape(opts.title)}`,
     `DESCRIPTION:${icsEscape(opts.description)}`,
     `LOCATION:${icsEscape(opts.location)}`,
-    `ORGANIZER;CN=${icsEscape("Amatis")}:mailto:${icsEscape(opts.organizer)}`,
+    `ORGANIZER;CN=${icsEscape("AmatisBerry")}:mailto:${icsEscape(opts.organizer)}`,
     `ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=${icsEscape(opts.attendee)}:mailto:${icsEscape(opts.attendee)}`,
     `ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=${icsEscape(opts.owner)}:mailto:${icsEscape(opts.owner)}`,
     "END:VEVENT",

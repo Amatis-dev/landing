@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Amatis · Business Consultancy Agency',
-  description: 'Amatis is a business consultancy agency helping companies grow with strategy, marketing and technology.',
+  title: 'AmatisBerry · Business Consultancy Agency',
+  description: 'AmatisBerry is a business consultancy agency helping companies grow with strategy, marketing and technology.',
   icons: {
     icon: '/assets/images/favicon.png',
   },

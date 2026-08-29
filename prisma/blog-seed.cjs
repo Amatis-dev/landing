@@ -72,7 +72,7 @@ const P4 = `
 <p>Plan for penetration tests before launch and continuous bug-bounty after it. Enforce withdrawal allow-listing, device binding and step-up authentication for sensitive actions. Most post-launch incidents trace back to secrets management and unmonitored admin tooling, not exotic cryptography.</p>
 <h2>Compliance early, not later</h2>
 <p>KYC/AML flows affect onboarding UX, data residency and even which chains you can list. Engage legal counsel for target jurisdictions during architecture design; retrofitting compliance is far more expensive than designing for it.</p>
-<p><strong>Evaluating an exchange project?</strong> <a href="/connect-with-us.html">Talk to Amatis</a> — we design, build and harden exchange platforms end to end.</p>`;
+<p><strong>Evaluating an exchange project?</strong> <a href="/connect-with-us.html">Talk to AmatisBerry</a> — we design, build and harden exchange platforms end to end.</p>`;
 
 const P5 = `
 <p>Search still sends the highest-intent traffic most businesses get — but ranking in 2026 looks different from 2019. AI-generated summaries, stricter quality signals and Core Web Vitals have reshuffled the checklist. Here is what actually moves the needle now.</p>
@@ -88,7 +88,7 @@ const P5 = `
 <p>Search engines map brands, products and authors as entities. Consistent company details across your site, Google Business Profile and industry directories strengthen how confidently systems recommend you.</p>
 <h2>4. Measure what matters</h2>
 <p>Track conversions from organic sessions, not just positions. A rank-4 page that sells beats a rank-1 page that bounces. Set up Search Console goals and review them monthly.</p>
-<p><strong>Want SEO built into your platform instead of bolted on?</strong> <a href="/connect-with-us.html">Amatis builds sites that rank by design</a>.</p>`;
+<p><strong>Want SEO built into your platform instead of bolted on?</strong> <a href="/connect-with-us.html">AmatisBerry builds sites that rank by design</a>.</p>`;
 
 
 // ---------- English translations of the Persian articles ----------
@@ -107,7 +107,7 @@ const P1en = `
 <p>For most projects, cross-platform frameworks like React Native or Flutter win on cost and speed. If you need deep device hardware access or heavy processing, native iOS and Android development is justified.</p>
 <h2>4. Realistic budget and timeline</h2>
 <p>A quality MVP usually takes two to four months. Split the budget into phases and reserve at least 20% for post-launch marketing — even the best app is nothing without users.</p>
-<p><strong>Ready to start?</strong> The Amatis team covers everything from idea analysis to design, development and support — <a href="/connect-with-us.html">request a free consultation</a>.</p>`;
+<p><strong>Ready to start?</strong> The AmatisBerry team covers everything from idea analysis to design, development and support — <a href="/connect-with-us.html">request a free consultation</a>.</p>`;
 
 const P2en = `
 <p>Most customers search for you on Google before the first call. Their impression from the first few seconds of your homepage decides whether they contact you or leave. Your corporate website is a salesperson that works around the clock.</p>
@@ -123,7 +123,7 @@ const P2en = `
 <p>Page titles, meta descriptions, heading structure, speed and mobile experience are the foundations of technical SEO. Bolting SEO on after launch means breaking and rebuilding; design it in from the start.</p>
 <h2>Content that works</h2>
 <p>Instead of describing services, show results: case studies with numbers and images, customer testimonials, and expert articles like this one. Real content convinces visitors and lifts Google rankings at the same time.</p>
-<p><strong>Want a website that sells?</strong> <a href="/connect-with-us.html">Talk to Amatis</a> — from design to SEO and support.</p>`;
+<p><strong>Want a website that sells?</strong> <a href="/connect-with-us.html">Talk to AmatisBerry</a> — from design to SEO and support.</p>`;
 
 const P3en = `
 <p>Launching an online store is easier than it looks — provided you do things in the right order. Most failed stores had good products but weak infrastructure and marketing.</p>
@@ -139,7 +139,7 @@ const P3en = `
 <p>Combining several payment gateways with a wallet balance raises payment success rates. For shipping, sign contracts with more than one courier from day one — an outage at your carrier must never stop your sales.</p>
 <h2>4. Marketing that sells</h2>
 <p>Warm up your email list and social channels before launch. After launch, product-page SEO and content marketing are the cheapest sustainable growth; paid ads accelerate it. Measure conversion weekly and keep testing your product pages.</p>
-<p><strong>Planning a store?</strong> <a href="/connect-with-us.html">Use Amatis' free consultation</a> to start on the right path from day one.</p>`;
+<p><strong>Planning a store?</strong> <a href="/connect-with-us.html">Use AmatisBerry' free consultation</a> to start on the right path from day one.</p>`;
 
 // ---------- German translations ----------
 
@@ -157,7 +157,7 @@ const P1de = `
 <p>Für die meisten Projekte gewinnen Cross-Platform-Frameworks wie React Native oder Flutter bei Kosten und Geschwindigkeit. Bei anspruchsvoller Hardware-Anbindung ist native Entwicklung gerechtfertigt.</p>
 <h2>4. Realistisches Budget</h2>
 <p>Ein qualitatives MVP dauert in der Regel zwei bis vier Monate. Reservieren Sie mindestens 20 % des Budgets für das Marketing nach dem Launch.</p>
-<p><strong>Bereit loszulegen?</strong> Das Amatis-Team begleitet Sie von der Ideeanalyse bis zu Design, Entwicklung und Support — <a href="/connect-with-us.html">kostenlose Beratung anfordern</a>.</p>`;
+<p><strong>Bereit loszulegen?</strong> Das AmatisBerry-Team begleitet Sie von der Ideeanalyse bis zu Design, Entwicklung und Support — <a href="/connect-with-us.html">kostenlose Beratung anfordern</a>.</p>`;
 
 const P2de = `
 <p>Die meisten Kunden suchen Sie bei Google, bevor sie anrufen. Der Eindruck der ersten Sekunden entscheidet über Kontakt oder Absprung. Ihre Unternehmens-Website ist ein Verkäufer, der rund um die Uhr arbeitet.</p>
@@ -171,7 +171,7 @@ const P2de = `
 <p>Schwere Slider ohne Nutzwert, vage Werbeslogans ohne Belege, überfrachtete Menüs und die Vernachlässigung von Mobile – heute mehr als die Hälfte des Traffics.</p>
 <h2>SEO ab Tag eins</h2>
 <p>Seitentitel, Meta-Beschreibungen, Überschriftenstruktur, Tempo und mobile Erfahrung sind das Fundament. SEO nachträglich einzubauen bedeutet Abbau und Neuaufbau.</p>
-<p><strong>Sie wollen eine Website, die verkauft?</strong> <a href="/connect-with-us.html">Sprechen Sie mit Amatis</a>.</p>`;
+<p><strong>Sie wollen eine Website, die verkauft?</strong> <a href="/connect-with-us.html">Sprechen Sie mit AmatisBerry</a>.</p>`;
 
 const P3de = `
 <p>Ein Online-Shop zu starten ist einfacher als gedacht – wenn die Reihenfolge stimmt. Gescheiterte Shops hatten meist gute Produkte, aber schwache Infrastruktur und Marketing.</p>
@@ -185,7 +185,7 @@ const P3de = `
 </ul>
 <h2>3. Zahlungen und Logistik</h2>
 <p>Mehrere Zahlungsdienstleister erhöhen die Erfolgsquote. Schließen Sie von Anfang an Verträge mit mehr als einem Versanddienstleister ab.</p>
-<p><strong>Sie planen einen Shop?</strong> <a href="/connect-with-us.html">Nutzen Sie die kostenlose Beratung von Amatis</a>.</p>`;
+<p><strong>Sie planen einen Shop?</strong> <a href="/connect-with-us.html">Nutzen Sie die kostenlose Beratung von AmatisBerry</a>.</p>`;
 
 const P4de = `
 <p>Krypto-Börsen gehören zu den anspruchsvollsten Produkten im Softwarebereich: Zuverlässigkeit auf Finanzniveau, feindliche Sicherheit und 24/7-Betrieb. Eine realistische Einordnung vor dem Budget-Engagement:</p>
@@ -202,7 +202,7 @@ const P4de = `
 <p>Penetrationstests vor dem Launch, Bug-Bounty danach. Die meisten Vorfälle gehen auf Secrets-Management und unüberwachte Admin-Tools zurück, nicht auf exotische Kryptografie.</p>
 <h2>Compliance früh</h2>
 <p>KYC/AML beeinflusst Onboarding, Datenresidenz und welche Chains gelistet werden können. Rechtliche Beratung gehört in die Architekturphase.</p>
-<p><strong>Börsenprojekt geplant?</strong> <a href="/connect-with-us.html">Sprechen Sie mit Amatis</a>.</p>`;
+<p><strong>Börsenprojekt geplant?</strong> <a href="/connect-with-us.html">Sprechen Sie mit AmatisBerry</a>.</p>`;
 
 const P5de = `
 <p>Die Suche liefert weiterhin den kaufkräftigsten Traffic – aber Rankings sehen 2026 anders aus als 2019. KI-Zusammenfassungen, strengere Qualitätssignale und Core Web Vitals haben die Checkliste verändert.</p>
@@ -218,7 +218,7 @@ const P5de = `
 <p>Suchmaschinen erfassen Marken und Autoren als Entitäten. Konsistente Firmendaten stärken die Empfehlungsfähigkeit.</p>
 <h2>4. Richtig messen</h2>
 <p>Konversionen aus organischem Traffic verfolgen, nicht nur Positionen. Eine Platz-4-Seite, die verkauft, schlägt eine Platz-1-Seite mit Absprüngen.</p>
-<p><strong>SEO eingebaut statt aufgesetzt?</strong> <a href="/connect-with-us.html">Amatis baut Websites, die von Grund auf ranken</a>.</p>`;
+<p><strong>SEO eingebaut statt aufgesetzt?</strong> <a href="/connect-with-us.html">AmatisBerry baut Websites, die von Grund auf ranken</a>.</p>`;
 
 // ---------- Arabic translations ----------
 

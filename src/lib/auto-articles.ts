@@ -17,7 +17,7 @@ import prisma from "@/lib/db";
 // Local model adapted from the landing schema: one flat BlogPost row per
 // locale, content stored as HTML, siblings grouped by groupId.
 
-const UA = "AmatisAutoBot/1.0 (+https://amatisberry.ir)";
+const UA = "AmatisBerryAutoBot/1.0 (+https://amatisberry.ir)";
 const MAX_BODY_CHARS = 7000;
 const MAX_ARTICLES_PER_RUN = 2;
 const LOCALES = ["fa", "en", "de", "ar"] as const;

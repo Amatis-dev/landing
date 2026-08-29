@@ -9,7 +9,7 @@ SERVICES = [
     {
         "cat": "apps", "file": "android-app.html", "img": "android",
         "title_key": "services.apps.android", "title_en": "Android App",
-        "desc": "Native Android application development by Amatis — Kotlin, modern architecture, Play Store release and long-term support.",
+        "desc": "Native Android application development by AmatisBerry — Kotlin, modern architecture, Play Store release and long-term support.",
         "c": {
             "en": {"subtitle": "Native Android applications built with Kotlin, from MVP to mature product.",
                    "p1": "Our Android team ships high-performance apps using Kotlin and modern architecture patterns such as MVVM and clean architecture. We cover the full lifecycle — discovery, UI/UX, development, Play Store publishing and post-launch iteration.",
@@ -40,7 +40,7 @@ SERVICES = [
     {
         "cat": "apps", "file": "ios-app.html", "img": "smartphone",
         "title_key": "services.apps.ios", "title_en": "iOS App",
-        "desc": "Native iOS application development by Amatis — Swift, SwiftUI, App Store polish and ongoing support.",
+        "desc": "Native iOS application development by AmatisBerry — Swift, SwiftUI, App Store polish and ongoing support.",
         "c": {
             "en": {"subtitle": "Native iOS apps with Swift and SwiftUI, polished to App Store standards.",
                    "p1": "We design and build iOS apps for iPhone and iPad with Swift and SwiftUI, following Apple's Human Interface Guidelines. From prototype to App Store review, we handle even the smallest detail of the experience.",
@@ -71,7 +71,7 @@ SERVICES = [
     {
         "cat": "apps", "file": "web-app-pwa.html", "img": "website",
         "title_key": "services.apps.pwa", "title_en": "Web App & PWA",
-        "desc": "Fast, installable web applications and PWAs by Amatis — one codebase, every device, offline-ready.",
+        "desc": "Fast, installable web applications and PWAs by AmatisBerry — one codebase, every device, offline-ready.",
         "c": {
             "en": {"subtitle": "Fast, installable web apps and PWAs that work on any device and browser.",
                    "p1": "Progressive Web Apps combine the reach of the web with the feel of a native app. We build installable, offline-capable and lightning-fast web applications using modern stacks like Next.js and React.",
@@ -102,7 +102,7 @@ SERVICES = [
     {
         "cat": "apps", "file": "ecommerce-app.html", "img": "shopping",
         "title_key": "services.apps.ecom", "title_en": "E-commerce App",
-        "desc": "Feature-rich mobile shopping apps by Amatis — carts, secure payments, orders and push notifications.",
+        "desc": "Feature-rich mobile shopping apps by AmatisBerry — carts, secure payments, orders and push notifications.",
         "c": {
             "en": {"subtitle": "Feature-rich shopping apps with carts, payments, orders and push notifications.",
                    "p1": "We build native mobile stores that convert. Product catalogs, smart search, smooth checkout, order tracking, wishlists and push offers are all engineered for performance and retention.",
@@ -133,7 +133,7 @@ SERVICES = [
     {
         "cat": "apps", "file": "classifieds-app.html", "img": "marketplace",
         "title_key": "services.apps.classifieds", "title_en": "Classifieds App",
-        "desc": "Classifieds and listing apps built by Amatis with smart search, chat, filters and secure posting.",
+        "desc": "Classifieds and listing apps built by AmatisBerry with smart search, chat, filters and secure posting.",
         "c": {
             "en": {"subtitle": "Classifieds and listing apps with chat, search, filters and secure posting.",
                    "p1": "From vehicle and property listings to job boards and second-hand marketplaces, we build classifieds apps that keep buyers and sellers engaged. Features like verified accounts, in-app chat and location-based search are built in.",
@@ -164,7 +164,7 @@ SERVICES = [
     {
         "cat": "apps", "file": "book-reader-app.html", "img": "books",
         "title_key": "services.apps.reader", "title_en": "Book Reader App",
-        "desc": "E-book and audiobook reader apps by Amatis — synced libraries, subscriptions and a beautiful reading experience.",
+        "desc": "E-book and audiobook reader apps by AmatisBerry — synced libraries, subscriptions and a beautiful reading experience.",
         "c": {
             "en": {"subtitle": "Book reader apps for ebooks and audiobooks with synced libraries and subscriptions.",
                    "p1": "A great reading app is about focus. We craft calm, typographic-first experiences with adjustable fonts, themes, offline downloads and cross-device syncing of your library.",
@@ -195,7 +195,7 @@ SERVICES = [
     {
         "cat": "apps", "file": "tourism-app.html", "img": "travel",
         "title_key": "services.apps.tourism", "title_en": "Tourism App",
-        "desc": "Travel and tourism apps by Amatis — tours, itineraries, maps and unforgettable local experiences.",
+        "desc": "Travel and tourism apps by AmatisBerry — tours, itineraries, maps and unforgettable local experiences.",
         "c": {
             "en": {"subtitle": "Tourism and travel apps with tours, itineraries, maps and local experiences.",
                    "p1": "We help tourism businesses reach travelers with beautiful apps for tours, hotels, flights and experiences. Interactive maps, offline guides and multi-language content make every trip smoother.",
@@ -226,7 +226,7 @@ SERVICES = [
     {
         "cat": "apps", "file": "taxi-app.html", "img": "taxi",
         "title_key": "services.apps.taxi", "title_en": "Taxi Booking App",
-        "desc": "Ride-hailing apps by Amatis — live driver tracking, smart dispatch and in-app payments.",
+        "desc": "Ride-hailing apps by AmatisBerry — live driver tracking, smart dispatch and in-app payments.",
         "c": {
             "en": {"subtitle": "Ride-hailing apps with live tracking, driver dispatch and in-app payments.",
                    "p1": "We build complete taxi and ride-hailing platforms for cities and fleets. Rider and driver apps, live GPS tracking, fare estimation and smart dispatch work together for a smooth experience.",
@@ -257,7 +257,7 @@ SERVICES = [
     {
         "cat": "apps", "file": "flight-hotel-app.html", "img": "hotel",
         "title_key": "services.apps.booking", "title_en": "Flight & Hotel Booking",
-        "desc": "Flight and hotel booking apps by Amatis — real-time availability, pricing and instant confirmation.",
+        "desc": "Flight and hotel booking apps by AmatisBerry — real-time availability, pricing and instant confirmation.",
         "c": {
             "en": {"subtitle": "Booking apps with availability, pricing and instant confirmation.",
                    "p1": "We build booking platforms for flights, hotels and travel packages. Search across providers, compare prices in real time and confirm reservations instantly with a smooth, secure flow.",

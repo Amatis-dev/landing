@@ -165,7 +165,7 @@ HEADER_TOP = """  <!-- ======================= HEADER ======================= --
     <div class="header-inner">
       <a class="brand" href="index.html" data-nav-key="home">
         <span class="brand-mark">A</span>
-        <span class="brand-word" data-i18n="brand">Amatis</span>
+        <span class="brand-word" data-i18n="brand">AmatisBerry</span>
       </a>
 
       <nav class="site-nav" aria-label="Main navigation">
@@ -255,9 +255,9 @@ FOOTER = """  <!-- ======================= FOOTER ======================= -->
         <div class="footer-brand">
           <a class="brand" href="index.html">
             <span class="brand-mark">A</span>
-            <span class="brand-word" data-i18n="brand">Amatis</span>
+            <span class="brand-word" data-i18n="brand">AmatisBerry</span>
           </a>
-          <p data-i18n="footer.tagline">Amatis is a business consultancy agency helping companies grow with strategy, marketing and technology.</p>
+          <p data-i18n="footer.tagline">AmatisBerry is a business consultancy agency helping companies grow with strategy, marketing and technology.</p>
         </div>
         <div class="footer-col">
           <h4 data-i18n="footer.colServices">Services</h4>
@@ -287,7 +287,7 @@ FOOTER = """  <!-- ======================= FOOTER ======================= -->
         </div>
       </div>
       <div class="footer-bottom">
-        <span data-i18n="footer.rights">© {year} Amatis. All rights reserved.</span>
+        <span data-i18n="footer.rights">© {year} AmatisBerry. All rights reserved.</span>
         <div class="footer-langs">
           <a href="index.html" data-footer-lang="en">English</a><span class="sep">/</span>
           <a href="index.html" data-footer-lang="de">Deutsch</a><span class="sep">/</span>
@@ -357,7 +357,7 @@ def build_page(svc, img):
     js_slug = slug_to_js(slug)  # camelCase key used in i18n.js (svc.*)
     en = svc["c"]["en"]
     title = esc(svc["title_en"])
-    head_meta = """    <title>%s · Amatis</title>
+    head_meta = """    <title>%s · AmatisBerry</title>
    <meta name="description" content="%s">""" % (esc(svc["title_en"]), esc(svc["desc"]))
 
     features = "\n".join(

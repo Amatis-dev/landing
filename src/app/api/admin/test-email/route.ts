@@ -16,8 +16,8 @@ export async function POST(req: NextRequest) {
 
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(to)) return fail("invalid_email");
 
-  const subject = (body?.subject ?? "").trim() || "Amatis — test email";
-  const text = (body?.body ?? "").trim() || "This is a test email from the Amatis admin panel.";
+  const subject = (body?.subject ?? "").trim() || "AmatisBerry — test email";
+  const text = (body?.body ?? "").trim() || "This is a test email from the AmatisBerry admin panel.";
 
   if (!(await isEmailConfigured())) {
     return fail("email_not_configured");

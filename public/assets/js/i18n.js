@@ -1,5 +1,5 @@
 /* ============================================================
-   Amatis — i18n engine
+   AmatisBerry — i18n engine
    Languages: en (default), de, fa, ar
    ============================================================ */
 window.AMATIS_I18N = (function () {
@@ -353,7 +353,7 @@ window.AMATIS_I18N = (function () {
         f5: "SLA-backed support & reporting"
       },
     },
-    /*__SVC_END__*/    svc: {
+    /*__SVC_END__*/        svc: {
       androidApp: {
         subtitle: "Native Android applications built with Kotlin, from MVP to mature product.",
         p1: "Our Android team ships high-performance apps using Kotlin and modern architecture patterns such as MVVM and clean architecture. We cover the full lifecycle — discovery, UI/UX, development, Play Store publishing and post-launch iteration.",
@@ -1347,11 +1347,11 @@ window.AMATIS_I18N = (function () {
         f5: "SLA-backed support & reporting"
       },
     },      meta: {
-        title: "Amatis \u00b7 Business Consultancy Agency",
+        title: "AmatisBerry \u00b7 Business Consultancy Agency",
         description:
-          "Amatis is a business consultancy agency helping companies grow with strategy, marketing and technology.",
+          "AmatisBerry is a business consultancy agency helping companies grow with strategy, marketing and technology.",
       },
-      brand: "Amatis",
+      brand: "AmatisBerry",
       nav: {
         home: "Home",
         showcase: "Showcase",
@@ -1731,7 +1731,7 @@ window.AMATIS_I18N = (function () {
         titleEnd: " Partner for Growth.",
         statBadge: "10+",
         statText: "Years of working experience taking care of your business goals",
-        lead: "Amatis helps ambitious businesses grow with strategy, marketing and technology. From the first idea to a launched product, we are your partner at every step.",
+        lead: "AmatisBerry helps ambitious businesses grow with strategy, marketing and technology. From the first idea to a launched product, we are your partner at every step.",
         ctaPrimary: "Explore Our Services",
         ctaSecondary: "View Showcase",
         chips: [
@@ -1742,13 +1742,13 @@ window.AMATIS_I18N = (function () {
           "AI Solutions",
         ],
         note: "Free consultation for every new project",
-        cardTitle: "Amatis",
+        cardTitle: "AmatisBerry",
         cardSub: "Business Consultancy Agency",
         mini1Label: "Clients served",
         mini1Value: "350+",
         mini2Label: "Projects delivered",
         mini2Value: "870+",
-        imgAlt: "Amatis \u2014 Business Consultancy",
+        imgAlt: "AmatisBerry \u2014 Business Consultancy",
       },
       marquee: {
         m1: "Business Consultancy   \u2022   Digital Marketing   \u2022   Market Analysis   \u2022   Web Development   \u2022   ",
@@ -1799,7 +1799,7 @@ window.AMATIS_I18N = (function () {
         post3: {
           title: "Why every business needs a great website",
           date: "29 November 2025",
-          author: "Amatis Studio",
+          author: "AmatisBerry Studio",
         },
         readMore: "Read More",
         viewAll: "View All Blogs",
@@ -1814,7 +1814,7 @@ window.AMATIS_I18N = (function () {
       },
       footer: {
         tagline:
-          "Amatis is a business consultancy agency helping companies grow with strategy, marketing and technology.",
+          "AmatisBerry is a business consultancy agency helping companies grow with strategy, marketing and technology.",
         colServices: "Services",
         colCompany: "Company",
         colContact: "Contact",
@@ -1823,7 +1823,7 @@ window.AMATIS_I18N = (function () {
           company: ["Home", "Showcase", "Who Are We", "Connect With Us"],
           contact: ["Schedule a Call"],
         },
-        rights: "\u00a9 {year} Amatis. All rights reserved.",
+        rights: "\u00a9 {year} AmatisBerry. All rights reserved.",
       },
       showcase: {
         kicker: "Showcase",
@@ -1894,7 +1894,7 @@ window.AMATIS_I18N = (function () {
       waw: {
         kicker: "Who Are We",
         title: "We Take Care of Your Business Goals",
-        p1: "Amatis is a business consultancy agency with more than 10 years of experience. We help companies grow by combining strategy, marketing and technology.",
+        p1: "AmatisBerry is a business consultancy agency with more than 10 years of experience. We help companies grow by combining strategy, marketing and technology.",
         p2: "From market analysis to web development, we stay by your side at every step \u2014 with transparency, quality and measurable results.",
         counter1: "Clients",
         counter2: "Satisfaction",
@@ -2290,7 +2290,7 @@ window.AMATIS_I18N = (function () {
         f5: "Support mit SLA & Reporting"
       },
     },
-    /*__SVC_END__*/    svc: {
+    /*__SVC_END__*/        svc: {
       androidApp: {
         subtitle: "Native-Android-Apps mit Kotlin – vom MVP bis zum ausgereiften Produkt.",
         p1: "Unser Android-Team entwickelt leistungsfähige Apps mit Kotlin und modernen Architekturmustern wie MVVM und Clean Architecture. Wir begleiten den gesamten Lebenszyklus – von der Konzeption über UI/UX und Entwicklung bis zur Veröffentlichung im Play Store sowie zur Weiterentwicklung nach dem Launch.",
@@ -3284,11 +3284,11 @@ window.AMATIS_I18N = (function () {
         f5: "Support mit SLA & Reporting"
       },
     },      meta: {
-        title: "Amatis \u00b7 Unternehmensberatung",
+        title: "AmatisBerry \u00b7 Unternehmensberatung",
         description:
-          "Amatis ist eine Unternehmensberatung, die Unternehmen mit Strategie, Marketing und Technologie beim Wachstum unterst\u00fctzt.",
+          "AmatisBerry ist eine Unternehmensberatung, die Unternehmen mit Strategie, Marketing und Technologie beim Wachstum unterst\u00fctzt.",
       },
-      brand: "Amatis",
+      brand: "AmatisBerry",
       nav: {
         home: "Startseite",
         showcase: "Referenzen",
@@ -3668,7 +3668,7 @@ window.AMATIS_I18N = (function () {
         titleEnd: " Partner f\u00fcr Wachstum.",
         statBadge: "10+",
         statText: "Jahre Erfahrung, um sich um Ihre Gesch\u00e4ftsziele zu k\u00fcmmern",
-        lead: "Amatis hilft ambitionierten Unternehmen mit Strategie, Marketing und Technologie zu wachsen. Von der ersten Idee bis zum fertigen Produkt sind wir an Ihrer Seite.",
+        lead: "AmatisBerry hilft ambitionierten Unternehmen mit Strategie, Marketing und Technologie zu wachsen. Von der ersten Idee bis zum fertigen Produkt sind wir an Ihrer Seite.",
         ctaPrimary: "Leistungen entdecken",
         ctaSecondary: "Referenzen ansehen",
         chips: [
@@ -3679,13 +3679,13 @@ window.AMATIS_I18N = (function () {
           "KI-L\u00f6sungen",
         ],
         note: "Kostenlose Beratung f\u00fcr jedes neue Projekt",
-        cardTitle: "Amatis",
+        cardTitle: "AmatisBerry",
         cardSub: "Unternehmensberatung",
         mini1Label: "Betreute Kunden",
         mini1Value: "350+",
         mini2Label: "Umgesetzte Projekte",
         mini2Value: "870+",
-        imgAlt: "Amatis \u2014 Unternehmensberatung",
+        imgAlt: "AmatisBerry \u2014 Unternehmensberatung",
       },
       marquee: {
         m1: "Unternehmensberatung   \u2022   Digitales Marketing   \u2022   Marktanalyse   \u2022   Webentwicklung   \u2022   ",
@@ -3736,7 +3736,7 @@ window.AMATIS_I18N = (function () {
         post3: {
           title: "Warum jedes Unternehmen eine gro\u00dfartige Website braucht",
           date: "29. November 2025",
-          author: "Amatis Studio",
+          author: "AmatisBerry Studio",
         },
         readMore: "Weiterlesen",
         viewAll: "Alle Blogbeitr\u00e4ge",
@@ -3751,7 +3751,7 @@ window.AMATIS_I18N = (function () {
       },
       footer: {
         tagline:
-          "Amatis ist eine Unternehmensberatung, die Unternehmen mit Strategie, Marketing und Technologie beim Wachstum unterst\u00fctzt.",
+          "AmatisBerry ist eine Unternehmensberatung, die Unternehmen mit Strategie, Marketing und Technologie beim Wachstum unterst\u00fctzt.",
         colServices: "Leistungen",
         colCompany: "Unternehmen",
         colContact: "Kontakt",
@@ -3760,7 +3760,7 @@ window.AMATIS_I18N = (function () {
           company: ["Startseite", "Referenzen", "\u00dcber uns", "Kontakt"],
           contact: ["Beratung buchen"],
         },
-        rights: "\u00a9 {year} Amatis. Alle Rechte vorbehalten.",
+        rights: "\u00a9 {year} AmatisBerry. Alle Rechte vorbehalten.",
       },
       showcase: {
         kicker: "Referenzen",
@@ -3831,7 +3831,7 @@ window.AMATIS_I18N = (function () {
       waw: {
         kicker: "\u00dcber uns",
         title: "Wir k\u00fcmmern uns um Ihre Gesch\u00e4ftsziele",
-        p1: "Amatis ist eine Unternehmensberatung mit mehr als 10 Jahren Erfahrung. Wir helfen Unternehmen zu wachsen \u2014 mit Strategie, Marketing und Technologie.",
+        p1: "AmatisBerry ist eine Unternehmensberatung mit mehr als 10 Jahren Erfahrung. Wir helfen Unternehmen zu wachsen \u2014 mit Strategie, Marketing und Technologie.",
         p2: "Von der Marktanalyse bis zur Webentwicklung sind wir mit Transparenz, Qualit\u00e4t und messbaren Ergebnissen an Ihrer Seite.",
         counter1: "Kunden",
         counter2: "Zufriedenheit",
@@ -4227,7 +4227,7 @@ window.AMATIS_I18N = (function () {
         f5: "پشتیبانی با SLA و گزارش‌دهی"
       },
     },
-    /*__SVC_END__*/    svc: {
+    /*__SVC_END__*/        svc: {
       androidApp: {
         subtitle: "اپلیکیشن‌های اندروید نیتیو با کاتلین، از MVP تا محصول کامل.",
         p1: "تیم اندروید ما با کاتلین و معماری‌های مدرن مانند MVVM و Clean Architecture اپلیکیشن‌هایی پرسرعت و باکیفیت می‌سازد. کل چرخه را پوشش می‌دهیم — از ایده و UI/UX و توسعه تا انتشار در گوگل‌پلی و بهبود مداوم پس از عرضه.",
@@ -5221,11 +5221,11 @@ window.AMATIS_I18N = (function () {
         f5: "پشتیبانی با SLA و گزارش‌دهی"
       },
     },      meta: {
-        title: "\u0622\u0645\u0627\u062a\u06cc\u0633 \u00b7 \u0645\u0634\u0627\u0648\u0631\u0647 \u06a9\u0633\u0628 \u0648 \u06a9\u0627\u0631",
+        title: "\u062A\u0645\u0634\u06A9\u0020\u0622\u0645\u0627\u062A\u06CC\u0633 \u00b7 \u0645\u0634\u0627\u0648\u0631\u0647 \u06a9\u0633\u0628 \u0648 \u06a9\u0627\u0631",
         description:
-          "\u0622\u0645\u0627\u062a\u06cc\u0633 \u06cc\u06a9 \u0622\u0698\u0627\u0646\u0633 \u0645\u0634\u0627\u0648\u0631\u0647 \u06a9\u0633\u0628 \u0648 \u06a9\u0627\u0631 \u0627\u0633\u062a \u06a9\u0647 \u0628\u0627 \u0627\u0633\u062a\u0631\u0627\u062a\u0698\u06cc\u060c \u0628\u0627\u0632\u0627\u0631\u06cc\u0627\u0628\u06cc \u0648 \u062a\u06a9\u0646\u0648\u0644\u0648\u0698\u06cc \u0628\u0647 \u0631\u0634\u062f \u0634\u0631\u06a9\u062a\u200c\u0647\u0627 \u06a9\u0645\u06a9 \u0645\u06cc\u200c\u06a9\u0646\u062f.",
+          "\u062A\u0645\u0634\u06A9\u0020\u0622\u0645\u0627\u062A\u06CC\u0633 \u06cc\u06a9 \u0622\u0698\u0627\u0646\u0633 \u0645\u0634\u0627\u0648\u0631\u0647 \u06a9\u0633\u0628 \u0648 \u06a9\u0627\u0631 \u0627\u0633\u062a \u06a9\u0647 \u0628\u0627 \u0627\u0633\u062a\u0631\u0627\u062a\u0698\u06cc\u060c \u0628\u0627\u0632\u0627\u0631\u06cc\u0627\u0628\u06cc \u0648 \u062a\u06a9\u0646\u0648\u0644\u0648\u0698\u06cc \u0628\u0647 \u0631\u0634\u062f \u0634\u0631\u06a9\u062a\u200c\u0647\u0627 \u06a9\u0645\u06a9 \u0645\u06cc\u200c\u06a9\u0646\u062f.",
       },
-      brand: "\u0622\u0645\u0627\u062a\u06cc\u0633",
+      brand: "\u062A\u0645\u0634\u06A9\u0020\u0622\u0645\u0627\u062A\u06CC\u0633",
       nav: {
         home: "\u062e\u0627\u0646\u0647",
         showcase: "\u0646\u0645\u0648\u0646\u0647 \u06a9\u0627\u0631\u0647\u0627",
@@ -5605,7 +5605,7 @@ window.AMATIS_I18N = (function () {
         titleEnd: " \u0634\u0645\u0627 \u0628\u0631\u0627\u06cc \u0631\u0634\u062f.",
         statBadge: "10+",
         statText: "\u0633\u0627\u0644 \u0633\u0627\u0628\u0642\u0647 \u06a9\u0627\u0631 \u0628\u0631\u0627\u06cc \u062a\u062d\u0642\u0642 \u0627\u0647\u062f\u0627\u0641 \u06a9\u0633\u0628 \u0648 \u06a9\u0627\u0631 \u0634\u0645\u0627",
-        lead: "\u0622\u0645\u0627\u062a\u06cc\u0633 \u0628\u0627 \u0627\u0633\u062a\u0631\u0627\u062a\u0698\u06cc\u060c \u0628\u0627\u0632\u0627\u0631\u06cc\u0627\u0628\u06cc \u0648 \u062a\u06a9\u0646\u0648\u0644\u0648\u0698\u06cc \u0628\u0647 \u0631\u0634\u062f \u06a9\u0633\u0628\u200c\u0648\u06a9\u0627\u0631\u0647\u0627\u06cc \u0628\u0644\u0646\u062f\u067e\u0631\u0648\u0627\u0632 \u06a9\u0645\u06a9 \u0645\u06cc\u200c\u06a9\u0646\u062f. \u0627\u0632 \u0627\u06cc\u062f\u0647\u200c\u06cc \u0627\u0648\u0644 \u062a\u0627 \u0631\u0627\u0647\u200c\u0627\u0646\u062f\u0627\u0632\u06cc \u0645\u062d\u0635\u0648\u0644\u060c \u062f\u0631 \u06a9\u0646\u0627\u0631 \u0634\u0645\u0627 \u0647\u0633\u062a\u06cc\u0645.",
+        lead: "\u062A\u0645\u0634\u06A9\u0020\u0622\u0645\u0627\u062A\u06CC\u0633 \u0628\u0627 \u0627\u0633\u062a\u0631\u0627\u062a\u0698\u06cc\u060c \u0628\u0627\u0632\u0627\u0631\u06cc\u0627\u0628\u06cc \u0648 \u062a\u06a9\u0646\u0648\u0644\u0648\u0698\u06cc \u0628\u0647 \u0631\u0634\u062f \u06a9\u0633\u0628\u200c\u0648\u06a9\u0627\u0631\u0647\u0627\u06cc \u0628\u0644\u0646\u062f\u067e\u0631\u0648\u0627\u0632 \u06a9\u0645\u06a9 \u0645\u06cc\u200c\u06a9\u0646\u062f. \u0627\u0632 \u0627\u06cc\u062f\u0647\u200c\u06cc \u0627\u0648\u0644 \u062a\u0627 \u0631\u0627\u0647\u200c\u0627\u0646\u062f\u0627\u0632\u06cc \u0645\u062d\u0635\u0648\u0644\u060c \u062f\u0631 \u06a9\u0646\u0627\u0631 \u0634\u0645\u0627 \u0647\u0633\u062a\u06cc\u0645.",
         ctaPrimary: "\u0645\u0634\u0627\u0647\u062f\u0647 \u062e\u062f\u0645\u0627\u062a",
         ctaSecondary: "\u0646\u0645\u0648\u0646\u0647 \u06a9\u0627\u0631\u0647\u0627",
         chips: [
@@ -5616,13 +5616,13 @@ window.AMATIS_I18N = (function () {
           "\u0631\u0627\u0647\u06a9\u0627\u0631\u0647\u0627\u06cc \u0647\u0648\u0634 \u0645\u0635\u0646\u0648\u0639\u06cc",
         ],
         note: "\u0645\u0634\u0627\u0648\u0631\u0647 \u0631\u0627\u06cc\u06af\u0627\u0646 \u0628\u0631\u0627\u06cc \u0647\u0631 \u067e\u0631\u0648\u0698\u0647 \u062c\u062f\u06cc\u062f",
-        cardTitle: "\u0622\u0645\u0627\u062a\u06cc\u0633",
+        cardTitle: "\u062A\u0645\u0634\u06A9\u0020\u0622\u0645\u0627\u062A\u06CC\u0633",
         cardSub: "\u0622\u0698\u0627\u0646\u0633 \u0645\u0634\u0627\u0648\u0631\u0647 \u06a9\u0633\u0628 \u0648 \u06a9\u0627\u0631",
         mini1Label: "\u0645\u0634\u062a\u0631\u06cc\u0627\u0646",
         mini1Value: "350+",
         mini2Label: "\u067e\u0631\u0648\u0698\u0647\u200c\u0647\u0627\u06cc \u0627\u0646\u062c\u0627\u0645 \u0634\u062f\u0647",
         mini2Value: "870+",
-        imgAlt: "\u0622\u0645\u0627\u062a\u06cc\u0633 \u2014 \u0645\u0634\u0627\u0648\u0631\u0647 \u06a9\u0633\u0628 \u0648 \u06a9\u0627\u0631",
+        imgAlt: "\u062A\u0645\u0634\u06A9\u0020\u0622\u0645\u0627\u062A\u06CC\u0633 \u2014 \u0645\u0634\u0627\u0648\u0631\u0647 \u06a9\u0633\u0628 \u0648 \u06a9\u0627\u0631",
       },
       marquee: {
         m1: "\u0645\u0634\u0627\u0648\u0631\u0647 \u06a9\u0633\u0628 \u0648 \u06a9\u0627\u0631   \u2022   \u0628\u0627\u0632\u0627\u0631\u06cc\u0627\u0628\u06cc \u062f\u06cc\u062c\u06cc\u062a\u0627\u0644   \u2022   \u062a\u062d\u0644\u06cc\u0644 \u0628\u0627\u0632\u0627\u0631   \u2022   \u062a\u0648\u0633\u0639\u0647 \u0648\u0628   \u2022   ",
@@ -5673,7 +5673,7 @@ window.AMATIS_I18N = (function () {
         post3: {
           title: "\u0686\u0631\u0627 \u0647\u0631 \u06a9\u0633\u0628 \u0648 \u06a9\u0627\u0631\u06cc \u0628\u0647 \u06cc\u06a9 \u0648\u0628\u200c\u0633\u0627\u06cc\u062a \u0639\u0627\u0644\u06cc \u0646\u06cc\u0627\u0632 \u062f\u0627\u0631\u062f",
           date: "29 \u0646\u0648\u0627\u0645\u0628\u0631 2025",
-          author: "\u0627\u0633\u062a\u0648\u062f\u06cc\u0648 \u0622\u0645\u0627\u062a\u06cc\u0633",
+          author: "\u0627\u0633\u062a\u0648\u062f\u06cc\u0648 \u062A\u0645\u0634\u06A9\u0020\u0622\u0645\u0627\u062A\u06CC\u0633",
         },
         readMore: "\u0627\u062f\u0627\u0645\u0647 \u0645\u0637\u0644\u0628",
         viewAll: "\u0645\u0634\u0627\u0647\u062f\u0647 \u062a\u0645\u0627\u0645 \u0648\u0628\u0644\u0627\u06af\u200c\u0647\u0627",
@@ -5688,7 +5688,7 @@ window.AMATIS_I18N = (function () {
       },
       footer: {
         tagline:
-          "\u0622\u0645\u0627\u062a\u06cc\u0633 \u06cc\u06a9 \u0622\u0698\u0627\u0646\u0633 \u0645\u0634\u0627\u0648\u0631\u0647 \u06a9\u0633\u0628 \u0648 \u06a9\u0627\u0631 \u0627\u0633\u062a \u06a9\u0647 \u0628\u0627 \u0627\u0633\u062a\u0631\u0627\u062a\u0698\u06cc\u060c \u0628\u0627\u0632\u0627\u0631\u06cc\u0627\u0628\u06cc \u0648 \u062a\u06a9\u0646\u0648\u0644\u0648\u0698\u06cc \u0628\u0647 \u0631\u0634\u062f \u0634\u0631\u06a9\u062a\u200c\u0647\u0627 \u06a9\u0645\u06a9 \u0645\u06cc\u200c\u06a9\u0646\u062f.",
+          "\u062A\u0645\u0634\u06A9\u0020\u0622\u0645\u0627\u062A\u06CC\u0633 \u06cc\u06a9 \u0622\u0698\u0627\u0646\u0633 \u0645\u0634\u0627\u0648\u0631\u0647 \u06a9\u0633\u0628 \u0648 \u06a9\u0627\u0631 \u0627\u0633\u062a \u06a9\u0647 \u0628\u0627 \u0627\u0633\u062a\u0631\u0627\u062a\u0698\u06cc\u060c \u0628\u0627\u0632\u0627\u0631\u06cc\u0627\u0628\u06cc \u0648 \u062a\u06a9\u0646\u0648\u0644\u0648\u0698\u06cc \u0628\u0647 \u0631\u0634\u062f \u0634\u0631\u06a9\u062a\u200c\u0647\u0627 \u06a9\u0645\u06a9 \u0645\u06cc\u200c\u06a9\u0646\u062f.",
         colServices: "\u062e\u062f\u0645\u0627\u062a",
         colCompany: "\u0634\u0631\u06a9\u062a",
         colContact: "\u062a\u0645\u0627\u0633",
@@ -5697,7 +5697,7 @@ window.AMATIS_I18N = (function () {
           company: ["\u062e\u0627\u0646\u0647", "\u0646\u0645\u0648\u0646\u0647 \u06a9\u0627\u0631\u0647\u0627", "\u0645\u0627 \u06a9\u06cc\u0633\u062a\u06cc\u0645", "\u0627\u0631\u062a\u0628\u0627\u0637 \u0628\u0627 \u0645\u0627"],
           contact: ["\u0631\u0632\u0631\u0648 \u0645\u0634\u0627\u0648\u0631\u0647"],
         },
-        rights: "\u00a9 {year} \u0622\u0645\u0627\u062a\u06cc\u0633. \u06a9\u0644\u06cc\u0647 \u062d\u0642\u0648\u0642 \u0645\u062d\u0641\u0648\u0638 \u0627\u0633\u062a.",
+        rights: "\u00a9 {year} \u062A\u0645\u0634\u06A9\u0020\u0622\u0645\u0627\u062A\u06CC\u0633. \u06a9\u0644\u06cc\u0647 \u062d\u0642\u0648\u0642 \u0645\u062d\u0641\u0648\u0638 \u0627\u0633\u062a.",
       },
       showcase: {
         kicker: "\u0646\u0645\u0648\u0646\u0647 \u06a9\u0627\u0631\u0647\u0627",
@@ -5768,7 +5768,7 @@ window.AMATIS_I18N = (function () {
       waw: {
         kicker: "\u0645\u0627 \u06a9\u06cc\u0633\u062a\u06cc\u0645",
         title: "\u0645\u0627 \u0627\u0632 \u0627\u0647\u062f\u0627\u0641 \u06a9\u0633\u0628 \u0648 \u06a9\u0627\u0631 \u0634\u0645\u0627 \u0645\u0631\u0627\u0642\u0628\u062a \u0645\u06cc\u200c\u06a9\u0646\u06cc\u0645",
-        p1: "\u0622\u0645\u0627\u062a\u06cc\u0633 \u06cc\u06a9 \u0622\u0698\u0627\u0646\u0633 \u0645\u0634\u0627\u0648\u0631\u0647 \u06a9\u0633\u0628 \u0648 \u06a9\u0627\u0631 \u0628\u0627 \u0628\u06cc\u0634 \u0627\u0632 10 \u0633\u0627\u0644 \u0633\u0627\u0628\u0642\u0647 \u0627\u0633\u062a. \u0645\u0627 \u0628\u0627 \u062a\u0631\u06a9\u06cc\u0628 \u0627\u0633\u062a\u0631\u0627\u062a\u0698\u06cc\u060c \u0628\u0627\u0632\u0627\u0631\u06cc\u0627\u0628\u06cc \u0648 \u062a\u06a9\u0646\u0648\u0644\u0648\u0698\u06cc \u0628\u0647 \u0634\u0631\u06a9\u062a\u200c\u0647\u0627 \u062f\u0631 \u0631\u0634\u062f \u06a9\u0645\u06a9 \u0645\u06cc\u200c\u06a9\u0646\u06cc\u0645.",
+        p1: "\u062A\u0645\u0634\u06A9\u0020\u0622\u0645\u0627\u062A\u06CC\u0633 \u06cc\u06a9 \u0622\u0698\u0627\u0646\u0633 \u0645\u0634\u0627\u0648\u0631\u0647 \u06a9\u0633\u0628 \u0648 \u06a9\u0627\u0631 \u0628\u0627 \u0628\u06cc\u0634 \u0627\u0632 10 \u0633\u0627\u0644 \u0633\u0627\u0628\u0642\u0647 \u0627\u0633\u062a. \u0645\u0627 \u0628\u0627 \u062a\u0631\u06a9\u06cc\u0628 \u0627\u0633\u062a\u0631\u0627\u062a\u0698\u06cc\u060c \u0628\u0627\u0632\u0627\u0631\u06cc\u0627\u0628\u06cc \u0648 \u062a\u06a9\u0646\u0648\u0644\u0648\u0698\u06cc \u0628\u0647 \u0634\u0631\u06a9\u062a\u200c\u0647\u0627 \u062f\u0631 \u0631\u0634\u062f \u06a9\u0645\u06a9 \u0645\u06cc\u200c\u06a9\u0646\u06cc\u0645.",
         p2: "\u0627\u0632 \u062a\u062d\u0644\u06cc\u0644 \u0628\u0627\u0632\u0627\u0631 \u062a\u0627 \u062a\u0648\u0633\u0639\u0647 \u0648\u0628\u060c \u0628\u0627 \u0634\u0641\u0627\u0641\u06cc\u062a\u060c \u06a9\u06cc\u0641\u06cc\u062a \u0648 \u0646\u062a\u0627\u06cc\u062c \u0642\u0627\u0628\u0644 \u0627\u0646\u062f\u0627\u0632\u0647\u200c\u06af\u06cc\u0631\u06cc \u062f\u0631 \u06a9\u0646\u0627\u0631 \u0634\u0645\u0627 \u0647\u0633\u062a\u06cc\u0645.",
         counter1: "\u0645\u0634\u062a\u0631\u06cc\u0627\u0646",
         counter2: "\u0631\u0636\u0627\u06cc\u062a",
@@ -6164,7 +6164,7 @@ window.AMATIS_I18N = (function () {
         f5: "دعم باتفاقيات مستوى خدمة وتقارير"
       },
     },
-    /*__SVC_END__*/    svc: {
+    /*__SVC_END__*/        svc: {
       androidApp: {
         subtitle: "تطبيقات أندرويد أصلية مبنية بلغة Kotlin، من فكرة MVP إلى منتج متكامل.",
         p1: "يبني فريقنا تطبيقات أندرويد عالية الأداء باستخدام Kotlin وأنماط معمارية حديثة مثل MVVM وClean Architecture. نغطي دورة الحياة كاملة — من الفكرة وتصميم الواجهة والتطوير وحتى النشر في متجر Play والتطوير المستمر.",
@@ -7158,11 +7158,11 @@ window.AMATIS_I18N = (function () {
         f5: "دعم باتفاقيات مستوى خدمة وتقارير"
       },
     },      meta: {
-        title: "\u0623\u0645\u0627\u062a\u064a\u0633 \u00b7 \u0648\u0643\u0627\u0644\u0629 \u0627\u0633\u062a\u0634\u0627\u0631\u0627\u062a \u0623\u0639\u0645\u0627\u0644",
+        title: "AmatisBerry \u00b7 \u0648\u0643\u0627\u0644\u0629 \u0627\u0633\u062a\u0634\u0627\u0631\u0627\u062a \u0623\u0639\u0645\u0627\u0644",
         description:
-          "\u0623\u0645\u0627\u062a\u064a\u0633 \u0648\u0643\u0627\u0644\u0629 \u0627\u0633\u062a\u0634\u0627\u0631\u0627\u062a \u0623\u0639\u0645\u0627\u0644 \u062a\u0633\u0627\u0639\u062f \u0627\u0644\u0634\u0631\u0643\u0627\u062a \u0639\u0644\u0649 \u0627\u0644\u0646\u0645\u0648 \u0645\u0646 \u062e\u0644\u0627\u0644 \u0627\u0644\u0627\u0633\u062a\u0631\u0627\u062a\u064a\u062c\u064a\u0629 \u0648\u0627\u0644\u062a\u0633\u0648\u064a\u0642 \u0648\u0627\u0644\u062a\u0642\u0646\u064a\u0629.",
+          "AmatisBerry \u0648\u0643\u0627\u0644\u0629 \u0627\u0633\u062a\u0634\u0627\u0631\u0627\u062a \u0623\u0639\u0645\u0627\u0644 \u062a\u0633\u0627\u0639\u062f \u0627\u0644\u0634\u0631\u0643\u0627\u062a \u0639\u0644\u0649 \u0627\u0644\u0646\u0645\u0648 \u0645\u0646 \u062e\u0644\u0627\u0644 \u0627\u0644\u0627\u0633\u062a\u0631\u0627\u062a\u064a\u062c\u064a\u0629 \u0648\u0627\u0644\u062a\u0633\u0648\u064a\u0642 \u0648\u0627\u0644\u062a\u0642\u0646\u064a\u0629.",
       },
-      brand: "\u0623\u0645\u0627\u062a\u064a\u0633",
+      brand: "AmatisBerry",
       nav: {
         home: "\u0627\u0644\u0631\u0626\u064a\u0633\u064a\u0629",
         showcase: "\u0623\u0639\u0645\u0627\u0644\u0646\u0627",
@@ -7542,7 +7542,7 @@ window.AMATIS_I18N = (function () {
         titleEnd: " \u0644\u0644\u0646\u0645\u0648.",
         statBadge: "10+",
         statText: "\u0633\u0646\u0648\u0627\u062a \u0645\u0646 \u0627\u0644\u062e\u0628\u0631\u0629 \u0644\u0644\u0639\u0646\u0627\u064a\u0629 \u0628\u0623\u0647\u062f\u0627\u0641 \u0639\u0645\u0644\u0643",
-        lead: "\u062a\u0633\u0627\u0639\u062f \u0623\u0645\u0627\u062a\u064a\u0633 \u0627\u0644\u0634\u0631\u0643\u0627\u062a \u0627\u0644\u0637\u0645\u0648\u062d\u0629 \u0639\u0644\u0649 \u0627\u0644\u0646\u0645\u0648 \u0645\u0646 \u062e\u0644\u0627\u0644 \u0627\u0644\u0627\u0633\u062a\u0631\u0627\u062a\u064a\u062c\u064a\u0629 \u0648\u0627\u0644\u062a\u0633\u0648\u064a\u0642 \u0648\u0627\u0644\u062a\u0642\u0646\u064a\u0629. \u0645\u0646 \u0627\u0644\u0641\u0643\u0631\u0629 \u0627\u0644\u0623\u0648\u0644\u0649 \u062d\u062a\u0649 \u0625\u0637\u0644\u0627\u0642 \u0627\u0644\u0645\u0646\u062a\u062c\u060c \u0646\u062d\u0646 \u0628\u062c\u0627\u0646\u0628\u0643 \u0641\u064a \u0643\u0644 \u062e\u0637\u0648\u0629.",
+        lead: "\u062a\u0633\u0627\u0639\u062f AmatisBerry \u0627\u0644\u0634\u0631\u0643\u0627\u062a \u0627\u0644\u0637\u0645\u0648\u062d\u0629 \u0639\u0644\u0649 \u0627\u0644\u0646\u0645\u0648 \u0645\u0646 \u062e\u0644\u0627\u0644 \u0627\u0644\u0627\u0633\u062a\u0631\u0627\u062a\u064a\u062c\u064a\u0629 \u0648\u0627\u0644\u062a\u0633\u0648\u064a\u0642 \u0648\u0627\u0644\u062a\u0642\u0646\u064a\u0629. \u0645\u0646 \u0627\u0644\u0641\u0643\u0631\u0629 \u0627\u0644\u0623\u0648\u0644\u0649 \u062d\u062a\u0649 \u0625\u0637\u0644\u0627\u0642 \u0627\u0644\u0645\u0646\u062a\u062c\u060c \u0646\u062d\u0646 \u0628\u062c\u0627\u0646\u0628\u0643 \u0641\u064a \u0643\u0644 \u062e\u0637\u0648\u0629.",
         ctaPrimary: "\u0627\u0633\u062a\u0643\u0634\u0641 \u062e\u062f\u0645\u0627\u062a\u0646\u0627",
         ctaSecondary: "\u0639\u0631\u0636 \u0627\u0644\u0623\u0639\u0645\u0627\u0644",
         chips: [
@@ -7553,13 +7553,13 @@ window.AMATIS_I18N = (function () {
           "\u062d\u0644\u0648\u0644 \u0627\u0644\u0630\u0643\u0627\u0621 \u0627\u0644\u0627\u0635\u0637\u0646\u0627\u0639\u064a",
         ],
         note: "\u0627\u0633\u062a\u0634\u0627\u0631\u0629 \u0645\u062c\u0627\u0646\u064a\u0629 \u0644\u0643\u0644 \u0645\u0634\u0631\u0648\u0639 \u062c\u062f\u064a\u062f",
-        cardTitle: "\u0623\u0645\u0627\u062a\u064a\u0633",
+        cardTitle: "AmatisBerry",
         cardSub: "\u0648\u0643\u0627\u0644\u0629 \u0627\u0633\u062a\u0634\u0627\u0631\u0627\u062a \u0623\u0639\u0645\u0627\u0644",
         mini1Label: "\u0627\u0644\u0639\u0645\u0644\u0627\u0621",
         mini1Value: "350+",
         mini2Label: "\u0627\u0644\u0645\u0634\u0627\u0631\u064a\u0639 \u0627\u0644\u0645\u0646\u062c\u0632\u0629",
         mini2Value: "870+",
-        imgAlt: "\u0623\u0645\u0627\u062a\u064a\u0633 \u2014 \u0627\u0633\u062a\u0634\u0627\u0631\u0627\u062a \u0623\u0639\u0645\u0627\u0644",
+        imgAlt: "AmatisBerry \u2014 \u0627\u0633\u062a\u0634\u0627\u0631\u0627\u062a \u0623\u0639\u0645\u0627\u0644",
       },
       marquee: {
         m1: "\u0627\u0633\u062a\u0634\u0627\u0631\u0627\u062a \u0623\u0639\u0645\u0627\u0644   \u2022   \u0627\u0644\u062a\u0633\u0648\u064a\u0642 \u0627\u0644\u0631\u0642\u0645\u064a   \u2022   \u062a\u062d\u0644\u064a\u0644 \u0627\u0644\u0633\u0648\u0642   \u2022   \u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0648\u064a\u0628   \u2022   ",
@@ -7610,7 +7610,7 @@ window.AMATIS_I18N = (function () {
         post3: {
           title: "\u0644\u0645\u0627\u0630\u0627 \u064a\u062d\u062a\u0627\u062c \u0643\u0644 \u0639\u0645\u0644 \u0625\u0644\u0649 \u0645\u0648\u0642\u0639 \u0639\u0627\u0644\u0645\u064a \u0627\u0644\u0645\u0633\u062a\u0648\u0649",
           date: "29 \u0646\u0648\u0641\u0645\u0628\u0631 2025",
-          author: "\u0627\u0633\u062a\u0648\u062f\u064a\u0648 \u0623\u0645\u0627\u062a\u064a\u0633",
+          author: "\u0627\u0633\u062a\u0648\u062f\u064a\u0648 AmatisBerry",
         },
         readMore: "\u0627\u0642\u0631\u0623 \u0627\u0644\u0645\u0632\u064a\u062f",
         viewAll: "\u0639\u0631\u0636 \u0643\u0644 \u0627\u0644\u0645\u062f\u0648\u0646\u0629",
@@ -7625,7 +7625,7 @@ window.AMATIS_I18N = (function () {
       },
       footer: {
         tagline:
-          "\u0623\u0645\u0627\u062a\u064a\u0633 \u0648\u0643\u0627\u0644\u0629 \u0627\u0633\u062a\u0634\u0627\u0631\u0627\u062a \u0623\u0639\u0645\u0627\u0644 \u062a\u0633\u0627\u0639\u062f \u0627\u0644\u0634\u0631\u0643\u0627\u062a \u0639\u0644\u0649 \u0627\u0644\u0646\u0645\u0648 \u0645\u0646 \u062e\u0644\u0627\u0644 \u0627\u0644\u0627\u0633\u062a\u0631\u0627\u062a\u064a\u062c\u064a\u0629 \u0648\u0627\u0644\u062a\u0633\u0648\u064a\u0642 \u0648\u0627\u0644\u062a\u0642\u0646\u064a\u0629.",
+          "AmatisBerry \u0648\u0643\u0627\u0644\u0629 \u0627\u0633\u062a\u0634\u0627\u0631\u0627\u062a \u0623\u0639\u0645\u0627\u0644 \u062a\u0633\u0627\u0639\u062f \u0627\u0644\u0634\u0631\u0643\u0627\u062a \u0639\u0644\u0649 \u0627\u0644\u0646\u0645\u0648 \u0645\u0646 \u062e\u0644\u0627\u0644 \u0627\u0644\u0627\u0633\u062a\u0631\u0627\u062a\u064a\u062c\u064a\u0629 \u0648\u0627\u0644\u062a\u0633\u0648\u064a\u0642 \u0648\u0627\u0644\u062a\u0642\u0646\u064a\u0629.",
         colServices: "\u0627\u0644\u062e\u062f\u0645\u0627\u062a",
         colCompany: "\u0627\u0644\u0634\u0631\u0643\u0629",
         colContact: "\u0627\u0644\u0627\u062a\u0635\u0627\u0644",
@@ -7634,7 +7634,7 @@ window.AMATIS_I18N = (function () {
           company: ["\u0627\u0644\u0631\u0626\u064a\u0633\u064a\u0629", "\u0623\u0639\u0645\u0627\u0644\u0646\u0627", "\u0645\u0646 \u0646\u062d\u0646", "\u0627\u062a\u0635\u0644 \u0628\u0646\u0627"],
           contact: ["\u0627\u062d\u062c\u0632 \u0627\u0633\u062a\u0634\u0627\u0631\u0629"],
         },
-        rights: "\u00a9 {year} \u0623\u0645\u0627\u062a\u064a\u0633. \u062c\u0645\u064a\u0639 \u0627\u0644\u062d\u0642\u0648\u0642 \u0645\u062d\u0641\u0648\u0638\u0629.",
+        rights: "\u00a9 {year} AmatisBerry. \u062c\u0645\u064a\u0639 \u0627\u0644\u062d\u0642\u0648\u0642 \u0645\u062d\u0641\u0648\u0638\u0629.",
       },
       showcase: {
         kicker: "\u0623\u0639\u0645\u0627\u0644\u0646\u0627",
@@ -7705,7 +7705,7 @@ window.AMATIS_I18N = (function () {
       waw: {
         kicker: "\u0645\u0646 \u0646\u062d\u0646",
         title: "\u0646\u062e\u062a\u0635 \u0628\u0623\u0647\u062f\u0627\u0641 \u0639\u0645\u0644\u0643",
-        p1: "\u0623\u0645\u0627\u062a\u064a\u0633 \u0648\u0643\u0627\u0644\u0629 \u0627\u0633\u062a\u0634\u0627\u0631\u0627\u062a \u0623\u0639\u0645\u0627\u0644 \u0628\u0623\u0643\u062b\u0631 \u0645\u0646 10 \u0633\u0646\u0648\u0627\u062a \u0645\u0646 \u0627\u0644\u062e\u0628\u0631\u0629. \u0646\u0633\u0627\u0639\u062f \u0627\u0644\u0634\u0631\u0643\u0627\u062a \u0639\u0644\u0649 \u0627\u0644\u0646\u0645\u0648 \u0628\u0627\u0644\u0627\u0633\u062a\u0631\u0627\u062a\u064a\u062c\u064a\u0629 \u0648\u0627\u0644\u062a\u0633\u0648\u064a\u0642 \u0648\u0627\u0644\u062a\u0642\u0646\u064a\u0629.",
+        p1: "AmatisBerry \u0648\u0643\u0627\u0644\u0629 \u0627\u0633\u062a\u0634\u0627\u0631\u0627\u062a \u0623\u0639\u0645\u0627\u0644 \u0628\u0623\u0643\u062b\u0631 \u0645\u0646 10 \u0633\u0646\u0648\u0627\u062a \u0645\u0646 \u0627\u0644\u062e\u0628\u0631\u0629. \u0646\u0633\u0627\u0639\u062f \u0627\u0644\u0634\u0631\u0643\u0627\u062a \u0639\u0644\u0649 \u0627\u0644\u0646\u0645\u0648 \u0628\u0627\u0644\u0627\u0633\u062a\u0631\u0627\u062a\u064a\u062c\u064a\u0629 \u0648\u0627\u0644\u062a\u0633\u0648\u064a\u0642 \u0648\u0627\u0644\u062a\u0642\u0646\u064a\u0629.",
         p2: "\u0645\u0646 \u062a\u062d\u0644\u064a\u0644 \u0627\u0644\u0633\u0648\u0642 \u0625\u0644\u0649 \u062a\u0637\u0648\u064a\u0631 \u0627\u0644\u0648\u064a\u0628\u060c \u0646\u0643\u0648\u0646 \u0628\u062c\u0627\u0646\u0628\u0643 \u0645\u0639 \u0627\u0644\u0634\u0641\u0627\u0641\u064a\u0629 \u0648\u0627\u0644\u062c\u0648\u062f\u0629 \u0648\u0627\u0644\u0646\u062a\u0627\u0626\u062c \u0627\u0644\u0642\u0627\u0628\u0644\u0629 \u0644\u0644\u0642\u064a\u0627\u0633.",
         counter1: "\u0627\u0644\u0639\u0645\u0644\u0627\u0621",
         counter2: "\u0627\u0644\u0631\u0636\u0627",

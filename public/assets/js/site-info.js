@@ -1,5 +1,5 @@
 /* ============================================================
-   Amatis — DB-driven site content.
+   AmatisBerry — DB-driven site content.
    Fetches editable settings (/api/public/site-info) and fills
    elements marked with [data-site-field]. Re-applies whenever
    the language changes (i18n:applied). Falls back to the static

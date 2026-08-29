@@ -61,8 +61,8 @@ const FOOTER = `
     <div class="container-page">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a class="brand" href="/"><span class="brand-mark">A</span><span class="brand-word">Amatis</span></a>
-          <p>Amatis is a business consultancy agency helping companies grow with strategy, marketing and technology.</p>
+          <a class="brand" href="/"><span class="brand-mark">A</span><span class="brand-word">AmatisBerry</span></a>
+          <p>AmatisBerry is a business consultancy agency helping companies grow with strategy, marketing and technology.</p>
         </div>
         <div class="footer-col">
           <h4>Explore</h4>
@@ -81,12 +81,12 @@ const FOOTER = `
           </ul>
         </div>
       </div>
-      <div class="footer-bottom"><span>© ${new Date().getFullYear()} Amatis. All rights reserved.</span></div>
+      <div class="footer-bottom"><span>© ${new Date().getFullYear()} AmatisBerry. All rights reserved.</span></div>
     </div>
   </footer>`;
 
 const CHROME: Record<string, { home: string; blogs: string; minRead: string; ctaTitle: string; ctaText: string; ctaButton: string }> = {
-  en: { home: "Home", blogs: "Blogs", minRead: "min read", ctaTitle: "Ready to grow your business?", ctaText: "Talk to the Amatis team about your project — free consultation.", ctaButton: "Connect With Us" },
+  en: { home: "Home", blogs: "Blogs", minRead: "min read", ctaTitle: "Ready to grow your business?", ctaText: "Talk to the AmatisBerry team about your project — free consultation.", ctaButton: "Connect With Us" },
   fa: { home: "خانه", blogs: "وبلاگ", minRead: "دقیقه مطالعه", ctaTitle: "آمادهٔ رشد کسب‌وکارتان هستید؟", ctaText: "درمورد پروژه‌تان با تیم اماتیس صحبت کنید — مشاوره اولیه رایگان است.", ctaButton: "ارتباط با ما" },
   ar: { home: "الرئيسية", blogs: "المدونة", minRead: "دقائق القراءة", ctaTitle: "جاهز لتنمية عملك؟", ctaText: "تحدث مع فريق أماتيس عن مشروعك — استشارة مجانية.", ctaButton: "تواصل معنا" },
 };
@@ -163,7 +163,7 @@ export function renderPostPage(
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${escapeHtml(post.title)} · Amatis</title>
+  <title>${escapeHtml(post.title)} · AmatisBerry</title>
   <meta name="description" content="${escapeHtml(post.excerpt)}">
   <meta property="og:type" content="article">
   <meta property="og:title" content="${escapeHtml(post.title)}">
@@ -179,7 +179,7 @@ export function renderPostPage(
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="/">
-        <span class="brand-mark">A</span><span class="brand-word">Amatis</span>
+        <span class="brand-mark">A</span><span class="brand-word">AmatisBerry</span>
       </a>
       <nav class="site-nav" aria-label="Main">${NAV}</nav>
       <div class="header-actions">
@@ -200,7 +200,7 @@ export function renderPostPage(
         <span class="post-tag-pill">${escapeHtml(post.tag || "Blog")}</span>
         <h1 class="post-title">${escapeHtml(post.title)}</h1>
         <div class="post-meta">
-          <span><strong>Amatis</strong></span><span>•</span><span>${date}</span><span>•</span><span>${minutes} ${L.minRead}</span>
+          <span><strong>AmatisBerry</strong></span><span>•</span><span>${date}</span><span>•</span><span>${minutes} ${L.minRead}</span>
         </div>
         ${cover}
         <div class="post-body">${post.content}</div>

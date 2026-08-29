@@ -65,8 +65,8 @@ export async function POST(req: NextRequest) {
     });
   });
 
-  const title = `Consultation with Amatis — ${w.time} ${w.date}`;
-  const description = `You booked a consultation with Amatis.\n\nNotes: ${notes || "—"}\n\nGoogle Meet link:\n${meetLink}`;
+  const title = `Consultation with AmatisBerry — ${w.time} ${w.date}`;
+  const description = `You booked a consultation with AmatisBerry.\n\nNotes: ${notes || "—"}\n\nGoogle Meet link:\n${meetLink}`;
   const ics = buildIcs({
     uid: booking.id,
     title,
@@ -84,7 +84,7 @@ export async function POST(req: NextRequest) {
     owner: config.ownerEmail,
     subject: title,
     summary: title,
-    description: `You booked a consultation with Amatis. Notes: ${notes || "—"}`,
+    description: `You booked a consultation with AmatisBerry. Notes: ${notes || "—"}`,
     location: meetLink,
     start: slot.start,
     end: slot.end,

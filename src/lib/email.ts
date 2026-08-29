@@ -115,10 +115,10 @@ function wrapHtml(bodyHtml: string): string {
 <body style="margin:0;background:#0B1120;font-family:Inter,Arial,sans-serif">
   <div style="max-width:560px;margin:0 auto;padding:28px">
     <div style="background:#ffffff;border-radius:16px;padding:32px 28px;box-shadow:0 12px 36px rgba(20,45,90,.12)">
-      <div style="font-size:20px;font-weight:900;color:#12223D">Amatis</div>
+      <div style="font-size:20px;font-weight:900;color:#12223D">AmatisBerry</div>
       <div style="margin-top:16px;font-size:14px;color:#334155;line-height:1.9">${bodyHtml}</div>
     </div>
-    <p style="margin:18px 0 0;font-size:12px;color:#94a3b8;text-align:center">© ${new Date().getFullYear()} Amatis. All rights reserved.</p>
+    <p style="margin:18px 0 0;font-size:12px;color:#94a3b8;text-align:center">© ${new Date().getFullYear()} AmatisBerry. All rights reserved.</p>
   </div>
 </body></html>`;
 }
@@ -144,7 +144,7 @@ export async function sendContactNotification(msg: {
   const to = (await getSetting("contact_email")) || process.env.CONTACT_EMAIL || process.env.MAIL_FROM;
   if (!to) return;
 
-  const subject = `New message from Amatis contact form — ${msg.subject || msg.name}`;
+  const subject = `New message from AmatisBerry contact form — ${msg.subject || msg.name}`;
   const text =
     `Name: ${msg.name}\n` +
     `Email: ${msg.email}\n` +

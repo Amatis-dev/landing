@@ -1,5 +1,5 @@
 /* ============================================================
-   Amatis — meeting booking calendar
+   AmatisBerry — meeting booking calendar
    Fetches free time slots (/api/booking/slots), renders a date +
    time picker, and submits a booking (/api/booking) that returns a
    Google Meet link and emails an .ics invite.

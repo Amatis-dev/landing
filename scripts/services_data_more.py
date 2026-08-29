@@ -6,7 +6,7 @@ SERVICES_EXTRA = [
     {
         "cat": "websites", "file": "corporate-website.html", "img": "office",
         "title_key": "services.websites.corporate", "title_en": "Corporate Website",
-        "desc": "Polished corporate websites by Amatis that present your company with confidence and convert visitors.",
+        "desc": "Polished corporate websites by AmatisBerry that present your company with confidence and convert visitors.",
         "c": {
             "en": {"subtitle": "Polished corporate websites that present your company with confidence.",
                    "p1": "Your website is your digital shopfront. We craft performance-driven corporate sites with clear messaging, strong brand identity and seamless conversion paths — from landing pages to complete multi-page experiences.",
@@ -37,7 +37,7 @@ SERVICES_EXTRA = [
     {
         "cat": "websites", "file": "classifieds-website.html", "img": "market",
         "title_key": "services.websites.classifieds", "title_en": "Classifieds Website",
-        "desc": "Classifieds websites by Amatis — powerful search and posting platforms built like the big listing networks.",
+        "desc": "Classifieds websites by AmatisBerry — powerful search and posting platforms built like the big listing networks.",
         "c": {
             "en": {"subtitle": "Classifieds websites like the big listing platforms — search, post, chat.",
                    "p1": "Launch a listing marketplace for vehicles, real estate, jobs or general classifieds. We engineer searchable, filterable platforms with user accounts, secure posting and messaging built in.",
@@ -68,7 +68,7 @@ SERVICES_EXTRA = [
     {
         "cat": "websites", "file": "marketplace-website.html", "img": "shop",
         "title_key": "services.websites.marketplace", "title_en": "Marketplace Website",
-        "desc": "Multi-vendor marketplace websites by Amatis — stores, carts, checkout and seller management in one platform.",
+        "desc": "Multi-vendor marketplace websites by AmatisBerry — stores, carts, checkout and seller management in one platform.",
         "c": {
             "en": {"subtitle": "Marketplaces with multi-vendor stores and checkout.",
                    "p1": "We build marketplace platforms that let many sellers offer their products under one trusted brand. Vendor dashboards, commission handling, order routing and multi-store checkout are all included.",
@@ -99,7 +99,7 @@ SERVICES_EXTRA = [
     {
         "cat": "websites", "file": "online-store.html", "img": "store",
         "title_key": "services.websites.store", "title_en": "Online Store",
-        "desc": "Fast online stores by Amatis — catalogs, seamless payments, shipping and full admin control.",
+        "desc": "Fast online stores by AmatisBerry — catalogs, seamless payments, shipping and full admin control.",
         "c": {
             "en": {"subtitle": "Fast online stores with catalogs, payments and shipping.",
                    "p1": "Turn your products into an online store that sells around the clock. We build fast, reliable shops with smart catalogs, smooth checkout, secure payments and shipping integration.",
@@ -130,7 +130,7 @@ SERVICES_EXTRA = [
     {
         "cat": "websites", "file": "restaurant-website.html", "img": "restaurant",
         "title_key": "services.websites.restaurant", "title_en": "Restaurant Website",
-        "desc": "Restaurant websites by Amatis — beautiful menus, table reservation and online ordering.",
+        "desc": "Restaurant websites by AmatisBerry — beautiful menus, table reservation and online ordering.",
         "c": {
             "en": {"subtitle": "Restaurant sites with menus, table reservation and online ordering.",
                    "p1": "Bring your restaurant online with an appetizing website. Menu showcase, table reservations, online ordering and kitchen integrations all work together to fill every seat.",
@@ -161,7 +161,7 @@ SERVICES_EXTRA = [
     {
         "cat": "websites", "file": "news-website.html", "img": "newspaper",
         "title_key": "services.websites.news", "title_en": "News Website",
-        "desc": "News and media websites by Amatis — editorial workflows, fast delivery and audience growth.",
+        "desc": "News and media websites by AmatisBerry — editorial workflows, fast delivery and audience growth.",
         "c": {
             "en": {"subtitle": "News sites with editorial workflows and fast delivery.",
                    "p1": "We build modern news and media platforms with intuitive editorial workflows, lightning-fast article delivery and engaging layouts for desktop, tablet and mobile.",
@@ -192,7 +192,7 @@ SERVICES_EXTRA = [
     {
         "cat": "websites", "file": "medical-website.html", "img": "hospital",
         "title_key": "services.websites.medical", "title_en": "Medical Website",
-        "desc": "Medical and clinic websites by Amatis — online booking, patient portals and trust-building design.",
+        "desc": "Medical and clinic websites by AmatisBerry — online booking, patient portals and trust-building design.",
         "c": {
             "en": {"subtitle": "Clinic sites with online booking and patient portals.",
                    "p1": "We design trustworthy websites for clinics, doctors and health centers. Online appointment booking, patient information, service overviews and privacy-first practices build confidence from the first visit.",
@@ -223,7 +223,7 @@ SERVICES_EXTRA = [
     {
         "cat": "websites", "file": "tourism-website.html", "img": "beach",
         "title_key": "services.websites.tourism", "title_en": "Tourism Website",
-        "desc": "Travel and tourism websites by Amatis — tours, hotels and trip booking that inspire and convert.",
+        "desc": "Travel and tourism websites by AmatisBerry — tours, hotels and trip booking that inspire and convert.",
         "c": {
             "en": {"subtitle": "Travel and tourism websites with tours, hotels and trip booking.",
                    "p1": "Inspire travelers and turn clicks into bookings. We build beautiful tourism websites with immersive destination content, tour catalogs and seamless booking flows.",
@@ -254,7 +254,7 @@ SERVICES_EXTRA = [
     {
         "cat": "websites", "file": "book-reader-website.html", "img": "library",
         "title_key": "services.websites.reader", "title_en": "Book Reader Website",
-        "desc": "Book reader websites by Amatis — sell and stream ebooks and audiobooks with a beautiful reading experience.",
+        "desc": "Book reader websites by AmatisBerry — sell and stream ebooks and audiobooks with a beautiful reading experience.",
         "c": {
             "en": {"subtitle": "Book reader websites for selling and streaming ebooks and audiobooks.",
                    "p1": "Launch a reading platform for your publishing house or library. A beautiful catalog, secure e-book purchases, subscriptions and an in-browser reader make every title easy to enjoy.",
@@ -285,7 +285,7 @@ SERVICES_EXTRA = [
     {
         "cat": "websites", "file": "wordpress.html", "img": "laptop",
         "title_key": "services.websites.wordpress", "title_en": "WordPress Website",
-        "desc": "WordPress websites by Amatis — custom themes, plugins and builds tuned for speed and SEO.",
+        "desc": "WordPress websites by AmatisBerry — custom themes, plugins and builds tuned for speed and SEO.",
         "c": {
             "en": {"subtitle": "WordPress sites built and tuned for speed, SEO and easy editing.",
                    "p1": "WordPress gives your team total control over content. We build custom themes, required plugins and optimized setups — fast, secure and easy for authors to update every day.",
@@ -317,7 +317,7 @@ SERVICES_EXTRA = [
     {
         "cat": "ecommerce", "file": "subscription-store.html", "img": "business",
         "title_key": "services.ecommerce.subscription", "title_en": "Subscription Store",
-        "desc": "Subscription stores by Amatis — memberships, recurring billing, boxes and growing recurring revenue.",
+        "desc": "Subscription stores by AmatisBerry — memberships, recurring billing, boxes and growing recurring revenue.",
         "c": {
             "en": {"subtitle": "Stores for memberships and recurring revenue.",
                    "p1": "Turn one-time buyers into a predictable revenue stream. We build subscription e-commerce with plans, recurring billing, member portals and automated renewals.",
@@ -348,7 +348,7 @@ SERVICES_EXTRA = [
     {
         "cat": "ecommerce", "file": "shopify-store.html", "img": "retail",
         "title_key": "services.ecommerce.shopify", "title_en": "Shopify Store",
-        "desc": "Shopify stores by Amatis — configured and customized to your brand for sales and scale.",
+        "desc": "Shopify stores by AmatisBerry — configured and customized to your brand for sales and scale.",
         "c": {
             "en": {"subtitle": "Shopify stores configured and customized to your brand.",
                    "p1": "Launch fast with Shopify's proven infrastructure, tailored to your brand. We configure themes, apps and payments to create a store that looks custom and runs perfectly.",
@@ -380,7 +380,7 @@ SERVICES_EXTRA = [
     {
         "cat": "blockchain", "file": "crypto-exchange.html", "img": "bitcoin",
         "title_key": "services.blockchain.cex", "title_en": "Crypto Exchange",
-        "desc": "Centralized cryptocurrency exchanges by Amatis — order books, KYC, custody and liquidity.",
+        "desc": "Centralized cryptocurrency exchanges by AmatisBerry — order books, KYC, custody and liquidity.",
         "c": {
             "en": {"subtitle": "Centralized exchanges with order books and KYC.",
                    "p1": "We build secure centralized exchanges (CEX) with matching engines, order books, wallets and full KYC/AML flows. Spot trading, margin and futures modules scale with your user base.",
@@ -411,7 +411,7 @@ SERVICES_EXTRA = [
     {
         "cat": "blockchain", "file": "dex.html", "img": "cryptocurrency",
         "title_key": "services.blockchain.dex", "title_en": "Decentralized Exchange (DEX)",
-        "desc": "Decentralized exchanges by Amatis — on-chain swaps, liquidity pools and self-custody trading.",
+        "desc": "Decentralized exchanges by AmatisBerry — on-chain swaps, liquidity pools and self-custody trading.",
         "c": {
             "en": {"subtitle": "Decentralized exchanges with on-chain swaps.",
                    "p1": "We build decentralized exchanges (DEX) where users trade from their own wallets. Automated market makers, liquidity pools, staking and on-chain order flows are engineered for safety and transparency.",
@@ -442,7 +442,7 @@ SERVICES_EXTRA = [
     {
         "cat": "blockchain", "file": "p2p-exchange.html", "img": "trading",
         "title_key": "services.blockchain.p2p", "title_en": "P2P Exchange",
-        "desc": "Peer-to-peer crypto platforms by Amatis that match buyers and sellers with escrow protection.",
+        "desc": "Peer-to-peer crypto platforms by AmatisBerry that match buyers and sellers with escrow protection.",
         "c": {
             "en": {"subtitle": "Peer-to-peer platforms matching buyers and sellers.",
                    "p1": "We build P2P exchanges where users trade directly with each other. Offer walls, price matching, rating systems and secure escrow keep every deal fair and protected.",
@@ -473,7 +473,7 @@ SERVICES_EXTRA = [
     {
         "cat": "blockchain", "file": "otc-exchange.html", "img": "finance",
         "title_key": "services.blockchain.otc", "title_en": "OTC Exchange",
-        "desc": "OTC desks for large cryptocurrency trades by Amatis — privacy, liquidity and dedicated service.",
+        "desc": "OTC desks for large cryptocurrency trades by AmatisBerry — privacy, liquidity and dedicated service.",
         "c": {
             "en": {"subtitle": "OTC desks for large, private trades.",
                    "p1": "For large trades that move markets, OTC is the answer. We build private over-the-counter desks with negotiated pricing, high liquidity and direct settlement between parties.",
@@ -504,7 +504,7 @@ SERVICES_EXTRA = [
     {
         "cat": "blockchain", "file": "crypto-payment-gateway.html", "img": "payment",
         "title_key": "services.blockchain.gateway", "title_en": "Crypto Payment Gateway",
-        "desc": "Crypto payment gateways by Amatis — accept digital assets in your store and business.",
+        "desc": "Crypto payment gateways by AmatisBerry — accept digital assets in your store and business.",
         "c": {
             "en": {"subtitle": "Gateways to accept digital assets.",
                    "p1": "Let customers pay with crypto and still receive the funds you need. We build payment gateways with instant confirmations, automatic USD-pegged settlement and fiat conversion.",
@@ -535,7 +535,7 @@ SERVICES_EXTRA = [
     {
         "cat": "blockchain", "file": "smart-contracts.html", "img": "blockchain",
         "title_key": "services.blockchain.contracts", "title_en": "Smart Contracts & Tokens",
-        "desc": "Smart contract and token development by Amatis — audited, secure and gas-optimized.",
+        "desc": "Smart contract and token development by AmatisBerry — audited, secure and gas-optimized.",
         "c": {
             "en": {"subtitle": "Smart contract and token development.",
                    "p1": "We design and deploy on-chain logic for your project — from ERC/BEP tokens and NFTs to DAOs, staking and custom DeFi protocols. Security always comes first.",
@@ -566,7 +566,7 @@ SERVICES_EXTRA = [
     {
         "cat": "blockchain", "file": "airdrop-platform.html", "img": "ethereum",
         "title_key": "services.blockchain.airdrop", "title_en": "Airdrop Platform",
-        "desc": "Airdrop and token distribution platforms by Amatis — secure, automated and anti-bot.",
+        "desc": "Airdrop and token distribution platforms by AmatisBerry — secure, automated and anti-bot.",
         "c": {
             "en": {"subtitle": "Airdrop and token distribution platforms.",
                    "p1": "Reach thousands of wallets with a secure, automated airdrop. We build distribution platforms with eligibility rules, tasks and claims while keeping anti-bot measures and gas costs in check.",
@@ -597,7 +597,7 @@ SERVICES_EXTRA = [
     {
         "cat": "blockchain", "file": "exchange-app.html", "img": "money",
         "title_key": "services.blockchain.app", "title_en": "Exchange App",
-        "desc": "Crypto exchange mobile apps by Amatis — real-time charts, trading and portfolio management.",
+        "desc": "Crypto exchange mobile apps by AmatisBerry — real-time charts, trading and portfolio management.",
         "c": {
             "en": {"subtitle": "Exchange apps with charts and trading.",
                    "p1": "Take your exchange to mobile. We build trading apps with real-time charts, order placement, portfolio tracking and secure biometric login that your users will trust on the go.",
@@ -629,7 +629,7 @@ SERVICES_EXTRA = [
     {
         "cat": "more", "file": "uiux-design.html", "img": "design",
         "title_key": "services.more.uiux", "title_en": "UI/UX Design",
-        "desc": "UI/UX design services by Amatis — product and interface design users love.",
+        "desc": "UI/UX design services by AmatisBerry — product and interface design users love.",
         "c": {
             "en": {"subtitle": "Product and interface design users love.",
                    "p1": "Great products start with great design. Our designers research your users, map their journeys and craft interfaces that are clear, beautiful and easy to use across every screen.",
@@ -660,7 +660,7 @@ SERVICES_EXTRA = [
     {
         "cat": "more", "file": "seo-marketing.html", "img": "marketing",
         "title_key": "services.more.seo", "title_en": "SEO & Digital Marketing",
-        "desc": "SEO and digital marketing by Amatis — grow organic traffic, engagement and sales.",
+        "desc": "SEO and digital marketing by AmatisBerry — grow organic traffic, engagement and sales.",
         "c": {
             "en": {"subtitle": "Grow organic traffic and sales.",
                    "p1": "Visibility brings customers. We build SEO and digital marketing strategies that improve rankings, launch effective campaigns and turn traffic into loyal paying customers.",
@@ -691,7 +691,7 @@ SERVICES_EXTRA = [
     {
         "cat": "more", "file": "dashboards-admin.html", "img": "analytics",
         "title_key": "services.more.dashboards", "title_en": "Dashboards & Admin Panels",
-        "desc": "Dashboards and admin panels by Amatis — run your business with clear data and full control.",
+        "desc": "Dashboards and admin panels by AmatisBerry — run your business with clear data and full control.",
         "c": {
             "en": {"subtitle": "Admin panels to run your business with data.",
                    "p1": "Decisions are faster with clear data. We design and build dashboards and admin panels tailored to your workflow — from KPI overviews to deep reporting and operations tools.",
@@ -722,7 +722,7 @@ SERVICES_EXTRA = [
     {
         "cat": "more", "file": "maintenance-support.html", "img": "computer",
         "title_key": "services.more.support", "title_en": "Maintenance & Support",
-        "desc": "Maintenance and support by Amatis — hosting, monitoring and support that keeps everything running.",
+        "desc": "Maintenance and support by AmatisBerry — hosting, monitoring and support that keeps everything running.",
         "c": {
             "en": {"subtitle": "Hosting and support that keeps everything running.",
                    "p1": "Your product should keep improving after launch. We provide hosting, monitoring, updates and proactive maintenance so your website or app stays fast, secure and available.",

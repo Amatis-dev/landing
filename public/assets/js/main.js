@@ -1,5 +1,5 @@
 /* ============================================================
-   Amatis — main behavior
+   AmatisBerry — main behavior
    Theme, language switcher, mobile menu, marquee, reveal,
    showcase filter, counters, back-to-top, forms
    ============================================================ */
