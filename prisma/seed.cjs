@@ -6,9 +6,9 @@ const bcrypt = require("bcryptjs");
 const prisma = new PrismaClient();
 
 const DEFAULT_SETTINGS = [
-  { key: "contact_phone", value: "+852 2569 7974", secret: false, group: "contact" },
-  { key: "contact_phone_fa", value: "+۸۵۲ ۲۵۶۹ ۷۹۷۴", secret: false, group: "contact" },
-  { key: "contact_phone_ar", value: "+٨٥٢ ٢٥٦٩ ٧٩٧٤", secret: false, group: "contact" },
+  { key: "contact_phone", value: "+985138900548", secret: false, group: "contact" },
+  { key: "contact_phone_fa", value: "+985138900548", secret: false, group: "contact" },
+  { key: "contact_phone_ar", value: "+985138900548", secret: false, group: "contact" },
   { key: "contact_email", value: "hello@amatisberry.ir", secret: false, group: "contact" },
   { key: "contact_address_en", value: "44/1, Amethyst Tower, Training Park, Mashhad, Iran", secret: false, group: "contact" },
   { key: "contact_address_de", value: "44/1, Amethyst Tower, Training Park, Mashhad, Iran", secret: false, group: "contact" },
