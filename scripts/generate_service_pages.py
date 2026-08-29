@@ -476,7 +476,7 @@ def js_obj(fields):
 
 
 def build_svc_block(locale):
-    lines = ["    svc: {"]
+    lines = ["    /*__SVC_START__*/", "    svc: {"]
     for svc in SERVICES:
         slug = svc["file"][:-5]
         js_name = slug_to_js(slug)
@@ -490,13 +490,14 @@ def build_svc_block(locale):
         lines.append(js_obj(fields))
         lines.append("      },")
     lines.append("    },")
+    lines.append("    /*__SVC_END__*/")
     return "\n".join(lines)
 
 
 def inject_svc(i18n_content):
-    """Remove any previous svc blocks and re-insert right after each locale open."""
-    # Drop every existing svc block (they accumulate on re-runs / last-wins).
-    i18n_content = re.sub(r'    svc: \{.*?\n    \},\n', '', i18n_content, flags=re.DOTALL)
+    """Replace the sentinel-wrapped svc block for each locale (safe, brace-preserving)."""
+    i18n_content = re.sub(
+        r'/\*__SVC_START__\*/[\s\S]*?/\*__SVC_END__\*/', '', i18n_content)
     out = []
     for loc in LOCALES:
         marker = "    %s: {\n" % loc
