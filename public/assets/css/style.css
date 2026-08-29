@@ -2366,3 +2366,10 @@ section {
 .bk-hint { margin-top: 14px; color: var(--text-3); font-size: 12.5px; font-weight: 600; line-height: 1.7; }
 .booking-panel.success .bk-slot-summary { margin-top: 14px; }
 .booking-panel.success #bk-another { margin-top: 18px; }
+
+/* Phone numbers: keep the leading "+" and digits LTR even inside RTL locales */
+[dir="rtl"] [data-site-field="contact_phone"],
+[dir="rtl"] [data-i18n="connect.phoneValue"] {
+  direction: ltr;
+  unicode-bidi: embed;
+}
