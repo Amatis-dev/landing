@@ -7,8 +7,8 @@ const prisma = new PrismaClient();
 
 const DEFAULT_SETTINGS = [
   { key: "contact_phone", value: "+985138900548", secret: false, group: "contact" },
-  { key: "contact_phone_fa", value: "+985138900548", secret: false, group: "contact" },
-  { key: "contact_phone_ar", value: "+985138900548", secret: false, group: "contact" },
+  { key: "contact_phone_fa", value: "+۹۸۵۱۳۸۹۰۰۵۴۸", secret: false, group: "contact" },
+  { key: "contact_phone_ar", value: "+٩٨٥١٣٨٩٠٠٥٤٨", secret: false, group: "contact" },
   { key: "contact_email", value: "hello@amatisberry.ir", secret: false, group: "contact" },
   { key: "contact_address_en", value: "44/1, Amethyst Tower, Training Park, Mashhad, Iran", secret: false, group: "contact" },
   { key: "contact_address_de", value: "44/1, Amethyst Tower, Training Park, Mashhad, Iran", secret: false, group: "contact" },

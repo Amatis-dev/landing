@@ -14,8 +14,8 @@ const { prisma } = await import("/Users/majidghafouri/speechify/landing/src/lib/
 
 const FA_ADDR = "۴۴/۱، برج آمتیست، پارک ترینینگ، مشهد، ایران";
 const AR_ADDR = "٤٤/١، برج أميتيست، منتزه التدريب، مشهد، إيران";
-const FA_PHONE = "+985138900548";
-const AR_PHONE = "+985138900548";
+const FA_PHONE = "+۹۸۵۱۳۸۹۰۰۵۴۸";
+const AR_PHONE = "+٩٨٥١٣٨٩٠٠٥٤٨";
 
 async function setOrCreate(key, value) {
   const row = await prisma.setting.findUnique({ where: { key } });

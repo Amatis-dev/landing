@@ -5785,7 +5785,7 @@ window.AMATIS_I18N = (function () {
         subtitle:
           "\u067e\u0631\u0648\u0698\u0647\u200c\u0627\u06cc \u062f\u0631 \u0646\u0638\u0631 \u062f\u0627\u0631\u06cc\u062f \u06cc\u0627 \u0633\u0648\u0627\u0644\u06cc \u062f\u0627\u0631\u06cc\u062f\u061f \u062a\u06cc\u0645 \u0645\u0627 \u062f\u0631 \u06a9\u0646\u0627\u0631 \u0634\u0645\u0627\u0633\u062a.",
         phone: "\u062a\u0644\u0641\u0646",
-        phoneValue: "+985138900548",
+        phoneValue: "+۹۸۵۱۳۸۹۰۰۵۴۸",
         email: "\u0627\u06cc\u0645\u06cc\u0644",
         emailValue: "hello@amatisberry.ir",
         address: "\u0622\u062f\u0631\u0633",
@@ -7722,7 +7722,7 @@ window.AMATIS_I18N = (function () {
         subtitle:
           "\u0647\u0644 \u0644\u062f\u064a\u0643 \u0645\u0634\u0631\u0648\u0639 \u0623\u0648 \u0633\u0624\u0627\u0644\u061f \u0641\u0631\u064a\u0642\u0646\u0627 \u0647\u0646\u0627 \u0644\u0645\u0633\u0627\u0639\u062f\u062a\u0643.",
         phone: "\u0627\u0644\u0647\u0627\u062a\u0641",
-        phoneValue: "+985138900548",
+        phoneValue: "+٩٨٥١٣٨٩٠٠٥٤٨",
         email: "\u0627\u0644\u0628\u0631\u064a\u062f \u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a",
         emailValue: "hello@amatisberry.ir",
         address: "\u0627\u0644\u0639\u0646\u0648\u0627\u0646",
