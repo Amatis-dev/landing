@@ -522,7 +522,7 @@ def patch_nav_hrefs(content):
         content = content.replace(
             '<a href="what-we-offer.html#apps"><span data-i18n="%s">' % key, '<a href="%s"><span data-i18n="%s">' % (page, key))
     # the old nav always linked to the category anchor; also catch generic anchors
-    content = re.sub(r'<a href="what-we-offer\.html#(apps|websites|ecommerce|blockchain|more)"><span data-i18n="(services\.[a-z]+\.[a-z]+)">',
+    content = re.sub(r'<a href="what-we-offer\.html#(apps|websites|ecommerce|blockchain|more)"><span data-i18n="(services\.[a-z0-9]+\.[a-z0-9]+)">',
                      lambda m: '<a href="%s"><span data-i18n="%s">' % (LINK_MAP.get(m.group(2), "what-we-offer.html#%s" % m.group(1)), m.group(2)),
                      content)
     return content
