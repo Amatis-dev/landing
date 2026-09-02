@@ -1,0 +1,24 @@
+{
+  "name": "AmatisBerry — Mobile App & Web Development",
+  "short_name": "AmatisBerry",
+  "description": "AmatisBerry builds Android & iOS apps, web apps, PWAs and websites — from UI/UX design to launch.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f1a",
+  "theme_color": "#1a1a2e",
+  "lang": "fa",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "/assets/images/favicon.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/logo.png",
+      "sizes": "140x30",
+      "type": "image/png"
+    }
+  ]
+}

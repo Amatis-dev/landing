@@ -165,9 +165,36 @@ export function renderPostPage(
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>${escapeHtml(post.title)} · AmatisBerry</title>
   <meta name="description" content="${escapeHtml(post.excerpt)}">
+  <link rel="canonical" href="https://amatisberry.ir/blog/${encodeURIComponent(post.slug)}">
+  ${
+    siblings && siblings.length > 1
+      ? siblings
+          .map((s) => `<link rel="alternate" hreflang="${escapeHtml(s.lang)}" href="https://amatisberry.ir/blog/${encodeURIComponent(s.slug)}">`)
+          .join("\n  ")
+      : ""
+  }
   <meta property="og:type" content="article">
+  <meta property="og:site_name" content="AmatisBerry">
   <meta property="og:title" content="${escapeHtml(post.title)}">
   <meta property="og:description" content="${escapeHtml(post.excerpt)}">
+  <meta property="og:url" content="https://amatisberry.ir/blog/${encodeURIComponent(post.slug)}">
+  <meta property="og:image" content="${post.coverImage ? escapeHtml(post.coverImage) : "https://amatisberry.ir/assets/images/hero-image.jpg"}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${escapeHtml(post.title)}">
+  <meta name="twitter:description" content="${escapeHtml(post.excerpt)}">
+  <script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    image: post.coverImage || "https://amatisberry.ir/assets/images/hero-image.jpg",
+    datePublished: post.publishedAt instanceof Date ? post.publishedAt.toISOString() : String(post.publishedAt),
+    dateModified: post.publishedAt instanceof Date ? post.publishedAt.toISOString() : String(post.publishedAt),
+    inLanguage: post.lang,
+    mainEntityOfPage: `https://amatisberry.ir/blog/${encodeURIComponent(post.slug)}`,
+    author: { "@type": "Organization", name: "AmatisBerry" },
+    publisher: { "@type": "Organization", name: "AmatisBerry", url: "https://amatisberry.ir" },
+  })}</script>
   <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
