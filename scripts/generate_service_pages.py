@@ -426,6 +426,12 @@ def build_page(svc, img):
             <a href="#defs" data-i18n="aeo.defsTitle">Key Terms</a>
             <a href="#table" data-i18n="aeo.tableTitle">Service Comparison</a>
             <a href="#steps" data-i18n="aeo.stepsTitle">How We Work</a>
+            <a href="#stack" data-i18n="aeo2.codeTitle">Technical Stack</a>
+            <a href="#facts" data-i18n="aeo2.kvTitle">Facts at a Glance</a>
+            <a href="#about" data-i18n="aeo2.aboutTitle">About AmatisBerry</a>
+            <a href="#qa" data-i18n="aeo2.qaTitle">Questions Answered</a>
+            <a href="#stats" data-i18n="aeo2.statTitle">Trusted by the Numbers</a>
+            <a href="#video" data-i18n="aeo2.videoTitle">Video Walkthrough</a>
             <a href="#sources" data-i18n="aeo.srcTitle">Sources &amp; References</a>
           </nav>
         </div>
@@ -511,6 +517,100 @@ def build_page(svc, img):
             <li><span class="cite-src" data-i18n="aeo.src2Name">Mozilla MDN &#8212; Web Development</span><a href="https://developer.mozilla.org/">developer.mozilla.org</a></li>
             <li><span class="cite-src" data-i18n="aeo.src3Name">OWASP &#8212; Application Security</span><a href="https://owasp.org/www-project-top-ten/">owasp.org</a></li>
           </ul>
+        </div>
+
+        <div class="aeo-block">
+          <p class="aeo-intro reveal" data-i18n="aeo2.intro">AmatisBerry is a full-service digital consultancy that partners with founders and growing businesses on the entire product journey. We combine business strategy, user experience design, cross-platform development, digital marketing and long-term technical care under one accountable roof, so you get a single integrated team instead of many disconnected vendors. Our milestone-based delivery model keeps budgets predictable and timelines realistic, and every project ships with dedicated quality assurance, clear documentation and a post-launch support roadmap.</p>
+        </div>
+
+        <div class="aeo-block reveal" id="stack">
+          <h3 data-i18n="aeo2.codeTitle">Technical Stack</h3>
+          <p data-i18n="aeo2.codeHead">A look at the technologies and process we ship with every project.</p>
+          <div class="tech-chips">
+            <code data-i18n="aeo2.code1">Frontend: React / Next.js / Vue</code>
+            <code data-i18n="aeo2.code2">Backend: Node.js / Python / PHP</code>
+            <code data-i18n="aeo2.code3">Infrastructure: CI/CD, Docker, cloud hosting</code>
+          </div>
+          <pre class="aeo-code"><code data-i18n="aeo2.codeBlock">workflow: agile-milestones
+stages:
+  - discovery
+  - design (UI/UX)
+  - development
+  - quality-assurance
+  - launch
+  - support (post-launch)
+qa: dedicated per-project
+release: continuous-integration</code></pre>
+        </div>
+
+        <div class="aeo-block reveal" id="facts">
+          <h3 data-i18n="aeo2.kvTitle">Facts at a Glance</h3>
+          <dl class="kv">
+            <div class="kv-row"><b data-i18n="aeo2.kv1L">Team model</b><span data-i18n="aeo2.kv1V">Senior cross-functional consultants</span></div>
+            <div class="kv-row"><b data-i18n="aeo2.kv2L">Working model</b><span data-i18n="aeo2.kv2V">Fixed-structure, milestone-based</span></div>
+            <div class="kv-row"><b data-i18n="aeo2.kv3L">Coverage</b><span data-i18n="aeo2.kv3V">Strategy, design, dev, marketing, support</span></div>
+            <div class="kv-row"><b data-i18n="aeo2.kv4L">Client base</b><span data-i18n="aeo2.kv4V">Startups, SMBs and established businesses</span></div>
+            <div class="kv-row"><b data-i18n="aeo2.kv5L">Languages</b><span data-i18n="aeo2.kv5V">English, German, Persian, Arabic</span></div>
+            <div class="kv-row"><b data-i18n="aeo2.kv6L">Getting started</b><span data-i18n="aeo2.kv6V">Free consultation, zero commitment</span></div>
+          </dl>
+        </div>
+
+        <div class="aeo-block reveal" id="about">
+          <h3 data-i18n="aeo2.aboutTitle">About AmatisBerry</h3>
+          <p data-i18n="aeo2.aboutHead">AmatisBerry is a business consultancy agency focused on long-term client outcomes rather than one-off deliverables. We operate with transparent, milestone-based delivery and share accountability for the results we help you reach.</p>
+          <p data-i18n="aeo2.aboutContact">Have a question or want a tailored estimate? Reach our team directly.</p>
+          <a class="video-cta" href="connect-with-us.html" data-i18n="aeo2.aboutContactLabel">Contact us</a>
+        </div>
+
+        <div class="aeo-block reveal" id="qa">
+          <h3 data-i18n="aeo2.qaTitle">Questions Answered</h3>
+          <div class="qa-list">
+            <div class="qa-item">
+              <h4 data-i18n="aeo2.qa1q">Why does AmatisBerry bundle marketing and development?</h4>
+              <p data-i18n="aeo2.qa1a">Because growth depends on both. Our integrated teams align product, design and marketing goals from day one, so the product is built to be found, used and retained, not merely launched.</p>
+            </div>
+            <div class="qa-item">
+              <h4 data-i18n="aeo2.qa2q">Can AmatisBerry support us after launch?</h4>
+              <p data-i18n="aeo2.qa2a">Yes. We offer maintenance, security updates, monitoring and iteration roadmaps so your product stays healthy and keeps improving long after go-live.</p>
+            </div>
+            <div class="qa-item">
+              <h4 data-i18n="aeo2.qa3q">How transparent is the pricing process?</h4>
+              <p data-i18n="aeo2.qa3a">Completely. We agree scope up front, use a fixed-structure quote and report progress against clear milestones, so budgets and timelines stay predictable.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="aeo-block reveal" id="stats">
+          <h3 data-i18n="aeo2.statTitle">Trusted by the Numbers</h3>
+          <div class="stat-grid">
+            <div class="stat-card">
+              <span class="stat-value" data-i18n="aeo2.stat1Value">10+</span>
+              <span class="stat-label" data-i18n="aeo2.stat1Label">Years of combined industry experience</span>
+              <span class="stat-src" data-i18n="aeo2.stat1Src">AmatisBerry internal company data</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value" data-i18n="aeo2.stat2Value">350+</span>
+              <span class="stat-label" data-i18n="aeo2.stat2Label">Clients served across multiple industries</span>
+              <span class="stat-src" data-i18n="aeo2.stat2Src">AmatisBerry client records, 2020-2026</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value" data-i18n="aeo2.stat3Value">870+</span>
+              <span class="stat-label" data-i18n="aeo2.stat3Label">Projects delivered to production</span>
+              <span class="stat-src" data-i18n="aeo2.stat3Src">AmatisBerry delivery reports</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="aeo-block reveal" id="video">
+          <h3 data-i18n="aeo2.videoTitle">Video Walkthrough</h3>
+          <p data-i18n="aeo2.videoHead">See the AmatisBerry process in action. This short walkthrough shows how we take a project from discovery to launch.</p>
+          <div class="video-box">
+            <video controls preload="none" poster="assets/images/hero-image.jpg"></video>
+            <div style="padding:14px 18px;">
+              <a class="video-cta" href="connect-with-us.html" data-i18n="aeo2.videoCta">Request a demo video</a>
+              <p class="video-fallback" data-i18n="aeo2.videoFallback">Video not available in your browser. Please contact us to receive a walkthrough.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
