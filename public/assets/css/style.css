@@ -119,13 +119,13 @@ input, textarea, select {
   --line-strong: #00796b;
   --line-stronger: #00897b;
 
-  --primary: #00796b;
-  --primary-2: #00897b;
+  --primary: #00695f;
+  --primary-2: #00796b;
   --sky: #009688;
   --teal: #14b8a8;
   --teal-2: #0d9488;
   --navy: #1e1f28;
-  --primary-rgb: 0, 121, 107;
+  --primary-rgb: 0, 105, 95;
   --sky-rgb: 0, 150, 136;
   --teal-rgb: 20, 184, 168;
 
@@ -198,16 +198,16 @@ input, textarea, select {
   --line-9: #454855;
   --line-10: #3a3d49;
   --line-11: #454855;
-  --line-strong: #2aa79b;
-  --line-stronger: #35b3a6;
+  --line-strong: #3fc7ba;
+  --line-stronger: #5dd9c9;
 
-  --primary: #2aa79b;
-  --primary-2: #35b3a6;
+  --primary: #3fc7ba;
+  --primary-2: #5dd9c9;
   --sky: #14b8a8;
   --teal: #3fc7ba;
   --teal-2: #2aa79b;
   --navy: #1e1f28;
-  --primary-rgb: 42, 167, 155;
+  --primary-rgb: 63, 199, 186;
   --sky-rgb: 20, 184, 168;
   --teal-rgb: 63, 199, 186;
 
@@ -1721,7 +1721,7 @@ pre.aeo-code code {
   font-weight: 900;
   letter-spacing: -0.02em;
   color: var(--text);
-  opacity: 0.14;
+  opacity: 0.22;
   white-space: nowrap;
   unicode-bidi: plaintext;
   transition: opacity 0.3s ease;
@@ -1738,8 +1738,8 @@ pre.aeo-code code {
   transform: rotate(-1.4deg) scale(1.08);
 }
 .marquee-2 .marquee-item {
-  color: var(--primary);
-  opacity: 0.16;
+  color: var(--text);
+  opacity: 0.22;
 }
 
 /* ---------- Section titles ---------- */

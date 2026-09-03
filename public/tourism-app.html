@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900;1000&family=Vazirmatn:wght@600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preload" as="style" href="assets/css/style.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/style.min.css"></noscript>
   <!-- amatis-seo -->
   <link rel="canonical" href="https://amatisberry.ir/tourism-app.html">
   <meta property="og:type" content="website">
@@ -367,12 +368,12 @@ release: continuous-integration</code></pre>
         <div class="aeo-block reveal" id="facts">
           <h3 data-i18n="aeo2.kvTitle">Facts at a Glance</h3>
           <dl class="kv">
-            <div class="kv-row"><b data-i18n="aeo2.kv1L">Team model</b><span data-i18n="aeo2.kv1V">Senior cross-functional consultants</span></div>
-            <div class="kv-row"><b data-i18n="aeo2.kv2L">Working model</b><span data-i18n="aeo2.kv2V">Fixed-structure, milestone-based</span></div>
-            <div class="kv-row"><b data-i18n="aeo2.kv3L">Coverage</b><span data-i18n="aeo2.kv3V">Strategy, design, dev, marketing, support</span></div>
-            <div class="kv-row"><b data-i18n="aeo2.kv4L">Client base</b><span data-i18n="aeo2.kv4V">Startups, SMBs and established businesses</span></div>
-            <div class="kv-row"><b data-i18n="aeo2.kv5L">Languages</b><span data-i18n="aeo2.kv5V">English, German, Persian, Arabic</span></div>
-            <div class="kv-row"><b data-i18n="aeo2.kv6L">Getting started</b><span data-i18n="aeo2.kv6V">Free consultation, zero commitment</span></div>
+            <div class="kv-row"><dt><b data-i18n="aeo2.kv1L">Team model</b></dt><dd><span data-i18n="aeo2.kv1V">Senior cross-functional consultants</span></dd></div>
+            <div class="kv-row"><dt><b data-i18n="aeo2.kv2L">Working model</b></dt><dd><span data-i18n="aeo2.kv2V">Fixed-structure, milestone-based</span></dd></div>
+            <div class="kv-row"><dt><b data-i18n="aeo2.kv3L">Coverage</b></dt><dd><span data-i18n="aeo2.kv3V">Strategy, design, dev, marketing, support</span></dd></div>
+            <div class="kv-row"><dt><b data-i18n="aeo2.kv4L">Client base</b></dt><dd><span data-i18n="aeo2.kv4V">Startups, SMBs and established businesses</span></dd></div>
+            <div class="kv-row"><dt><b data-i18n="aeo2.kv5L">Languages</b></dt><dd><span data-i18n="aeo2.kv5V">English, German, Persian, Arabic</span></dd></div>
+            <div class="kv-row"><dt><b data-i18n="aeo2.kv6L">Getting started</b></dt><dd><span data-i18n="aeo2.kv6V">Free consultation, zero commitment</span></dd></div>
           </dl>
         </div>
 
@@ -440,6 +441,7 @@ release: continuous-integration</code></pre>
   <!-- ======================= FOOTER ======================= -->
   <footer class="site-footer">
     <div class="container-page">
+      <h2 class="sr-only" data-i18n="footer.heading">Footer Navigation</h2>
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="brand" href="index.html">
@@ -449,7 +451,7 @@ release: continuous-integration</code></pre>
           <p data-i18n="footer.tagline">AmatisBerry is a business consultancy agency helping companies grow with strategy, marketing and technology.</p>
         </div>
         <div class="footer-col">
-          <h4 data-i18n="footer.colServices">Services</h4>
+          <h3 data-i18n="footer.colServices">Services</h4>
           <ul>
             <li><a href="what-we-offer.html" data-i18n="footer.links.services.0">What We Offer</a></li>
             <li><a href="what-we-offer.html#apps" data-i18n="services.apps.title">App Development</a></li>
@@ -460,7 +462,7 @@ release: continuous-integration</code></pre>
           </ul>
         </div>
         <div class="footer-col">
-          <h4 data-i18n="footer.colCompany">Company</h4>
+          <h3 data-i18n="footer.colCompany">Company</h4>
           <ul>
             <li><a href="index.html" data-i18n="footer.links.company.0">Home</a></li>
             <li><a href="showcase.html" data-i18n="footer.links.company.1">Showcase</a></li>
@@ -469,7 +471,7 @@ release: continuous-integration</code></pre>
           </ul>
         </div>
         <div class="footer-col">
-          <h4 data-i18n="footer.colContact">Contact</h4>
+          <h3 data-i18n="footer.colContact">Contact</h4>
           <ul>
             <li><a href="index.html#schedule" data-i18n="footer.links.contact.0">Schedule a Call</a></li>
           </ul>
