@@ -322,6 +322,21 @@ FALLBACKS = {
     "more": "assets/images/service-3.png",
 }
 
+# Natural intrinsic dimensions for each source image so generated pages
+# include width/height (avoid CLS) and loading="lazy".
+IMG_DIMS = {
+    "assets/images/service-1.jpg": (1000, 563),
+    "assets/images/service-2.jpg": (1000, 667),
+    "assets/images/our-service-1.png": (1436, 942),
+    "assets/images/protfolio-1.jpg": (1920, 1049),
+    "assets/images/service-3.png": (50, 50),
+}
+
+
+def img_attrs(img):
+    w, h = IMG_DIMS.get(img, (1200, 800))
+    return 'width="%d" height="%d" loading="lazy"' % (w, h)
+
 
 def download_image(slug, keyword):
     os.makedirs(IMG_DIR, exist_ok=True)
@@ -388,7 +403,7 @@ def build_page(svc, img):
               <a class="btn-primary lg" href="connect-with-us.html" data-i18n="services.ctaButton">Book a Free Consultation</a>
             </div>
           </div>
-          <div class="split-media reveal"><img src="%(img)s" alt="%(title)s"></div>
+          <div class="split-media reveal"><img src="%(img)s" alt="%(title)s" %(img_attrs)s></div>
         </div>
       </div>
     </section>
@@ -624,6 +639,7 @@ release: continuous-integration</code></pre>
         "p2": esc(en["p2"]),
         "features": features,
         "img": img,
+        "img_attrs": img_attrs(img),
     }
 
     dropdown = DROPDOWN_BLOCK

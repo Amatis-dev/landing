@@ -1624,7 +1624,8 @@ pre.aeo-code code {
   justify-content: space-between;
   background: linear-gradient(135deg, var(--primary-2), var(--primary));
 }
-.hero-visual-header h4 {
+.hero-visual-header h4,
+.hero-visual-header .hero-card-title {
   font-weight: 800;
   font-size: 14.5px;
 }
