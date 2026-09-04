@@ -9,6 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900;1000&family=Vazirmatn:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Preload the variable woff2 for the active scripts to avoid font-swap CLS on the hero -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/vazirmatn/v16/Dxxo8j6PP2D_kU2muijlGMWWIGroe7ll.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2">
   <link rel="stylesheet" href="assets/css/style.css">
   <!-- amatis-seo -->
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
@@ -221,7 +224,7 @@
                 <span class="emoji-badge">📈</span>
               </div>
               <div class="hero-img">
-                <picture><source srcset="assets/images/hero-image.webp" type="image/webp"><img src="assets/images/hero-image.jpg" alt="AmatisBerry — Business Consultancy" width="1024" height="1024" fetchpriority="high" data-i18n-title="hero.imgAlt"></picture>
+                <picture><source srcset="assets/images/hero-image-768.webp 768w, assets/images/hero-image.webp 1024w" sizes="(max-width: 640px) 92vw, 488px" type="image/webp"><img src="assets/images/hero-image.jpg" alt="AmatisBerry — Business Consultancy" width="1024" height="1024" fetchpriority="high" data-i18n-title="hero.imgAlt"></picture>
               </div>
               <div class="hero-visual-footer">
                 <div class="hero-visual-mini">
