@@ -49,46 +49,133 @@ const POST_STYLES = `
     .lang-pill.active{background:var(--accent,#6c5ce7);border-color:var(--accent,#6c5ce7);color:#fff;opacity:1;}
   </style>`;
 
-const NAV = `
-  <a class="nav-pill" href="/">Home</a>
-  <a class="nav-pill" href="/showcase.html">Showcase</a>
-  <a class="nav-pill active" href="/blogs.html">Blogs</a>
-  <a class="nav-pill" href="/pricing.html">Plans &amp; Prices</a>
-  <a class="nav-pill" href="/connect-with-us.html">Connect With Us</a>`;
+function renderNav(L: Chrome): string {
+  return `
+  <a class="nav-pill" href="/">${L.home}</a>
+  <a class="nav-pill" href="/showcase.html">${L.showcase}</a>
+  <a class="nav-pill active" href="/blogs.html">${L.blogs}</a>
+  <a class="nav-pill" href="/pricing.html">${L.pricing}</a>
+  <a class="nav-pill" href="/connect-with-us.html">${L.connect}</a>`;
+}
 
-const FOOTER = `
+function renderFooter(L: Chrome): string {
+  return `
   <footer class="site-footer">
     <div class="container-page">
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="brand" href="/"><span class="brand-mark">AB</span><span class="brand-word">AmatisBerry</span></a>
-          <p>AmatisBerry is a business consultancy agency helping companies grow with strategy, marketing and technology.</p>
+          <p>${L.footerTagline}</p>
         </div>
         <div class="footer-col">
-          <h4>Explore</h4>
+          <h4>${L.explore}</h4>
           <ul>
-            <li><a href="/what-we-offer.html">What We Offer</a></li>
-            <li><a href="/showcase.html">Showcase</a></li>
-            <li><a href="/blogs.html">Blogs</a></li>
-            <li><a href="/connect-with-us.html">Connect With Us</a></li>
+            <li><a href="/what-we-offer.html">${L.offer}</a></li>
+            <li><a href="/showcase.html">${L.showcase}</a></li>
+            <li><a href="/blogs.html">${L.blogs}</a></li>
+            <li><a href="/connect-with-us.html">${L.connect}</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Contact</h4>
+          <h4>${L.contact}</h4>
           <ul>
             <li><a href="mailto:info@amatisberry.ir">info@amatisberry.ir</a></li>
-            <li><a href="/connect-with-us.html">Send a Message</a></li>
+            <li><a href="/connect-with-us.html">${L.sendMessage}</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-bottom"><span>© ${new Date().getFullYear()} AmatisBerry. All rights reserved.</span></div>
+      <div class="footer-bottom"><span>© ${new Date().getFullYear()} AmatisBerry. ${L.rights}</span></div>
     </div>
   </footer>`;
+}
 
-const CHROME: Record<string, { home: string; blogs: string; minRead: string; ctaTitle: string; ctaText: string; ctaButton: string }> = {
-  en: { home: "Home", blogs: "Blogs", minRead: "min read", ctaTitle: "Ready to grow your business?", ctaText: "Talk to the AmatisBerry team about your project — free consultation.", ctaButton: "Connect With Us" },
-  fa: { home: "خانه", blogs: "وبلاگ", minRead: "دقیقه مطالعه", ctaTitle: "آمادهٔ رشد کسب‌وکارتان هستید؟", ctaText: "درمورد پروژه‌تان با تیم اماتیس صحبت کنید — مشاوره اولیه رایگان است.", ctaButton: "ارتباط با ما" },
-  ar: { home: "الرئيسية", blogs: "المدونة", minRead: "دقائق القراءة", ctaTitle: "جاهز لتنمية عملك؟", ctaText: "تحدث مع فريق أماتيس عن مشروعك — استشارة مجانية.", ctaButton: "تواصل معنا" },
+type Chrome = {
+  home: string;
+  showcase: string;
+  blogs: string;
+  pricing: string;
+  connect: string;
+  minRead: string;
+  ctaTitle: string;
+  ctaText: string;
+  ctaButton: string;
+  footerTagline: string;
+  explore: string;
+  offer: string;
+  contact: string;
+  sendMessage: string;
+  rights: string;
+};
+
+const CHROME: Record<string, Chrome> = {
+  en: {
+    home: "Home",
+    showcase: "Showcase",
+    blogs: "Blogs",
+    pricing: "Plans & Prices",
+    connect: "Connect With Us",
+    minRead: "min read",
+    ctaTitle: "Ready to grow your business?",
+    ctaText: "Talk to the AmatisBerry team about your project — free consultation.",
+    ctaButton: "Connect With Us",
+    footerTagline: "AmatisBerry is a business consultancy agency helping companies grow with strategy, marketing and technology.",
+    explore: "Explore",
+    offer: "What We Offer",
+    contact: "Contact",
+    sendMessage: "Send a Message",
+    rights: "All rights reserved.",
+  },
+  de: {
+    home: "Startseite",
+    showcase: "Referenzen",
+    blogs: "Blog",
+    pricing: "Pläne & Preise",
+    connect: "Kontakt",
+    minRead: "Min. Lesezeit",
+    ctaTitle: "Bereit, Ihr Unternehmen zu vergrößern?",
+    ctaText: "Sprechen Sie mit dem AmatisBerry-Team über Ihr Projekt — kostenlose Beratung.",
+    ctaButton: "Kontakt aufnehmen",
+    footerTagline: "AmatisBerry ist eine Unternehmensberatung, die Unternehmen mit Strategie, Marketing und Technologie beim Wachstum unterstützt.",
+    explore: "Entdecken",
+    offer: "Unsere Leistungen",
+    contact: "Kontakt",
+    sendMessage: "Nachricht senden",
+    rights: "Alle Rechte vorbehalten.",
+  },
+  fa: {
+    home: "خانه",
+    showcase: "نمونه کارها",
+    blogs: "وبلاگ",
+    pricing: "تعرفه‌ها و قیمت‌ها",
+    connect: "ارتباط با ما",
+    minRead: "دقیقه مطالعه",
+    ctaTitle: "آمادهٔ رشد کسب‌وکارتان هستید؟",
+    ctaText: "درمورد پروژه‌تان با تیم اماتیس صحبت کنید — مشاوره اولیه رایگان است.",
+    ctaButton: "ارتباط با ما",
+    footerTagline: "تمشک آماتیس یک آژانس مشاوره کسب و کار است که با استراتژی، بازاریابی و تکنولوژی به رشد شرکت‌ها کمک می‌کند.",
+    explore: "کاوش",
+    offer: "خدمات ما",
+    contact: "تماس",
+    sendMessage: "ارسال پیام",
+    rights: "تمامی حقوق محفوظ است.",
+  },
+  ar: {
+    home: "الرئيسية",
+    showcase: "أعمالنا",
+    blogs: "المدونة",
+    pricing: "الباقات والأسعار",
+    connect: "اتصل بنا",
+    minRead: "دقائق القراءة",
+    ctaTitle: "جاهز لتنمية عملك؟",
+    ctaText: "تحدث مع فريق أماتيس عن مشروعك — استشارة مجانية.",
+    ctaButton: "تواصل معنا",
+    footerTagline: "AmatisBerry وكالة استشارات أعمال تساعد الشركات على النمو من خلال الاستراتيجية والتسويق والتقنية.",
+    explore: "استكشاف",
+    offer: "ما نقدمه",
+    contact: "الاتصال",
+    sendMessage: "إرسال رسالة",
+    rights: "جميع الحقوق محفوظة.",
+  },
 };
 
 const LANG_LABELS: Record<string, string> = {
@@ -208,7 +295,7 @@ export function renderPostPage(
       <a class="brand" href="/">
         <span class="brand-mark">AB</span><span class="brand-word">AmatisBerry</span>
       </a>
-      <nav class="site-nav" aria-label="Main">${NAV}</nav>
+      <nav class="site-nav" aria-label="Main">${renderNav(L)}</nav>
       <div class="header-actions">
         ${renderHeaderLangSwitcher(post.lang)}
         <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme">
@@ -224,7 +311,7 @@ export function renderPostPage(
         <nav class="post-crumb" aria-label="Breadcrumb">
           <a href="/">${L.home}</a> <span>/</span> <a href="/blogs.html">${L.blogs}</a> <span>/</span> <span>${escapeHtml(post.title)}</span>        </nav>
         ${switcher}
-        <span class="post-tag-pill">${escapeHtml(post.tag || "Blog")}</span>
+        <span class="post-tag-pill">${escapeHtml(post.tag || L.blogs)}</span>
         <h1 class="post-title">${escapeHtml(post.title)}</h1>
         <div class="post-meta">
           <span><strong>AmatisBerry</strong></span><span>•</span><span>${date}</span><span>•</span><span>${minutes} ${L.minRead}</span>
@@ -240,7 +327,7 @@ export function renderPostPage(
     </section>
   </main>
 
-  ${FOOTER}
+  ${renderFooter(L)}
   <script src="/assets/js/i18n.js"></script>
   <script>
     (function () {
