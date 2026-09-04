@@ -1,0 +1,64 @@
+# AmatisBerry
+
+> AmatisBerry is a business consultancy agency providing strategy, marketing and technology solutions to help companies grow and reach their goals with confidence. One team takes your idea to a live, growing product — covering strategy, design, development, marketing and post-launch support with milestone-based delivery and dedicated QA.
+
+## Agency
+
+- [Home](https://amatisberry.ir/)
+- [Who Are We](https://amatisberry.ir/who-are-we.html)
+- [Showcase](https://amatisberry.ir/showcase.html)
+- [What We Offer](https://amatisberry.ir/what-we-offer.html)
+- [Plans & Prices](https://amatisberry.ir/pricing.html)
+- [Connect With Us](https://amatisberry.ir/connect-with-us.html)
+- [Blogs](https://amatisberry.ir/blogs.html)
+- [Sitemap](https://amatisberry.ir/sitemap.xml)
+
+## App Development
+
+- [Android App](https://amatisberry.ir/android-app.html)
+- [iOS App](https://amatisberry.ir/ios-app.html)
+- [Web App & PWA](https://amatisberry.ir/web-app-pwa.html)
+- [E-commerce App](https://amatisberry.ir/ecommerce-app.html)
+- [Classifieds App](https://amatisberry.ir/classifieds-app.html)
+- [Book Reader App](https://amatisberry.ir/book-reader-app.html)
+- [Tourism App](https://amatisberry.ir/tourism-app.html)
+- [Taxi Booking App](https://amatisberry.ir/taxi-app.html)
+- [Flight & Hotel Booking](https://amatisberry.ir/flight-hotel-app.html)
+
+## Website Design
+
+- [Corporate Website](https://amatisberry.ir/corporate-website.html)
+- [Classifieds Website](https://amatisberry.ir/classifieds-website.html)
+- [Marketplace Website](https://amatisberry.ir/marketplace-website.html)
+- [Online Store](https://amatisberry.ir/online-store.html)
+- [Restaurant Website](https://amatisberry.ir/restaurant-website.html)
+- [News Website](https://amatisberry.ir/news-website.html)
+- [Medical Website](https://amatisberry.ir/medical-website.html)
+- [Tourism Website](https://amatisberry.ir/tourism-website.html)
+- [Book Reader Website](https://amatisberry.ir/book-reader-website.html)
+- [WordPress Website](https://amatisberry.ir/wordpress.html)
+
+## E-commerce
+
+- [Online Store](https://amatisberry.ir/online-store.html)
+- [Multi-vendor Marketplace](https://amatisberry.ir/marketplace-website.html)
+- [Subscription Store](https://amatisberry.ir/subscription-store.html)
+- [Shopify Store](https://amatisberry.ir/shopify-store.html)
+
+## Blockchain & Crypto
+
+- [Crypto Exchange](https://amatisberry.ir/crypto-exchange.html)
+- [Decentralized Exchange (DEX)](https://amatisberry.ir/dex.html)
+- [P2P Exchange](https://amatisberry.ir/p2p-exchange.html)
+- [OTC Exchange](https://amatisberry.ir/otc-exchange.html)
+- [Crypto Payment Gateway](https://amatisberry.ir/crypto-payment-gateway.html)
+- [Smart Contracts & Tokens](https://amatisberry.ir/smart-contracts.html)
+- [Airdrop Platform](https://amatisberry.ir/airdrop-platform.html)
+- [Exchange App](https://amatisberry.ir/exchange-app.html)
+
+## More Services
+
+- [UI/UX Design](https://amatisberry.ir/uiux-design.html)
+- [SEO & Digital Marketing](https://amatisberry.ir/seo-marketing.html)
+- [Dashboards & Admin Panels](https://amatisberry.ir/dashboards-admin.html)
+- [Maintenance & Support](https://amatisberry.ir/maintenance-support.html)
