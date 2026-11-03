@@ -30,6 +30,8 @@ const DEFAULT_SETTINGS = [
   { key: "contact_schedule_button_de", value: "Jetzt buchen", secret: false, group: "contact" },
   { key: "contact_schedule_button_fa", value: "اکنون رزرو کنید", secret: false, group: "contact" },
   { key: "contact_schedule_button_ar", value: "احجز الآن", secret: false, group: "contact" },
+  { key: "plausible_enabled", value: "true", secret: false, group: "analytics" },
+  { key: "plausible_api_url", value: "https://plausible.io", secret: false, group: "analytics" },
 ];
 
 async function main() {
@@ -41,7 +43,11 @@ async function main() {
       });
     }
   }
+  // Ensure Plausible settings exist
+  const plausibleEnabled = await prisma.setting.findUnique({ where: { key: "plausible_enabled" } });
+  const plausibleApiUrl = await prisma.setting.findUnique({ where: { key: "plausible_api_url" } });
   console.log(`seed: ensured ${DEFAULT_SETTINGS.length} default settings.`);
+  console.log(`seed: plausible_enabled=${plausibleEnabled?.value}, plausible_api_url=${plausibleApiUrl?.value}`);
 
   const { seedPosts } = require("./blog-seed.cjs");
   await seedPosts();
