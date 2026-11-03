@@ -1,66 +1,145 @@
-import { NextRequest } from "next/server";
-import prisma from "@/lib/db";
-import { ok, fail } from "@/lib/api";
+import { PrismaClient } from "@prisma/client";
 
-// Plausible API integration
-export async function GET(req: NextRequest) {
+const prisma = new PrismaClient();
+
+export async function GET(request: Request) {
   try {
-    // Check if Plausible is enabled
-    const plausibleEnabled = await prisma.setting.findUnique({ where: { key: "plausible_enabled" } });
-    const plausibleApiUrl = await prisma.setting.findUnique({ where: { key: "plausible_api_url" } });
+    const { searchParams } = new URL(request.url);
+    const startDate = searchParams.get("start")
+      ? new Date(searchParams.get("start")!)
+      : undefined;
+    const endDate = searchParams.get("end")
+      ? new Date(searchParams.get("end")!)
+      : undefined;
 
-    if (!plausibleEnabled || plausibleEnabled.value !== "true") {
-      return ok({ enabled: false, stats: null });
+    // Base query where clause
+    const where: any = {};
+
+    if (startDate || endDate) {
+      where.visitedAt = {};
+      if (startDate) where.visitedAt.gte = startDate;
+      if (endDate) where.visitedAt.lte = endDate;
     }
 
-    const apiUrl = plausibleApiUrl?.value || "https://plausible.io";
-    const searchParams = new URLSearchParams(req.url);
-    const startDate = searchParams.get("start") || new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
-    const endDate = searchParams.get("end") || new Date().toISOString().split("T")[0];
-    const event = searchParams.get("event");
-
-    let url = `${apiUrl}/api/v1/stats`;
-    const params: string[] = [];
-    if (startDate) params.push(`start=${startDate}`);
-    if (endDate) params.push(`end=${endDate}`);
-    if (event) params.push(`event=${event}`);
-
-    if (params.length > 0) {
-      url += `?${params.join("&")}`;
-    }
-
-    const res = await fetch(url, {
-      headers: {
-        "X-Plausible-Domain": "amatisberry.ir",
-      },
+    // Fetch all events in the date range
+    const events = await prisma.analyticsEvent.findMany({
+      where,
+      orderBy: { visitedAt: "desc" },
+      take: 10000, // reasonable limit
     });
 
-    if (!res.ok) {
-      const text = await res.text();
-      console.error("Plausible API error:", res.status, text);
-      return ok({ enabled: true, stats: null, error: "Plausible API error" });
+    if (events.length === 0) {
+      return new Response(
+        JSON.stringify({
+          pageviews: 0,
+          unique_visitors: 0,
+          sessions: 0,
+          bounce_rate: 0,
+          top_pages: [],
+          countries: [],
+          browsers: {},
+          os: {},
+          events: [],
+        }),
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
     }
 
-    const data = await res.json();
+    // ===== Calculate Statistics =====
 
-    // Transform Plausible data into nice format
-    const stats = {
-      enabled: true,
-      pageviews: data.pageviews || 0,
-      unique_visitors: data.unique_visitors || 0,
-      sessions: data.sessions || 0,
-      avg_time_on_site: data.avg_time_on_site || 0,
-      top_pages: data.top_pages || [],
-      events: data.events || [],
-      bounce_rate: data.bounce_rate || 0,
-      countries: data.countries || [],
-      browsers: data.browsers || [],
-      os: data.os || [],
-    };
+    // Total pageviews
+    const pageviews = events.length;
 
-    return ok({ enabled: true, stats });
-  } catch (error) {
-    console.error("Analytics error:", error);
-    return ok({ enabled: false, stats: null, error: "Failed to fetch analytics" });
+    // Unique visitors by IP (approximate - we store IP but may have repeats)
+    const uniqueIPs = new Set(events.map((e) => e.ipAddress).filter(Boolean));
+    const uniqueVisitors = uniqueIPs.size;
+
+    // Sessions by sessionId
+    const uniqueSessions = new Set(events.map((e) => e.sessionId)).size;
+
+    // Bounce rate: sessions with only 1 pageview
+    const sessionPageCounts: Map<string, number> = new Map();
+    events.forEach((e) => {
+      sessionPageCounts.set(e.sessionId, (sessionPageCounts.get(e.sessionId) || 0) + 1);
+    });
+    const bounceSessions = Array.from(sessionPageCounts.values()).filter(
+      (count) => count === 1
+    ).length;
+    const bounceRate = uniqueSessions > 0 ? (bounceSessions / uniqueSessions) * 100 : 0;
+
+    // Top pages
+    const pageViewsMap: Map<string, number> = new Map();
+    events.forEach((e) => {
+      pageViewsMap.set(e.path, (pageViewsMap.get(e.path) || 0) + 1);
+    });
+    const topPageEntries = Array.from(pageViewsMap.entries())
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 10)
+      .map(([path, views]) => ({ path, pageviews: views }));
+
+    // Countries
+    const countryMap: Map<string, number> = new Map();
+    events.forEach((e) => {
+      if (e.country) {
+        countryMap.set(e.country, (countryMap.get(e.country) || 0) + 1);
+      }
+    });
+    const countries = Array.from(countryMap.entries())
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 10)
+      .map(([country, visitors]) => ({ country, visitors }));
+
+    // Browsers
+    const browserMap: Map<string, number> = new Map();
+    events.forEach((e) => {
+      if (e.browser) {
+        browserMap.set(e.browser, (browserMap.get(e.browser) || 0) + 1);
+      }
+    });
+    const browsers: Record<string, number> = {};
+    browserMap.forEach((count, browser) => (browsers[browser] = count));
+
+    // Operating Systems
+    const osMap: Map<string, number> = new Map();
+    events.forEach((e) => {
+      if (e.os) {
+        osMap.set(e.os, (osMap.get(e.os) || 0) + 1);
+      }
+    });
+    const os: Record<string, number> = {};
+    osMap.forEach((count, osName) => (os[osName] = count));
+
+    // Events (if any tracked)
+    const trackedEvents = events.length > 0 ? events.length : 0;
+
+    return new Response(
+      JSON.stringify({
+        pageviews,
+        unique_visitors: uniqueVisitors,
+        sessions: uniqueSessions,
+        bounce_rate: Math.round(bounceRate * 10) / 10, // 1 decimal
+        top_pages: topPageEntries,
+        countries,
+        browsers,
+        os,
+        events: trackedEvents,
+      }),
+      {
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+  } catch (error: any) {
+    console.error("Analytics fetch error:", error);
+    return new Response(
+      JSON.stringify({ error: error.message || "Failed to fetch analytics" }),
+      {
+        status: 500,
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+  } finally {
+    await prisma.$disconnect();
   }
 }

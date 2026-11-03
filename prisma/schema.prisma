@@ -80,6 +80,25 @@ model Setting {
   @@index([group])
 }
 
+// ---------- Analytics ----------
+
+model AnalyticsEvent {
+  id          String   @id @default(cuid())
+  path       String   // URL path visited
+  referrer   String?  // Referring URL
+  ipAddress  String?  // visitor IP
+  country    String?  // detected country
+  browser    String?  // parsed browser
+  os         String?  // parsed operating system
+  userAgent  String?  // full user agent string
+  visitedAt  DateTime @default(now())
+  sessionId  String   // for session tracking
+
+  @@index([visitedAt])
+  @@index([path])
+  @@index([sessionId])
+}
+
 // ---------- Meeting booking: concrete generated time slots ----------
 
 model TimeSlot {
