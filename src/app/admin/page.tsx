@@ -63,69 +63,81 @@ export default function AdminAnalyticsPage() {
 
   return (
     <div className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="bg-card p-4 rounded-lg shadow-sm">
-          <div className="text-2xl font-bold">{stats.pageviews}</div>
-          <div className="text-sm text-muted-foreground">Pageviews</div>
-        </div>
-        <div className="bg-card p-4 rounded-lg shadow-sm">
-          <div className="text-2xl font-bold">{stats.unique_visitors}</div>
-          <div className="text-sm text-muted-foreground">Unique Visitors</div>
-        </div>
-        <div className="bg-card p-4 rounded-lg shadow-sm">
-          <div className="text-2xl font-bold">{stats.sessions}</div>
-          <div className="text-sm text-muted-foreground">Sessions</div>
-        </div>
+      <h2 className="text-xl font-bold mb-6">Analytics Overview</h2>
+
+      {/* KPIs Table */}
+      <div className="overflow-x-auto">
+        <table className="w-full collapse border-border rounded-lg shadow-sm">
+          <thead>
+            <tr className="border-b border-border">
+              <th className="p-4 text-left text-xs font-medium text-muted-foreground uppercase">Metric</th>
+              <th className="p-4 text-left text-xs font-medium text-muted-foreground uppercase">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="border-b border-border hover:bg-accent/20">
+              <td className="p-4">Pageviews</td>
+              <td className="p-4">{stats.pageviews}</td>
+            </tr>
+            <tr className="border-b border-border hover:bg-accent/20">
+              <td className="p-4">Unique Visitors</td>
+              <td className="p-4">{stats.unique_visitors}</td>
+            </tr>
+            <tr className="border-b border-border hover:bg-accent/20">
+              <td className="p-4">Sessions</td>
+              <td className="p-4">{stats.sessions}</td>
+            </tr>
+            <tr className="border-b border-border hover:bg-accent/20">
+              <td className="p-4">Bounce Rate</td>
+              <td className="p-4">{Math.round(stats.bounce_rate)}%</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
-        <div className="bg-card p-4 rounded-lg shadow-sm">
-          <div className="text-xs text-muted-foreground uppercase">Top Pages</div>
-          <ul className="space-y-1 text-sm">{stats.top_pages.map((p: any, idx: number) => (
-            <li key={idx} className="flex justify-between">
-              <span className="flex-1 truncate">{p.path || "/"}</span>
-              <span>{p.pageviews || 0}</span>
-            </li>
-          ))}</ul>
-        </div>
-        <div className="bg-card p-4 rounded-lg shadow-sm">
-          <div className="text-xs text-muted-foreground uppercase">Bounce Rate</div>
-          <div className="text-3xl font-bold">{Math.round(stats.bounce_rate)}%</div>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-2 gap-4">
-        <div className="bg-card p-4 rounded-lg shadow-sm">
-          <div className="text-xs text-muted-foreground uppercase">Countries</div>
-          <ul className="space-y-1 text-sm">{stats.countries.map((c: any) => (
-            <li key={c.country}>
-              <span>{c.country}</span>
-              <span>{c.visitors}</span>
-            </li>
-          ))}</ul>
-        </div>
-        <div className="bg-card p-4 rounded-lg shadow-sm">
-          <div className="text-xs text-muted-foreground uppercase">Browsers</div>
-          <ul className="space-y-1 text-sm">{Object.entries(stats.browsers as Record<string, number>).map(([b, v]) => (
-            <li key={b}>
-              <span>{b}</span>
-              <span>{v}</span>
-            </li>
-          ))}</ul>
-        </div>
-        <div className="bg-card p-4 rounded-lg shadow-sm">
-          <div className="text-xs text-muted-foreground uppercase">OS</div>
-          <ul className="space-y-1 text-sm">{Object.entries(stats.os as Record<string, number>).map(([o, v]) => (
-            <li key={o}>
-              <span>{o}</span>
-              <span>{v}</span>
-            </li>
-          ))}</ul>
-        </div>
+      {/* Detailed Stats Table */}
+      <div className="mt-6 overflow-x-auto">
+        <table className="w-full collapse border-border rounded-lg shadow-sm">
+          <thead>
+            <tr className="border-b border-border">
+              <th className="p-4 text-left text-xs font-medium text-muted-foreground uppercase">Category</th>
+              <th className="p-4 text-left text-xs font-medium text-muted-foreground uppercase">Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="border-b border-border hover:bg-accent/20">
+              <td className="p-4">Top Pages</td>
+              <td className="p-4">{stats.top_pages.map((p: any) => (
+                <div className="text-sm">{p.path || "/"}: {p.pageviews || 0} views</div>
+              )).join(' ')}</td>
+            </tr>
+            <tr className="border-b border-border hover:bg-accent/20">
+              <td className="p-4">Countries</td>
+              <td className="p-4">{stats.countries.map((c: any) => 
+                <div className="text-sm">{c.country}: {c.visitors}</div>
+              ).join(' ')}</td>
+            </tr>
+            <tr className="border-b border-border hover:bg-accent/20">
+              <td className="p-4">Browsers</td>
+              <td className="p-4">{Object.entries(stats.browsers as Record<string, number>).map(([b, v]) => 
+                <div className="text-sm">{b}: {v}</div>
+              ).join(' ')}</td>
+            </tr>
+            <tr className="border-b border-border hover:bg-accent/20">
+              <td className="p-4">OS</td>
+              <td className="p-4">{Object.entries(stats.os as Record<string, number>).map(([o, v]) => 
+                <div className="text-sm">{o}: {v}</div>
+              ).join(' ')}</td>
+            </tr>
+            <tr className="border-b border-border hover:bg-accent/20">
+              <td className="p-4">Session Events</td>
+              <td className="p-4">{stats.events || 0}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <div className="mt-6 pt-6 border-t text-muted-foreground text-xs">
-        <div>Session Events: {stats.events || 0}</div>
         <div>Data refreshed every 30s</div>
       </div>
     </div>
